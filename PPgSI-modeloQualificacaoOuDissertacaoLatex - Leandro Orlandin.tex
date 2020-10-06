@@ -751,7 +751,7 @@ Com a intenção de endereçar este tema auxiliando os designers e desenvolvedor
 
 É fundamental que não apenas os requisitos funcionais sejam garantidos pelas aplicações, mas também a disponibilização das mesmas considerando sua acessibilidade \cite{Oliveira2017strategies}. No âmbito de \textit{apps}, tem-se como importante característica suas constantes atualizações através de novas versões nas lojas de aplicativos (e.g. Google Play Store) \cite{nayebi,Palompa2018crowdsourcing}. Este processo de frequente revisão ao longo do tempo torna as aplicações mais maduras, com inclusão de novas funcionalidades e correções de erros.
 
-Em muitos estudos identifica-se que tanto as classificações quanto os comentários dos usuários nas lojas de aplicativos são um importante direcionador para os desenvolvedores no momento do lançamento de novas versões \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews,Palompa2018crowdsourcing,Pelloni2018becloma}. Considerando assim que os comentários orientam o desenvolvimento das \textit{apps} e que mesmo as mais maduras e populares apresentam problemas de acessibilidade \cite{Eler2018mate}, a dúvida que surge é se os usuários reportam suas dificuldades referentes à acessibilidade nas lojas de aplicativos.
+Em muitos estudos identifica-se que tanto as classificações quanto os comentários dos usuários nas lojas de aplicativos são um importante direcionador para os desenvolvedores no momento do lançamento de novas versões \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews,Palompa2018crowdsourcing,Pelloni2018becloma}. Considerando assim que os comentários orientam o desenvolvimento das \textit{apps} e que mesmo as mais maduras e populares apresentam problemas de acessibilidade \cite{Eler2018mate}, as dúvidas que surgem é se os usuários reportam suas dificuldades referentes à acessibilidade nas lojas de aplicativos, e do quão relevante são estes comentários para os desenvolvedores.
 
 
 
@@ -759,12 +759,13 @@ Em muitos estudos identifica-se que tanto as classificações quanto os comentá
 
 Diferentes taxonomias são empregadas nos estudos dos comentários \cite{Ciurumelea2017analyzing,Sorbo2017surf,Iacob2013retrieving,Iacob2014online,Li2018MobileAE,Mcilroy2016analyzing,Ortega2015thesis,Pagano2013userfeedback,Panichella2015how,Pelloni2018becloma}, e apesar de alguns destes trabalhos citarem inclusive interfaces com usuário, não se observa estudos que possuam detalhamento a respeito dos problemas relacionados à acessibilidade digital.
 
-Desta forma, esta proposta de pesquisa visa realizar um estudo amplo e generalizado sobre os comentários dos usuários envolvendo o tema acessibilidade na loja de aplicativos móveis \textit{Google Play Store}.
+Desta forma, esta proposta de pesquisa visa realizar um estudo amplo e generalizado envolvendo o tema acessibilidade sobre os comentários dos usuários na loja de aplicativos móveis \textit{Google Play Store}, \textit{commits} e \textit{issues} cadastrados pelos desenvolvedores em repositório aberto de código fonte \textit{Github}.
 
 As justificativas que visam embasar esta investigação pretendem 
 i) identificar se existe um volume significativo de comentários envolvendo acessibilidade e sua distribuição de acordo com as categorias dos \textit{apps},
 ii) analisar a diversificação dos comentários de acordo com padrões internacionais de acessibilidade \cite{bbc} e
-ii) por fim se existe um relacionamento entre a classificação do comentário de acordo com a acessibilidade e à respectiva nota dada ao aplicativo pelo próprio usuário.
+iii) se existe um relacionamento entre a classificação do comentário de acordo com a acessibilidade e à respectiva nota dada ao aplicativo pelo próprio usuário.
+iv) a correlação quantitativa entre os comentários, commits e issues
 
 Com este estudo, será possível confirmar a existência de uma pressão dos usuários frente aos desenvolvedores e empresas de aplicativos no que diz respeito às funcionalidades envolvendo acessibilidade.
 
@@ -775,7 +776,7 @@ Com este estudo, será possível confirmar a existência de uma pressão dos usu
 %selecionaremos um conjunto de aplicações
 %implementar ferramentas para coletar estes comentários
 %analisaremos estes comentários
-%definiremos palavras chave
+%definiremos palavras-chave
 %validação manual
 %utilizaremos PLN (mas precisamos definir para quê utilizar a mesma) se dividirmos quantos tópicos a pessoa fala em cada comentários seria interessante
 %quando a pessoa apenas reclama de algo a nota é ruim, porém quando existem outros assuntos envolvidos e algum deles pode ser elogios, a nota pode ser melhor.....
@@ -783,14 +784,15 @@ Com este estudo, será possível confirmar a existência de uma pressão dos usu
 
 Será definido um conjunto de aplicações móveis, com a condição inicial de que possuam versões de suas instalações (arquivos de instalação com extensão \textit{apk}) disponíveis no repositório F-Droid\footnote{https://f-droid.org/}. Este requisito permitirá que a pesquisa seja posteriormente evoluída, através de comparações entre os problemas de acessibilidade encontrados em diferentes versões do software, fora do escopo deste projeto. É importante que o levantamento selecione aplicações de diferentes categorias, como por exemplo: navegação, finanças e leitura.
 
-Uma nova ferramenta, em linguagem Python, será implementada para coletar os comentários dos aplicativos e validar a existência de versões do softaware de instalação no repositório de F-Droid. Esta condição inicial de validação poderá ser excluída se por ventura o conjunto for restrito a determinadas categorias ou mesmo possuam reduzido número de comentários envolvendo acessibilidade.
+Uma nova ferramenta, em linguagem Python, será implementada para coletar os comentários dos aplicativos e validar a existência de versões do software de instalação no repositório de F-Droid. Esta condição inicial de validação poderá ser excluída se por ventura o conjunto for restrito a determinadas categorias ou mesmo possuam reduzido número de comentários envolvendo acessibilidade.
 
 Com base no \textit{W3C} \cite{wcag} e no \textit{BBC Guidelines} \cite{bbc}, serão estabelecidas palavras-chave que, em existindo no comentário, indicarão a possibilidade do mesmo se referir a uma diretriz de acessibilidade.
 
-Em posse dos comentários e das palavras-chave, será possível iniciar um processo de averiguação manual se os mesmos abordam o tema acessibilidade e qual foi a mensagem transmitida pelo usuário (pedido de correção ou cumprimentos pelo aplicativo). Esta averiguação, poderá ser feita em parceria com outro projeto que envolva Processamento de Linguagem Natural (PLN).
+Em posse dos comentários e das palavras-chave, será possível iniciar um processo de averiguação manual se os mesmos abordam o tema acessibilidade e qual foi a mensagem transmitida pelo usuário (pedido de correção ou cumprimentos pelo aplicativo).
 
-Como forma de complementar a verificação utilizando-se de PLN, poderá ser utilizado um processo de Análise de Sentimento (AS), conforme abordado em literatura como uma forma de melhorar o processo investigativo\cite{Panichella2015how}.
-%#comentário# ESTA PARTE DE PLN E AS PRECISAM SER MELHOR EXPLICADAS
+A mesma metodologia aplicada para a obtenção e avaliação dos comentários será utilizada sobre os textos informativos dos desenvolvedores quando da realização dos \textit{commits} e cadastramento das \textit{issues} no repositório de código fonte aberto \textit{Github}.
+
+Em posse destes dados, será realizado então um estudo que visa identificar uma correlação quantitativa entre as 3 bases de informações: comentários, \textit{commits} e \textit{issues}.
 
 
 \section{Organização}
@@ -807,7 +809,7 @@ Como forma de complementar a verificação utilizando-se de PLN, poderá ser uti
 
 Segundo o site \textit{Dicio - Dicionário Online de Português}, a definição de acessibilidade pode ser dada como sendo \textit{a propriedade de material confeccionado para que qualquer pessoa tenha acesso, consiga ver, usar, compreender, principalmente de material que se destina à inclusão social de pessoas com alguma deficiência} \footnote{https://www.dicio.com.br/acessibilidade/}. Trata-se da possibilidade e condição de qualquer indivíduo alcançar os elementos funcionais do ambiente construído, para assim permitir sua utilização \cite{camilamaster}.
 
-Para o caso de acessibilidade digital, e conforme visto anteriormente, a mesma representa a capacidade de um software ser utilizado, independentemente da condição física, mental ou intelectual do usuário \cite{w3cwai}. Trata-se da flexibilidade do software em se adaptar às necessidades de cada usuário, suas preferências e limitações \cite{camilamaster}. Este fator torna-se mais importante no contexto mundial atual em decorrência dos índices de pessoas com algum tipo de deficiência e da alta demanda por \textit{apps} em dispositivos móveis \cite{storeanalysis}.
+Para o caso de acessibilidade digital, e conforme visto anteriormente, essa representa a capacidade de um software ser utilizado, independentemente da condição física, mental ou intelectual do usuário \cite{w3cwai}. Trata-se da flexibilidade do software em se adaptar às necessidades de cada usuário, suas preferências e limitações \cite{camilamaster}. Este fator torna-se mais importante no contexto mundial atual em decorrência dos índices de pessoas com algum tipo de deficiência e da alta demanda por \textit{apps} em dispositivos móveis \cite{storeanalysis}.
 
 Normalmente a acessibilidade digital é associada exclusivamente às dificuldades motoras, físicas ou sensoriais dos indivíduos com necessidades especiais, sendo desconsiderada importante parcela da população, como por exemplo idosos ou crianças. Uma aplicação que não seja acessível a um indivíduo não pode ser considerada eficaz, eficiente ou agradável ao mesmo \cite{santarosa}.
 
@@ -962,7 +964,7 @@ Esta mudança de características trouxe novos desafios ao cotidiano dos desenvo
 
 \section{Estudos Relacionados}
 %evolução de apps (evoluem rapidamente), geralmente é ágil, novas versões surgem a cada semana, citar referência, citar estudos do panichella, mario linhares, e assim por diante
-No contexto relacionado aos estudos já realizados sobre comentários em lojas de aplicativos, podemos elencar vários artigos, porém nenhum centrado em discussões de envolvendo acessibilidade (exceto o artigo do estudo piloto desta pesquisa \cite{ihc2019}.
+No contexto relacionado aos estudos já realizados sobre comentários em lojas de aplicativos, podemos elencar vários artigos, porém os únicos centradosem discussões de envolvendo acessibilidade trata-se do artigo referente ao estudo piloto desta pesquisa \cite{ihc2019} e estudo evolutivo deste artigo abordando uma análise automatizada \cite{rochestertamjeed}. Não identificamos estudos correlacionando comentários, \textit{commits} e \textit{issues} envolvendo acessibilidade.
 
 Com o advento das lojas de aplicativos (e.g. Google Play e Apple Store) a relação entre desenvolvedor e usuário começou a ser alterado. Comentários de usuários passaram a ser postados publicamente causando impactos tanto nas notas do aplicativo (\textit{ratings}) bem como no número de vezes que o software é baixado (\textit{downloads}), e desta forma tornando-se para o desenvolvedor uma importante fonte de compreensão do seu público \cite{Pagano2013userfeedback}. De acordo com \cite{Fu2013whypeoplehate}, baseado em mais de 13 milhões de comentários, foi possível uma análise da exigência dos usuários independentemente da categoria do aplicativo, observando-se que os mesmos tendem a ser mais tolerantes para a categoria jogos do que para demais aplicações.
 
@@ -979,28 +981,28 @@ No que diz respeito às notas em lojas de aplicação, em \cite{Yan2019currentst
 %Os comentários impulsionam os desenvolvedores, mas não temos estudos envolvendo
 Em decorrência de relevante parcela da população mundial possuir algum grau de deficiência, bem como do avanço tecnológico que permitiu um aumento considerável da utilização de softwares para dispositivos móveis, entende-se como fundamental a evolução das aplicações no que diz respeito à sua acessibilidade.
 
-Apesar desta importância e mesmo em aplicações móveis populares, identifica-se problemas de acessibilidade conforme com os padrões internacionalmente reconhecidos, o que leva ao indício de que não há a devida relevância para este tema junto aos desenvolvedores, ou mesmo não há uma pressão de mercado que induza a esta priorização durante a elaboração de novas versões do software.
+Apesar desta importância e mesmo em aplicações móveis populares, identifica-se problemas de acessibilidade conforme com os padrões internacionalmente reconhecidos, o que leva ao indício de que não há a devida significância para este tema junto aos desenvolvedores, ou mesmo não há uma pressão de mercado que induza a esta priorização durante a elaboração de novas versões do software.
 
-Considerando que os comentários são uma importante fonte de retroalimentação para os desenvolvedores e dada a importância da acessibilidade no cenário mundial, entende-se que existe a necessidade de um estudo do relacionamento entre os temas acessibilidade e respectivos comentários em lojas de aplicativos.
+Considerando que os comentários são uma importante fonte de retroalimentação para os desenvolvedores e dada a importância da acessibilidade no cenário mundial, entende-se que existe a necessidade de um estudo do relacionamento entre os comentários em lojas de aplicativos, e as informações cadastradas pelos desenvolvedores para os \textit{commits} e \textit{issues}, tendo em conta o tema acessibilidade.
 
 
 
 \chapter{Proposta de Pesquisa}
-* * * * * * * * * * * * * * * * * * * * * * 
+%* * * * * * * * * * * * * * * * * * * * * * 
+%
+%* * * * * * \underline{EM ELABORAÇÃO AINDA} * * * * * * *
+%
+%* * * * * * * * * * * * * * * * * * * * * * 
 
-* * * * * * \underline{EM ELABORAÇÃO AINDA} * * * * * * *
+Os comentários dos usuários nas lojas de aplicativos são uma importante fonte de informações para os desenvolvedores, apresentando um vasto conjunto de possíveis requisitos a serem abordados nas versões posteriores dos \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews,Palompa2018crowdsourcing,Pelloni2018becloma}. Além disso, mesmo aplicações de grandes corporações possuem falhas de acessibilidade \cite{Eler2018mate}. Considerando este cenário, esta proposta de pesquisa visa investigar o relacionamento dos comentários, \textit{commits} e \textit{issues} envolvendo o tema acessibilidade, e o quão relevante é este ponto de vista frente ao volume total. O objetivo principal desta pesquisa é a apresentação de um panorama geral sobre esta perspectiva.
 
-* * * * * * * * * * * * * * * * * * * * * * 
-
-Os comentários dos usuários nas lojas de aplicativos são uma importante fonte de informações para os desenvolvedores, apresentando um vasto conjunto de possíveis requisitos a serem abordados nas versões posteriores dos \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews,Palompa2018crowdsourcing,Pelloni2018becloma}. Além disso, mesmo aplicações de grandes corporações possuem falhas de acessibilidade \cite{Eler2018mate}. Considerando este cenário, esta proposta de pesquisa visa investigar se os usuários enviam comentários envolvendo o tema acessibilidade, e o quão relevante é este ponto de vista frente ao volume total de opiniões. O objetivo principal desta pesquisa é a apresentação de um panorama geral sobre esta perspectiva.
-
-A pesquisa visa aprofundar o estudo piloto \cite{ihc2019} que identificou baixo índice de comentários envolvendo este tema, em torno de 1,2\%, em conjunto específico de 701 \textit{apps}. Nessa ocasião foram analisados de forma manual aproximadamente 5000 comentários, considerando apenas as aplicações que possuem código fonte aberto no Github \footnote{https://github.com/} e com versões anteriores de instalação disponíveis no repositório F-Droid\footnote{https://f-droid.org/}.
+A pesquisa visa estender o estudo piloto \cite{ihc2019} que identificou baixo índice de comentários envolvendo este tema, em torno de 1,2\%, em conjunto específico de 701 \textit{apps}. Nessa ocasião foram analisados de forma manual aproximadamente 5000 comentários, considerando apenas as aplicações que possuem código fonte aberto no Github \footnote{https://github.com/} e com versões anteriores de instalação disponíveis no repositório F-Droid\footnote{https://f-droid.org/}.
 
 
 \section{Estudo Bibliográfico}
-O início da pesquisa se dá através de um estudo bibliográfico envolvendo os guias de padrões para acessibilidade internacionais da BBC \cite{bbc} e W3C \cite{wcag}, e suas influências no padrão brasileiro eMAG \cite{emag}. Esta etapa provê o embasamento crítico para avaliar os comentários dos usuários em etapa futura da pesquisa.
+O início da pesquisa se dá através de um estudo bibliográfico envolvendo os guias de padrões para acessibilidade internacionais da BBC \cite{bbc} e W3C \cite{wcag}, e suas influências no padrão brasileiro eMAG \cite{emag}. Esta etapa provê o embasamento crítico para avaliar os comentários dos usuários, bem como os \textit{commits} e \textit{issues} dos desenvolvedores em etapa futura da pesquisa.
 
-Além disso, foram analisados artigos envolvendo comentários. Estes estudos apresentam diferentes formas de abordar o tema, considerado como um rico conjunto de informações aos desenvolvedores. Com o advento das lojas de aplicativos, a facilidade em disponibilizar novas versões do software tornou o planejamento das entregas um importante pilar no processo de engenharia de software, apoiado no modelo Ágil de Entregas \cite{manifestoagil}. São encontrados na literatura tanto estudos envolvendo a utilização de comentários de usuários como fonte de requisitos para versões futuras de \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews}, quanto avaliações de diferentes formas para classificá-los\cite{Panichella2015how,Pelloni2018becloma,Sorbo2017surf}.
+Além disso, foram analisados artigos envolvendo comentários. Estes estudos apresentam diferentes formas de abordar o tema, considerado como um rico conjunto de informações aos desenvolvedores. Com o advento das lojas de aplicativos, a facilidade em disponibilizar novas versões do software tornou o planejamento das entregas um importante pilar no processo de engenharia de software, apoiado no modelo Ágil de Entregas \cite{manifestoagil}. São encontrados na literatura tanto estudos envolvendo a utilização de comentários de usuários como fonte de requisitos para versões futuras de \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews}, quanto avaliações de diferentes formas para classificá-los\cite{Panichella2015how,Pelloni2018becloma,Sorbo2017surf}, porém nenhum estudo relacionou estes três itens (comentários, \textit{commits} e \textit{issues}).
 
 
 \section{Metodologia}
@@ -1009,21 +1011,66 @@ Será adotada a seguinte metodologia para se alcançar os objetivos deste projet
 	\item [1] Revisão Bibliográfica: inicialmente será realizada uma etapa de estudos envolvendo os diferentes padrões de acessibilidade da BBC \cite{bbc}, W3C \cite{wcag} e do eMAG \cite{emag}. Esta preparação inicial visa fornecer embasamentos teóricos que permitirão analisar os resultados obtidos em etapa posterior.
 	\item [2] Seleção dos \textit{apps}: será selecionado um conjunto de aplicativos significativos, composto por \textit{apps} de relevância nas lojas (\textit{apps tops}), complementado por exemplos de casos menos influentes e com códigos fontes disponíveis no Github. Este tipo segregação visa verificar se o apoio de grandes investidores influencia a acessibilidade do software, bem como é desejo desta pesquisa identificar o panorama para os pequenos desenvolvedores.
 	\item [3] Obtenção dos comentários: esta etapa consiste em levantar exemplos de forma automatizada, através de um \textit{crawler} elaborado em linguagem Python.
-	\item [5] Definição das palavras-chave: nesta etapa serão revisados os conjuntos de palara chave inicialmente estabelecido durante o estudo piloto \cite{ihc2019}. Nesta revisão serão considerados os conhecimentos obtidos na etapa de Revisão Bibliográfica.
-	\item [4] Filtragem os comentários: em seguida serão filtrados exemplos de acordo com o conjunto estabelecido na etapa anterior.
-	\item [6] Análise dos comentários: finalmente serão analisadas as amostras filtradas. Os percentuais obtidos no estudo piloto serão ampliados para um conjunto maior de \textit{apps}. Será verificado se o mesmo comportamento (baixo índice e notas inferiores para casos específicos de reclamações) é identificado em diferentes categorias de software, conforme abrangência de \textit{apps} especificada em item prévio.
+	\item [4] Obtenção dos \textit{commits} e \textit{issues}: esta etapa consiste em levantar exemplos de forma automatizada, através de um \textit{crawler} elaborado em linguagem Python.
+	\item [5] Definição das palavras-chave: nesta etapa serão revisados os conjuntos de palavras-chave inicialmente estabelecido durante o estudo piloto \cite{ihc2019}. Nesta revisão serão considerados os conhecimentos obtidos na etapa de Revisão Bibliográfica.
+	\item [6] Filtragem dos comentários, \textit{commits} e \textit{issues}: em seguida serão filtrados exemplos de acordo com o conjunto estabelecido na etapa anterior.
+	\item [6] Análise dos dados: finalmente serão analisadas as amostras filtradas. Os percentuais obtidos no estudo piloto serão estendidos para os \textit{commits} e \textit{issues}. Será verificado se o mesmo comportamento dos comentários (baixo índice e notas inferiores para casos específicos de reclamações) é refletido para os outros dois itens.
 	
-	*********************************
-	
-	******** PLN - Manter??? ********
-	
-	*********************************
-	
-	Durante a etapa de análise, poderão ser utilizados processamentos automatizados de análises de texto que permitirão ganhar escalabilidade e por consequência maior abrangência. De acordo com \cite{Panichella2015how} os usuários aplicam o mesmo padrão de resposta quando a sua intenção é de reportar um problema.
-	
-	
-	
+	Durante a etapa de análise, poderão ser utilizados processamentos automatizados de análises de texto que permitirão ganhar escalabilidade e por consequência maior abrangência. De acordo com \cite{Panichella2015how} os usuários aplicam o mesmo padrão de resposta quando a sua intenção é de reportar um problema.	
 \end{itemize}
+
+
+\section{Cronograma}
+
+Segue abaixo o cronograma esperado para esta proposta de pesquisa:
+
+\begin{table*}[!htb]
+	\centering
+	\caption{Cronograma}
+	\label{tab:cronograma}
+	\resizebox{\textwidth}{!}{ % abre resizebox, setar tabela da largura da página.
+		\begin{tabular}{lcccccccccccccccccccccccccccccccc}
+		\hline
+		Atividade             							& 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 \\
+		\hline
+		Levantamento
+		                      							&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+		Crawler Comentários
+		                      							&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+		Estudo Piloto
+		                      							&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+		Crawler Commits
+														&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+		Crawler Issues
+														&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+		\end{tabular}
+	}
+\end{table*}
+
+%
+%\begin{table*}[!htb]
+%	\centering
+%	\caption{Cronograma}
+%	\label{tab:cronograma1}
+%	\resizebox{\textwidth}{!}{ % abre resizebox, setar tabela da largura da página.
+%		\begin{tabular}{lcccccccccccccccccccccccccccccccc}
+%			\hline
+%			Atividade             							& 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 \\
+%			\hline
+%			1
+%			&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+%			2
+%			&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+%			3
+%			&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+%			4
+%			&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+%			5
+%			&   &   &   &   &   &   &   &   &   &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    \\
+%		\end{tabular}
+%	}
+%\end{table*}
+
 
 
 %3.1
