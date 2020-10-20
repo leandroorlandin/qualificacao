@@ -23,7 +23,7 @@ A acessibilidade digital teve o foco inicial nas páginas e aplicações web dad
 %A partir dos fatores acima, índices de deficiência da população e utilização dos dispositivos móveis no cotidiano, atesta-se a importância da acessibilidade digital neste novo panorama mundial, essa representando a capacidade do software de ser utilizado independentemente da condição física, mental ou intelectual do usuário \cite{w3cwai}. 
 
 
-\section{Problema de Pesquisa}
+\section{Lacuna de Pesquisa}
 
 Infelizmente, 
 apesar da existência de recursos para o desenvolvimento de aplicações acessíveis, 
@@ -38,47 +38,72 @@ No desenvolvimento de aplicações móveis,
 
 Diversos estudos sobre avaliações dos usuários em lojas de aplicativos as classificam de diferentes formas\cite{Iacob2013retrieving,Pagano2013userfeedback,Iacob2014online,Mcilroy2016analyzing,Sorbo2017surf,Ciurumelea2017analyzing,Ortega2015thesis,Li2018MobileAE,Pelloni2018becloma,Panichella2015how}: 
 relato de falha, reclamações em geral, requisição de nova funcionalidade, solução de propostas, problemas com o custo, problemas de compatibilidade, problemas com a rede, preocupações com segurança e privacidade, consumo de memória e bateria, elogios, e questões relacionadas à interface com o usuário.
-Apesar de alguns estudos classificarem avaliações relacionadas à interface com o usuário, nenhuma delas fez um estudo detalhado sobre as questões abordadas pelos avaliadores e não mencionaram comentários específicos sobre acessibilidade digital. 
-
-Considerando que os comentários e as notas recebidas nas avaliações dos usuários são utilizadas para corrigir falhas e evoluir os aplicativos móveis, duas questões de pesquisa são levantadas neste trabalho:
+Apesar de alguns estudos classificarem avaliações relacionadas à interface com o usuário, nenhuma delas fez um estudo detalhado sobre as questões abordadas pelos avaliadores e nem mencionaram comentários específicos sobre acessibilidade digital.
+Considerando que os comentários e as notas recebidas nas avaliações dos usuários são utilizadas para corrigir falhas e evoluir aplicativos móveis, duas questões de pesquisa são destacadas neste trabalho:
 \begin{itemize}
- \item[] QP1 - Os usuários de aplicações móveis relatam problemas de acessibilidade em suas avaliações publicadas nas lojas de aplicativos?
- \item[] QP2 - Os problemas de acessibilidade relatados nas avaliações dos usuários tem impacto na evolução das aplicações móveis?
+ \item Os usuários de aplicações móveis mencionam aspectos relacionados a acessibilidade em suas avaliações publicadas nas lojas de aplicativos?
+ \item Os problemas de acessibilidade relatados nas avaliações dos usuários tem impacto na evolução das aplicações móveis?
 \end{itemize}
-
 
 \section{Objetivo} 
 
-Desta forma, esta proposta de pesquisa visa realizar um estudo amplo e generalizado envolvendo o tema acessibilidade sobre os comentários dos usuários na loja de aplicativos móveis \textit{Google Play Store}, \textit{commits} e \textit{issues} cadastrados pelos desenvolvedores em repositório aberto de código fonte \textit{Github}.
+O objetivo deste projeto de pesquisa é investigar se as avaliações de aplicativos feitas por usuários abordam aspectos relacionados à acessibilidade do produto e se essas avaliações tem algum efeito na melhoria da acessibilidade da aplicação. Mais especificamente, deseja-se saber:
+\begin{itemize}
+ \item A quantidade e a distribuição de avaliações relacionadas à acessibilidade do aplicativo
+ \item A diversidade de tipos de violações de acessibilidade mencionadas nas avaliações
+ \item O impacto das questões de acessibilidade nas notas atribuídas pelos usuários
+ \item A quantidade e a distribuição de modificações relacionadas à acessibilidade do aplicativo realizadas no código-fonte
+ %\item A evolução da quantidade de violações encontradas nas diferentes versões da aplicação
+\end{itemize}
 
-As justificativas que visam embasar esta investigação pretendem 
-i) identificar se existe um volume significativo de comentários envolvendo acessibilidade e sua distribuição de acordo com as categorias dos \textit{apps},
-ii) analisar a diversificação dos comentários de acordo com padrões internacionais de acessibilidade \cite{bbc} e
-iii) se existe um relacionamento entre a classificação do comentário de acordo com a acessibilidade e à respectiva nota dada ao aplicativo pelo próprio usuário.
-iv) a correlação quantitativa entre os comentários, commits e issues
 
-Com este estudo, será possível confirmar a existência de uma pressão dos usuários frente aos desenvolvedores e empresas de aplicativos no que diz respeito às funcionalidades envolvendo acessibilidade.
 
 \section{Justificativa e relavância}
 
-tbd
+Como as avaliações dos usuários são uma importante ferramenta para direcionar a evolução e a melhoria de aplicativos móveis, 
+é importante entender se e como as avaliações publicadas em lojas de aplicativos estão sendo utilizadas para informar aos desenvolvedores e às organizações sobre questões relacionadas à acessibilidade das aplicações avaliadas. 
+Além disso, também é fundamental entender se as questões de acessibilidade abordadas pelos usuários são levadas em consideração na evolução dos aplicativos avaliados. 
+
+Desta forma, os resultados da investigação aqui proposta podem dar evidência de que as pessoas com deficiência deveriam expressar explicitamente as barreiras que enfrentam para usar aplicações e assim pressionar desenvolvedores e organizações a aperfeiçoarem seus produtos. 
+Adicionalmente, mostrar que os diversos tipos de violações de acessibilidade trazem problemas reais para usuários de aplicativos pode motivar desenvolvedores a levar em consideração as recomendações dos padrões e guias de acessibilidade enquanto projetam as interfaces de suas aplicações.
+
 
 \section{Metodologia}
 
+%Desta forma, esta proposta de pesquisa visa realizar um estudo amplo e generalizado envolvendo o tema acessibilidade sobre os comentários dos usuários na loja de aplicativos móveis \textit{Google Play Store}, \textit{commits} e \textit{issues} cadastrados pelos desenvolvedores em repositório aberto de código fonte \textit{Github}.
 
+%As justificativas que visam embasar esta investigação pretendem 
+%i) identificar se existe um volume significativo de comentários envolvendo acessibilidade e sua distribuição de acordo com as categorias dos \textit{apps},
+%ii) analisar a diversificação dos comentários de acordo com padrões internacionais de acessibilidade \cite{bbc} e
+%iii) se existe um relacionamento entre a classificação do comentário de acordo com a acessibilidade e à respectiva nota dada ao aplicativo pelo próprio usuário.
+%iv) a correlação quantitativa entre os comentários, commits e issues
 
+%Com este estudo, será possível confirmar a existência de uma pressão dos usuários frente aos desenvolvedores e empresas de aplicativos no que diz respeito às funcionalidades envolvendo acessibilidade.
 
-Será definido um conjunto de aplicações móveis, com a condição inicial de que possuam versões de suas instalações (arquivos de instalação com extensão \textit{apk}) disponíveis no repositório F-Droid\footnote{https://f-droid.org/}. Este requisito permitirá que a pesquisa seja posteriormente evoluída, através de comparações entre os problemas de acessibilidade encontrados em diferentes versões do software, fora do escopo deste projeto. É importante que o levantamento selecione aplicações de diferentes categorias, como por exemplo: navegação, finanças e leitura.
+Os objetivos desta proposta de pesquisa serão alcançados por meio da execução das seguintes atividades: 
+\begin{itemize}
+ \item Seleção de um conjunto de aplicativos móveis cujas avaliações publicadas na loja de aplicativos serão analisadas.
+ \item Obtenção dos comentários e notas atribuídas pelos usuários às aplicações selecionadas anteriormente.
+ \item Seleção de comentários dos usuários que abordam aspectos de acessibilidade da aplicação avaliada. 
+ \item Analise das avaliações de acessibilidade.
+ \item Obtenção dos problemas relatados (\textit{issues}/\textit{bugs}) e alterações (\textit{commit}) no código das aplicações selecionadas por meio do acesso a seus repositórios de código.
+ \item Seleção de problemas (\textit{issues}/\textit{bugs}) e alterações (\textit{commits}) relacionadas à acessibilidade da aplicação.
+ \item Análise dos problemas (\textit{issues}/\textit{bugs}) e alterações (\textit{commits}) selecionadas.
+\end{itemize}
 
-Uma nova ferramenta, em linguagem Python, será implementada para coletar os comentários dos aplicativos e validar a existência de versões do software de instalação no repositório de F-Droid. Esta condição inicial de validação poderá ser excluída se por ventura o conjunto for restrito a determinadas categorias ou mesmo possuam reduzido número de comentários envolvendo acessibilidade.
+A metodologia deste trabalho está detalhada no Capítulo~\ref{chap:proposta}, onde todas as decisões tomadas para a condução deste projeto de pesquisa são apresentadas e justificadas. 
 
-Com base no \textit{W3C} \cite{wcag} e no \textit{BBC Guidelines} \cite{bbc}, serão estabelecidas palavras-chave que, em existindo no comentário, indicarão a possibilidade do mesmo se referir a uma diretriz de acessibilidade.
+%Será definido um conjunto de aplicações móveis, com a condição inicial de que possuam versões de suas instalações (arquivos de instalação com extensão \textit{apk}) disponíveis no repositório F-Droid\footnote{https://f-droid.org/}. Este requisito permitirá que a pesquisa seja posteriormente evoluída, através de comparações entre os problemas de acessibilidade encontrados em diferentes versões do software, fora do escopo deste projeto. É importante que o levantamento selecione aplicações de diferentes categorias, como por exemplo: navegação, finanças e leitura.
 
-Em posse dos comentários e das palavras-chave, será possível iniciar um processo de averiguação manual se os mesmos abordam o tema acessibilidade e qual foi a mensagem transmitida pelo usuário (pedido de correção ou cumprimentos pelo aplicativo).
+%Uma nova ferramenta, em linguagem Python, será implementada para coletar os comentários dos aplicativos e validar a existência de versões do software de instalação no repositório de F-Droid. Esta condição inicial de validação poderá ser excluída se por ventura o conjunto for restrito a determinadas categorias ou mesmo possuam reduzido número de comentários envolvendo acessibilidade.
 
-A mesma metodologia aplicada para a obtenção e avaliação dos comentários será utilizada sobre os textos informativos dos desenvolvedores quando da realização dos \textit{commits} e cadastramento das \textit{issues} no repositório de código fonte aberto \textit{Github}.
+%Com base no \textit{W3C} \cite{wcag} e no \textit{BBC Guidelines} \cite{bbc}, serão estabelecidas palavras-chave que, em existindo no comentário, indicarão a possibilidade do mesmo se referir a uma diretriz de acessibilidade.
 
-Em posse destes dados, será realizado então um estudo que visa identificar uma correlação quantitativa entre as 3 bases de informações: comentários, \textit{commits} e \textit{issues}.
+%Em posse dos comentários e das palavras-chave, será possível iniciar um processo de averiguação manual se os mesmos abordam o tema acessibilidade e qual foi a mensagem transmitida pelo usuário (pedido de correção ou cumprimentos pelo aplicativo).
+
+%A mesma metodologia aplicada para a obtenção e avaliação dos comentários será utilizada sobre os textos informativos dos desenvolvedores quando da realização dos \textit{commits} e cadastramento das \textit{issues} no repositório de código fonte aberto \textit{Github}.
+
+%Em posse destes dados, será realizado então um estudo que visa identificar uma correlação quantitativa entre as 3 bases de informações: comentários, \textit{commits} e \textit{issues}.
 
 
 %Com a intenção de endereçar este tema auxiliando os designers e desenvolvedores de software a criar produtos acessíveis, vários padrões têm sido propostos e amplamente utilizados, principalmente aqueles ligados ao \textit{World Wide Web Consortium - W3C} \cite{wcag} e ao \textit{BBC Guidelines} \cite{bbc}. No âmbito nacional destaca-se o Modelo de Acessibilidade em Governo Eletrônico, ou simplesmente eMAG \cite{emag}. Todavia, é possível observar em estudos que ainda existe uma falta de acessibilidade nas aplicações \cite{smartcities,Eler2018mate,Quispe2018accessibility,Serra2015accessibility,Yan2019currentstatus}.
@@ -108,10 +133,10 @@ Em posse destes dados, será realizado então um estudo que visa identificar uma
 
 
 \section{Organização}
-%O que teremos em qual capítulo
-%Dar um panorama geral do documento
-* * * * * * * * * * * * * * * * * * * * * * 
 
-* * * * * * \underline{A ELABORAR AINDA} * * * * * * *
+Esta proposta de pesquisa está organizada da seguinte forma.
+No Capítulo~\ref{chap:background}, são apresentados os conceitos fundamentais que embasam este projeto de pesquisa.
+No Capítulo~\ref{chap:proposta}, a metodologia deste projeto de pesquisa é apresentada em detalhes. 
+No Capítulo~\ref{chap:atividades}, as atividades já realizadas desta proposta de pesquisa são apresentadas.
 
-* * * * * * * * * * * * * * * * * * * * * * 
+
