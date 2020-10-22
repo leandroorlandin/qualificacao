@@ -12,21 +12,112 @@ As seguintes questões de pesquisa foram definidas para este estudo exploratóri
 
 \section{Seleção de aplicativos móveis}
 
+Os critérios de seleção dos aplicativos para este estudo seguem os critérios definidos na Seção~\ref{sec:selecao}. Portanto, foram selecionadas aplicações da plataforma Android que satisfaziam as seguintes condições: estavam disponíveis na Google Play Store e o código-fonte estava armazenado em um repositório público da plataforma GitHub. Ao todo, apenas 701 aplicativos dentre os mais de 2000  indexados no FDroid\footnote{Dados de julho/2019} satisfizeram esses critérios.
+
+A Tabela~\ref{tab:summarygps} mostra a distribuição de alguns atributos dos aplicativos selecionados por meio de estatística descritiva utilizando o resumo dos cinco números (mínimo amostral, quartil inferior, 
+mediana, quartil superior, máximo amostral), a média e o desvio padrão. 
+A maioria dos aplicativos tem até 9 atividades, mas há aplicativos muito maiores, como o ``Slide for Reddit'', por exemplo, que possui 91 atividades.
+
+\begin{table}[htb]
+%\setlength{\tabcolsep}{0pt}
+
+\centering
+\caption{Statistics on the Google Play Store sample}
+\small
+\label{tab:summarygps}
+\begin{tabular}{lrrrrr}
+\hline
+             & Atividades & Nota & Avaliações     & Instalações  & Comentários \\
+\hline
+Mínimo          & 1          & 0     & 0            & 0         & 0       \\
+Quartil Inferior           & 2          & 4           & 50    & 1K      & 4       \\
+Mediana       & 5          & 4.3   & 130         & 10K     & 22      \\
+Quartil Superior          & 9          & 4.6   & 836        & 50K     & 145     \\
+Máximo          & 92         & 5     & 3.6M    & 100M & 4480    \\
+Média         & 8.16       & 4.16  & 12.4K     & 550K+    & 305.4   \\
+Desvio Padrão        & 10.5       & 0.79  & 151.6K  & 5.7M   & 840.8  \\
+\hline
+\end{tabular}
+\end{table}
+
+A maioria dos aplicativos possui uma boa nota e a maioria foi avaliada por até 836 usuários. O número de avaliações apresentado na tabela é diferente do número de comentários, pois quando um usuário faz uma avaliação ele é obrigado a atribuir uma nota, mas não é obrigado a inserir um comentário. Existem aplicativos que possuem um número muito alto de avaliações, como o Telegram, que possui 3,6 milhões de avaliações. O Telegram também é o aplicativo mais instalado (100 milhoes de istalações).
+Por outro lado, o número de comentários não é muito alto, pois a maioria dos aplicativos recebeu até no máxmio 145 comentários em suas avaliações. O número máximo de revisões desta amostra é de 4480 em razão das limitações da API utilizada. Esta limitação não teve muito impacto neste estudo exploratório porque apenas 15 aplicativos (2\%) possuem mais de 4480 revisões registradas na Google Play Store.
 
 
-We decided to target only Android apps because this platform has the largest market share world wide\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide}. Besides, many app evolution studies are based on Android apps. 
-Therefore, we analysed user reviews extracted from the Google Play Store, the Android official app store.
-%; and issues related to mobile apps from the GitHub platform, a hosting service for version control using Git that offers features such as bug tracking and feature requests, for example.
-%The number of available apps in the Google Play Store is around 2.6 million according to Statista\footnote{https://www.statista.com/statistics/266210/number-of-available-applications-in-the-google-play-store/}.
-%, and by the end of 2018 GitHub had around 96 million repositories created\footnote{https://octoverse.github.com/}, among which nearly 53 thousand had been tagged with the ``android'' keyword. This doesn't mean there is only 53K Android app repositories since not all developers tag their projects.
-To select Android apps to our investigation, we resorted to a well known app repository called FDroid, a catalogue of Free and Open Source Software applications for the Android platform. FDroid indexes many applications that are published in the Google Play Store.
-%and/or has a repository created on GitHub. 
-Although the source code of the analysed apps is not required for our study, in the future we intend to investigate the impact of accessibility reviews on the app evolution by analysing changes in the source code.
+\section{Extração e seleção das avaliações}
 
-FDroid comprises 1867 mobile apps\footnote{Last data extraction on May 22nd, 2019} split into 17 categories. %: System, Theming, Games, Time, Security, Connectivity, Multimedia, Science and Education, Reading, Navigation, Money, Graphics, Writing, Internet, Development, Sports and Health, and Phone and SMS. 
-We excluded all apps under the category Theming and System because they usually have no user interface as they are used to change or install specific resources on the Android environment, such as new virtual keyboard layout or languages, for example. After filtering out such apps, only 1520 apps remained.
-Following, we selected the 701 apps that are also available on the Google Play Store.
-%while the GitHub sample (GHS) contains 1203 apps.
+Uma aplicação escrita na linguagem Python foi escrita para consumir os dados da Google Play Store utilizando a API \emph{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Como mencionado anteriormente, na versão utilizada, esta API só permite o retorno de no máximo 4480 avaliações de cada aplicativo. Além disso, só foram recuperadas avaliações escritas em inglês, que é o idioma padrão definido pela API.
 
 
+A seleção das avaliações que possivelmente estão relacionadas a algum aspecto de acessibilidade da aplicação foi feita por meio da utilização de palavras-chave aplicadas aos comentários dos usuários. 
+Para isso, um conjunto de palavras-chave foi definido com base nas diretrizes de acessibilidade da BBC~\cite{bbc}. Este guia de acessibilidade possui 54 recomendações que são classificadas em onze diferentes categorias: áudio e vídeo (5); design (12); editorial (3); foco (6); formulários (6); imagens (2); links (3); notificações (4); scripts e conteúdo dinâmico (4); estrutura (4); e texto equivalente (5). 
+Este padrão foi selecionado porque ele tem o foco em aplicações móveis e possui exemplos de implementação e de teste de cada recomendação, o que permite compreender melhor os tipos de problemas de acessibilidade tratados no guia. 
+
+Foram definidas 213 palavras-chave com base na análise de cada recomendação do guia. 
+A Tabela~{tab:keywords} mostra exemplos das palalavras-chave utilizadas.
+Note que foram utilizadas variantes das palavras (exemplo: \textit{cannot see} e \textit{can't see}, ou \textit{color} e \textit{colour}, ou \textit{impaired} e \textit{impairement}) para garantir que nenhuma avaliação relevante fosse excluída. Infelizmente, não é possível capturar casos em que as palavras foram escritas com a grafia errada. A lista completa das palavras-chave podem ser vistas em um repositório criado para armazenar dos dados deste estudo\footnote{https://github.com/marceloeler/data-ihc2019}.
+
+
+\begin{table}[!htb]
+\small
+\caption{Examples of the keywords used to identify user reviews that may be related to accessibility}
+\label{tab:keywords}
+\begin{tabular}{|l|l|}
+\hline
+Categorias & Palavras-chave \\
+\hline
+Gerais                    & accessibility, disability, screen reader, Talkback, operable, impaired, 
+\\& impairment                                               \\
+
+\hline
+Áudio/Vídeo             & subtitle, sign language, audio description,
+ transcript, autoplay, mute, \\& volume                                                 \\
+
+\hline
+Design                      & contrast, background color, blind, flicker,
+ visual cue, touch size, \\&overlap, font size, 
+ dark/light mode, eyestrain, seizure, can't see \\
+
+\hline
+Editorial                   & consist. label, language, visual/audio cue                                                                \\
+
+\hline
+Foco                       & focusable, control focus, keyboard trap, 
+ focus order, navigable                        \\
+
+\hline
+Formulários                       & unique label, missing label, content description,
+ input type, \\& input format, focusable                                                                        \\
+
+\hline
+Imagens                      & image of text, hidden text, text alternative,
+background image                                                                                               \\
+
+\hline
+Links                       & link description, unique desc., duplicate
+link, alternative format \\
+
+\hline
+Notificações               & inclusive, haptic, vibration, feedback, alert 
+ dialog, understandable, \\& unfamiliar                                                                             \\
+
+\hline
+Conteúdo dinâmico & animated content, page refresh, automatic  
+refresh, timeout,  adaptable, \\&input sign                                                               \\
+
+\hline
+Estrutura                   & page title, screen title, heading, header                                                                                                         \\
+\hline
+Texto equivalente             & alternative text, non-visual, blind, screen reader, content description  \\
+\hline
+\end{tabular}
+\end{table}
+
+O uso de palavras-chave pode trazer muitos falsos positivos, uma vez que várias palavras utilizadas podem ter conotações diferentes em diferentes contextos. Por isso foi realizada uma análise manual de todas as avaliações que possuíam pelo menos uma palavra-chave definida. Neste estudo, apenas uma pessoa fez a análise manual das avaliações. Além disso, as avaliações não selecionadas por palavras-chave não foram analisadas para saber se alguma delas não foi selecionada pela ausência de alguma palavra-chave relevante e que não foi utilizada. Durante a análise manual, as avaliações confirmadas também foram classificadas em: 
+requisições, quando o usuário reporta algum problema de acessibilidade ou solicita alguma modificação ou adição para tornar a aplicação mais acessível;
+ou elogios, quando o usuário parabeniza o aplicativo pelo seu nível de acessibilidade.
+
+Neste estudo, foram extraídas 214.053 avaliações dos 701 aplicativos da amostra. 
+Dessas avaliações, apenas 5.076 foram pré-selecionadas por meio das palavras-chave. 
+Após a análise manual, o número de avaliações de fato relacionadas à acessibilidade das aplicações foi de 2.663. 
 
