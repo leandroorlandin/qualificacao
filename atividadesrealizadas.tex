@@ -1,0 +1,32 @@
+Este capítulo apresenta um estudo exploratório realizado com o objetivo de verificar a viabilidade e aperfeiçoar a proposta com base nas descobertas e desafios enfrentados durante o processo. Destaca-se que este estudo teve o foco apenas na análise das avaliações de acessibilidade e não explorou as sugestões de modificações e as alterações realizadas no código das aplicações. Todas as decisões de projeto e metodologia adotada estão em conformidade com o que foi descrito no Capítulo~\ref{chap:proposta}.
+Além disso, também são descritas as atividades já realizadas do cronograma proposto.
+
+\section{Questões de pesquisa}
+
+As seguintes questões de pesquisa foram definidas para este estudo exploratório:
+\begin{itemize}
+ \item RQ1 - Quantas avaliações de usuário são relacionadas a acessibilidade e qual é a sua distribuição? 
+ \item RQ2 - Qual é a diversidade de tópicos de acessibilidade abordados nas avaliações dos usuários?
+ \item RQ3 - Quais são as notas associadas às avaliações que abordam aspectos de acessibilidade?  
+\end{itemize}
+
+\section{Seleção de aplicativos móveis}
+
+
+
+We decided to target only Android apps because this platform has the largest market share world wide\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide}. Besides, many app evolution studies are based on Android apps. 
+Therefore, we analysed user reviews extracted from the Google Play Store, the Android official app store.
+%; and issues related to mobile apps from the GitHub platform, a hosting service for version control using Git that offers features such as bug tracking and feature requests, for example.
+%The number of available apps in the Google Play Store is around 2.6 million according to Statista\footnote{https://www.statista.com/statistics/266210/number-of-available-applications-in-the-google-play-store/}.
+%, and by the end of 2018 GitHub had around 96 million repositories created\footnote{https://octoverse.github.com/}, among which nearly 53 thousand had been tagged with the ``android'' keyword. This doesn't mean there is only 53K Android app repositories since not all developers tag their projects.
+To select Android apps to our investigation, we resorted to a well known app repository called FDroid, a catalogue of Free and Open Source Software applications for the Android platform. FDroid indexes many applications that are published in the Google Play Store.
+%and/or has a repository created on GitHub. 
+Although the source code of the analysed apps is not required for our study, in the future we intend to investigate the impact of accessibility reviews on the app evolution by analysing changes in the source code.
+
+FDroid comprises 1867 mobile apps\footnote{Last data extraction on May 22nd, 2019} split into 17 categories. %: System, Theming, Games, Time, Security, Connectivity, Multimedia, Science and Education, Reading, Navigation, Money, Graphics, Writing, Internet, Development, Sports and Health, and Phone and SMS. 
+We excluded all apps under the category Theming and System because they usually have no user interface as they are used to change or install specific resources on the Android environment, such as new virtual keyboard layout or languages, for example. After filtering out such apps, only 1520 apps remained.
+Following, we selected the 701 apps that are also available on the Google Play Store.
+%while the GitHub sample (GHS) contains 1203 apps.
+
+
+
