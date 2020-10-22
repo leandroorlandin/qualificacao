@@ -123,16 +123,37 @@ ou elogios, quando o usuário parabeniza o aplicativo pelo seu nível de acessib
 As avaliações selecionadas com base nas palavras-chave e na validação manual foram analisadas para responder as questões de pesquisa propostas no estudo exploratório. A seguir as respostas às questões de pesquisa são apresentadas em detalhes. 
 
  
-\subsection{RQ1 - Quantas avaliações de usuário são relacionadas a acessibilidade e qual é a sua distribuição? }
+\textbf{RQ1 - Quantas avaliações de usuário são relacionadas a acessibilidade e qual é a sua distribuição? }
 
 No total, foram extraídas 214.053 avaliações completas (com nota e comentário) dos 701 aplicativos da amostra. 
 Dessas avaliações, apenas 5.076 foram pré-selecionadas por meio das palavras-chave. 
-Após a análise manual, o número de avaliações de fato relacionadas à acessibilidade das aplicações foi de 2.663. Dos 701 aplicativos da amostra, apenas 276 possuem pelo menos uma avaliação relacionada a acessibilidade.
+Após a análise manual, o número de avaliações relacionadas à acessibilidade das aplicações foi reduzido para 2.663, o que representa apenas 1.24\% de todas as avaliações completas extraídas.
 
-As 2.663 avaliações de acessibilidade representam apenas 1.24\% de todas as avaliações completas extraídas. A Figura~\ref{fig:distribution-proportion} mostra a distribuição da proporção entre as avaliações de acessibilidade e o número total de avaliações completas de cada aplicativo.
+As avaliações de acessibilidade não estão igualmente distribuídas entre os aplicativos da amostra.
+Só 40\% dos aplicativos (276) possuem pelo menos uma avaliação relacionada a acessibilidade.
+É importante ressaltar que 92\% (197.419) de todas as avaliações extraídas foram realizadas para esses 276 aplicativos, indicando que quanto menos avaliações, menos as chances de haver uma avaliação de acessibilidade. 
+De fato, a correlação de Spearman calculada entre o número de avaliações e o número de avaliações de acessibilidade é de 0.73, o que representa uma forte correlação.
+
+As avaliações de acessibilidade não estão distribuídas igualmente entre os 276 aplicativos.
+Quase 65\% das avaliações de acessibilidade (1.745) estão concentradas em apenas 35 aplicativos. 
+Dentre esses 35 aplicativos, três possuem mais de 100 avaliações de acessibilidade enquanto os demais tem entre 19 e 79 avaliações cada. 
+A Figura~\ref{fig:distributionreviewsapp} mostra a distribuição de avaliações de acessibilidade entre os aplicativos da amostra, com exceção dos 35 aplicativos mencionados anteriormente.
+É possível perceber que a grande maioria de aplicativos tem menos do que nove avaliações de acessibilidade enquanto cerca de metade da amostra tem até três avaliações do tipo.
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.80]{imagens/distribution-accreviews-no-outlier-violin.pdf}
+\caption{Distribuição das avaliações de acessibilidade entre os aplicativos da amostra}
+\label{fig:distributionreviewsapp}
+\end{figure}
+
+
+A Figura~\ref{fig:distribution-proportion} mostra a distribuição da proporção entre as avaliações de acessibilidade e o número total de avaliações completas de cada aplicativo.
 No geral, as avaliações de acessibilidade representam menos de 4\% de todas as reviões feitas para cada aplicativo. Para metade dos aplicativos, elas representam menos de 1.5\%.
 Para uma pequena proporção de aplicativos, as avaliações de acessibilidade representam entre 4\% e 9\% das avaliações recebidas. Existem alguns aplicativos para os quais essa proporção varia entre 10\% e 16\%.
-Há alguns casos em que o número de avaliações completas é tão pequeno que uma simples avaliação de acessibilidade representa uma grande proporção, como é o caso do aplicativo MuPDF mini, Booky McBookface, e GameDealz, cujas proporções são de 50\% (1/2), 40\% (2/5) e 33\% (1/3), respectivamente.
+Há alguns casos em que o número de avaliações completas é tão pequeno que uma simples avaliação de acessibilidade representa uma grande proporção, como é o caso do aplicativo MuPDF mini, Booky McBookface, e GameDealz, cujas proporções são de 50\% (1/2), 40\% (2/5) e 33\% (1/3), respectivamente. 
+\newline 
 
  \begin{figure}[!htb]
  \centering
@@ -142,39 +163,21 @@ Há alguns casos em que o número de avaliações completas é tão pequeno que 
 \end{figure}
 
 
+\textbf{RQ2 - Qual é a diversidade de tópicos de acessibilidade abordados nas avaliações dos usuários?}
 
-The accessibility reviews are not equally distributed through the 701 apps of our sample.
-Only around 40\% of our sample (276 apps) have at least one accessibility review.
-It is noticeable that these 276 apps concentrate 92\% (197,419) of all reviews of the sample,
-which implies that the more the number of reviews, the more the possibility of receiving accessibility reviews. 
-In fact, the Spearman correlation between the number of reviews and the number of reviews related to accessibility is 0.73, which is a strong correlation.
-
-The accessibility reviews are not equally distributed not even through the 276 apps that have accessibility reviews. 
-Nearly 65\% (1,745) of the accessibility reviews are concentrated in 35 outliers,
-where three apps have more than 100 accessibility reviews (140, 163 and 206) each one while the remaining 32 apps have between 19 and 79 reviews each. 
-\autoref{fig:distributionreviewsapp} shows the distribution of accessibility reviews through the 276 apps of our sample. 
-The outliers are not represented in this chart to improve its legibility. 
-This chart shows that 75\% of the apps have less than 9 reviews, and half of them have up to three accessibility reviews.
-
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=0.80]{imagens/distribution-accreviews-no-outlier-violin.pdf}
-\caption{Distribution of accessibility reviews}
-\label{fig:distributionreviewsapp}
-\end{figure}
-
-
-\subsection{RQ2 - Qual é a diversidade de tópicos de acessibilidade abordados nas avaliações dos usuários?}
-
+O objetivo desta questão de pesquisa é entender se os usuários abordam diferentes problemas de acessibilidade em suas avaliações ou se a maioria das avaliações tratam de um conjunto restrito de problemas. 
+A Tabela~\ref{tab:keywords-reviews} mostra o número de avaliações de acessibilidade e aplicativos associado a cada palavra-chave utilizada para selecionar as avaliações. 
+Nesta tabela só estão apresentadas as palavras-chave para as quais pelo menos uma avaliação estava associada. 
 
 \begin{table*}[!htb]
 \centering
-\caption{Number of accessibility reviews by keyword}
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{Número de avaliações e aplicativos por palavra-chave}
 \label{tab:keywords-reviews}
 \begin{tabular}{lrr||lrr||lrr}
 \hline
-keyword          & reviews & apps & keyword          & reviews & apps & keyword            & reviews & apps \\
+palavra          & avals. & apps & palavra          & avals. & apps &  palavra            & avals. & apps \\
 \hline
 dark mode        & 645     & 128  & metadata         & 20      & 12   & grouped            & 3       & 3    \\
 zoom             & 491     & 80   & too bright       & 20      & 8    & seizures           & 3       & 1    \\
@@ -185,8 +188,8 @@ cannot see       & 128     & 57   & voice command    & 14      & 10   & actionab
 accessibility    & 74      & 44   & text-to-speech   & 13      & 9    & audio cue          & 2       & 2    \\
 readable         & 72      & 47   & eyestrain        & 12      & 9    & missing label      & 2       & 2    \\
 change font      & 68      & 44   & strain           & 12      & 9    & navigable          & 2       & 2    \\
-hard to see      & 58      & 41   & background image & 11      & 8    & verbose            & 2       & 2    \\
-background color & 50      & 30   & screen reader    & 11      & 10   & captcha            & 2       & 2    \\
+hard to see      & 58      & 41   & backgrd. image & 11      & 8    & verbose            & 2       & 2    \\
+backgrd. color   & 50      & 30   & screen reader    & 11      & 10   & captcha            & 2       & 2    \\
 light mode       & 42      & 27   & change language  & 10      & 8    & audio description  & 1       & 1    \\
 mute             & 42      & 25   & small widget     & 10      & 9    & container          & 1       & 1    \\
 contrast         & 40      & 31   & stop button      & 10      & 5    & distinguishable    & 1       & 1    \\
@@ -205,70 +208,21 @@ autoplay         & 21      & 17   & visual cue       & 4       & 4    &         
 \end{tabular}
 \end{table*}
 
+Claramente, as avaliações de acessibilidade estão concentradas em um pequeno conjunto de palavras-chave. Seis das palavras-chave mais populares são mencionadas em mais de 100 avaliações de diferentes aplicativos. Por exemplo, a palavra-chave \textit{dark mode} aparece em 628 avaliações de 128 aplicativos distintos, o que representa quase metade da amostra de aplicativos.
 
-The aim of this research question is to understand whether users tend to address only specific issues or a wide range of features related to accessibility. \autoref{tab:keywords-reviews} shows the number of accessibility reviews and apps associated with each keyword we used in our investigation. We only show keywords for which at least one accessibility review was found. We collapsed many keywords (e.g. can't read and cannot read, dark theme and dark mode) for the sake of presentation. 
+Como várias palavras-chave podem estar relacionadas a uma mesma diretriz ou princípio de acessibilidade (exemplo: \textit{dark mode}, \textit{night mode} e \textit{black mode}), 
+as palavras-chave e as respectivas quantidades de avaliações foram agrupadas por tópicos (diretrizes, princípios ou temas) específicos de acessibilidade para facilitar a análise da diversidade de características abordadas.
 
-
-Clearly, accessibility reviews are concentrated on a small set of keywords. Only six keywords are mentioned in more than 100 accessibility reviews each. The most popular keywords are also mentioned in the reviews of several distinct apps. For instance, the keywords associated with ``dark mode'' appears on 628 accessibility reviews and 128 distinct apps, which is almost half of the apps with accessibility reviews. 
-
-
-%can't see -> cannot see
-%difficult to see -> hard to see
-%difficult to read -> hard to see
-%can't read -> cannot read
-%cannot read -> cannot see
-%impossible to see -> cannot see
-%impossible to read -> cannot see
-%dark theme -> dark mode
-%night theme -> dark mode
-%night mode -> dark mode
-%black theme -> dark mode
-%black mode -> dark mode
-%text size -> font size
-%accessible -> accessibility
-%background colour -> background color
-%adjust font -> change font
-%text resize -> change font
-%headache -> migraine
-%auto-play -> autoplay
-%play automatic -> autoplay
-%strain -> eyestrain
-%tiny font -> small font
-%larger font -> change font
-%heading -> header
-%white mode -> light mode
-%light theme -> light mode
-%white theme -> light mode
-%personalization -> customization
-%magnify -> zoom
-%screenreader -> screen reader
-%impairment -> impaired
-%disabled person -> impaired
-%adaptable -> adjustable
-%tooltip -> assistance
-%font sizing -> change font
-%no label -> missing label
-%large font -> change font
-%small font -> change font
-%talkback -> screen reader
-%small button -> small size
-%overlap -> spacing
-
-Solely analysing the frequency of keywords in accessibility reviews is not enough to understand the diversity of features addressed by user reviews. 
-Many keywords are associated with the same accessibility feature or issue. 
-For instance, the keywords dark mode, night mode and black mode belongs to the same accessibility aspect: dark mode. 
-Therefore, we grouped several keywords to represent a single accessibility topic and to make it easy to analyse the results.
-%Moreover, the keyword itself does not evidence to which specific problem the user is referring to. Manual validation helped to make it clear that only reviews related to an accessibility issue or compliment were selected, but in this study we did not specify what was the problem. 
-
+A Tabela~\ref{tab:group-keywords} mostra, para cada tópico de acessibilidade (Coluna 1), o número de avaliações distintas (Coluna 2), a proporção das avaliações em relação às avaliações de acessibilidade (Coluna 3), o número de aplicativos distintos que tiveram uma avaliação relacionada (Coluna 4), e a proporção de aplicativos em relação aos aplicativos que possuem pelo menos uma avaliação (Coluna 5).
+As diretrizes gerais da BBC não foram utilizadas para a organização dos tópicos apresentados na tabela porque eles são muito gerais e podem englobar muitas palavras-chave ao mesmo tempo.
 
 \begin{table}[]
 \centering
-\caption{Number of distinct apps and reviews by grouped features related to accessibility}
-\small
+\caption{Distribuição de avaliações de acessibilidade e aplicativos por tópico de acessibilidade}
 \label{tab:group-keywords}
 \begin{tabular}{lrrrr}
 \hline
-Topic         & Reviews & \% (Reviews) & Apps & \% (Apps) \\
+Tópico         & Avals. & \% (Avals.) & Apps & \% (Apps) \\
 \hline
 Theme/Mode    & 726     & 27\%     & 144  & 52\%  \\
 Zoom          & 506     & 19,0\%     & 83   & 30,1\%  \\
@@ -287,78 +241,40 @@ Language      & 15      & 0,6\%      & 11   & 4,0\%  \\
 \end{tabular}
 \end{table}
 
-\autoref{tab:group-keywords} shows the accessibility topics (Column 1), the number of distinct reviews related to that topic (Column 2), the proportion between the number of reviews and the total number of accessibility reviews (Column 3), the number of distinct apps covered by that topic (Column 4), and the proportion between the number of distinct apps and the total number of apps with accessibility reviews (Column 5).
-We did not use the general guidelines of the BBC standard as accessibility topics because they are coarse grained groups. In that case, most topics or features would fall into the Design guidelines group.
+O tópico \textit{Theme/Mode} é o mais popular entre as avaliações uma vez que 27\% das avaliações de acessibilidade estão relacionadas a este tópico, e quase metade das aplicações tem este tipo de avaliação. 
+Este tópico agrega todas as avaliações que mencionam modos de cores e temas das interfaces dos aplicativos. 
+O segundo tópico mais popular é o relacionado a funcionalidades de \textit{zoom} (19\% das revisões de acessibilidade e 30\% das aplicações).
+O terceiro tópico mais popular está relacionado à personalização do aplicativo, representando 13\% das revisões e relacionados a 23\% dos aplicativos. 
+Diversos outros tópicos estão presentes em um número menor de avaliações de acessibilidade, mas muitos deles estão relacionados com um grande número de aplicativos. 
 
-
-Theme/Mode is the most popular topic among user reviews.
-It aggregates all accessibility reviews that contain keywords related to colour modes and themes. Around 27\% of the accessibility reviews are associated with this specific topic, and nearly half of the apps received at least one review within this topic.
-The second most popular topic is related to zooming features, which have almost 20\% of the accessibility reviews and are associated with the reviews of 30\% of the apps.
-
-Many users request features that enable font and specially font size adjustments. This topic represents almost 10\% of the accessibility reviews and are related to 30\% of the apps.
-Although theme/mode and font size adjustments are features linked to the customization of the app, we created a specific topic to show how many reviews explicitly mention customization features. 
-
-Media and dynamic content control (volume control, pause button, stop button, autoplay, etc) are also within the most popular accessibility topics. It is related to nearly 12\% of the accessibility reviews and 82 apps (30\%). 
-The poor contrast between elements of the foreground and the background make text and visual components difficult to see or read. Most user complaints associated with the keywords ``cannot see'', ``hard to see'', and many others are related to poor contrast. Contrast issues are reported in 8\% of the accessibility reviews and 33\% of the apps.
-
-Accessibility reviews that directly address user's disabilities or aspects of the user interface that can specially impact disabled users are not too popular, but represent 5\% of the accessibility reviews and cover 70 apps (25\%). The keywords accessibility and accessible were mentioned in only 3\% of the reviews and for a small number of apps (16\%).
-The remaining topics, although important for what accessibility is concerned, are not frequent among user reviews.
-
-We also analysed the diversity of accessibility reviews for each individual app to check whether users reported more than one type of issue by app.
-To do so, we analysed how many keywords and accessibility topics were mentioned in the accessibility reviews of each app. 
-\autoref{fig:distributiontopicsapps} shows the distribution of the number of keywords mentioned in the accessibility reviews of each app (left side). 
-For most apps, the accessibility reviews are related to six keywords at most. For half of the apps, this number is reduced to three. Few apps have more than 15 keywords on their accessibility reviews. The Cool Reader app is one of the outliers of the group for it received accessibility reviews containing 36 distinct keywords. As most apps have few accessibility reviews, the diversity of keywords mentioned in accessibility reviews is poor. In fact, the Spearman correlation between the number of keywords and the number of reviews is 0.93, which might imply that the more the number of reviews, the more the diversity of reviews.
+Além da análise de todas as avaliações em conjunto, também foram realizadas análises das diversidades de tópicos de acessibilidade de cada aplicativo isoladamente. 
+Figure~\ref{fig:distributiontopicsapps} mostra a distribuição de palavras-chave encontradas nas avaliações de acessibilidade de cada aplicativo (lado esquerdo). 
+No geral, há pouca diversidade de palavras-chave nas avaliações de cada aplicativo analisado individualmente. 
+A correlação de Spearman entre a diversidade de palavras-chave e o número de avaliações em cada aplicativo é de 0.93, o que indica que a diversidade aumenta conforme aumenta o número de avaliações.
 
 
  \begin{figure}[!htb]
  \centering
 \includegraphics[scale=0.8]{imagens/distribution-topics-keywords.pdf}
-\caption{Distribution of accessibility topics and keywords through the accessibility reviews of each app}
+\caption{Distribuição de tópicos de acessibilidade e palavras-chave nas avaliações de cada aplicativo}
 \label{fig:distributiontopicsapps}
 \end{figure}
 
 
-\autoref{fig:distributiontopicsapps} shows the distribution of the number of accessibility topics mentioned in the accessibility reviews of each app (right side). The fact that the accessibility reviews of an app contains several keywords does not necessarily mean the reviews are diverse for many keywords are related to the same issue or accessibility aspect. Notice that the accessibility reviews are concentrated in two to four accessibility aspects while some apps have accessibility reviews related to almost all accessibility concerns we mentioned. The app Calculator,
-%\footnote{https://play.google.com/store/apps/details?id=com.android2.calculator3}, 
-for example, have accessibility reviews that address 12 of the accessibility topics presented in~\autoref{tab:group-keywords}. Although the Spearman correlation between the number of reviews and the number of topics is strong (0.87), this app has only 60 accessibility reviews. The next most diverse app with respect to accessibility reviews are the Cool Reader app and the Hacker's Keyboard, %\footnote{https://play.google.com/store/apps/details?id=org.coolreader}
-with 11 accessibility topics each app.
+Para a maioria dos aplicativos, as avaliações de acessibilidade estão relacionadas a no máximo seis palavras-chave. 
+Para metade dos aplicativos, no máximo três palavras-chave são mencionadas. 
+Poucos aplicativos tem avaliações que mencionam mais de 15 palavras-chave. 
+Um dos aplicativos que foge ao padrão é o \textit{Cool Reader}, pois em suas avaliações foram encontradas 36 palavras-chave distintas. 
 
 
+A diversidade de palavras-chave não é uma indicação de que diversos aspectos de acessibilidade são tratados uma vez que muitas delas estão relacionadas a um mesmo problema, e por isso uma análise por tópico deve ser realizada. 
+A Tabela~\ref{fig:distributiontopicsapps} mostra a distribuição de tópicos de acessibilidade relacionados a cada avaliação de acessibilidade (lado direito). 
+Note que as avaliações de acessibilidade para a maioria dos aplicativos estão concentradas em dois a quatro tópicos, enquanto alguns aplicativos possuem avaliações associadas a quase todos os tópicos abordados. 
+O aplicativo \textit{Calculator}, por exemplo, tem avaliações de acessibilidade que abordam 12 tópicos de acessbilidade distintos. 
+Embora a correlação de Spearman entre a diversidade de tópicos e o número de avaliações seja de 0.87, o que representa uma correlação forte, este aplicativo possui apenas 60 avaliações.
 
 
-\begin{comment}
-
-We grouped the number of accessibility reviews based on the accessibility guidelines we used to define the keywords~\cite{bbc}. \autoref{tab:guideline-reviews} shows the number of accessibility reviews we found by each guideline. As for the keywords, some accessibility aspects may be related to more than one guideline. The design guideline is by far the most relevant feature in this context since around 79\% of the accessibility reviews refer to it. This is not surprising once the design guideline cover most aspects of the user interface, such as colour choices, widget sizes, font/color/size/content adjustments, spacing, focus, and so forth. The second most relevant guideline is related to Audio and Video, which covers alternatives for audio and visual content, automatic play, metadata, volume control and audio conflict. The remaining guidelines are rarely mentioned by users on their reviews.
-
-\begin{table}[!htb]
-\caption{Number of accessibility reviews by accessibility guideline}
-\label{tab:guidelines-reviews}
-\begin{tabular}{lrr}
-\hline
-Guideline        & Reviews & Proportion   \\
-\hline
-Audio/video      & 303     & 10\% \\
-Design           & 2369    & 79\% \\
-Editorial        & 17      & 1\%  \\
-Focus            & 67      & 2\%  \\
-Forms            & 19      & 1\%  \\
-Images           & 23      & 1\%  \\
-Links            & 0       & 0\%  \\
-Notifications    & 21      & 1\%  \\
-Dynamic content  & 85      & 3\%  \\
-Structure        & 14      & 0\%  \\
-Text equivalents & 67      & 2\% \\
-\hline
-\end{tabular}
-\end{table}
-
-
-As the BBC accessibility guidelines can cover a wide range of accessibility features, we grouped the accessibility reviews by specific issues to understand the most relevant aspects of apps usability. The most mentioned feature in this context is the Adjustability (under the Design guideline) feature. Almost 1300 reviews mention features related to the adaptation of the user interface. By far, the most requested feature is to change colour themes or modes, in which users can choose between blind, dark, night, light, white mode, for instance. The second most requested features is the capacity to change the text, contrast and content size (nearly 600 reviews). Content resizing (e.g. zooming) is also a feature commonly requested by users (488 reviews).
-
-Media control (e.g. pause and stop button, mute, volume control, subtitle) is also a frequent requested features. In many reviews, users also mention they cannot perceive (e.g. keywords cannot see, impossible to see) all elements of the user interface due to several reasons: low contrast ratio, bad colour choices, small fonts and widgets, and so forth. Around 250 reviews mention this problem. Few reviews address issues directly associated with disabled users, where blind users and assistive technologies are mentioned. Some reviews also report flickering screens that may cause migraine, headache and even seizures to epileptic users.\\
-\end{comment}
-
-\subsection{RQ3 - Quais são as notas associadas às avaliações que abordam aspectos de acessibilidade?}
+\textbf{RQ3 - Quais são as notas associadas às avaliações que abordam aspectos de acessibilidade?}
 
 
 Not all reviews have features requests or bug reports. Many users give positive feedback on the apps they like. 
