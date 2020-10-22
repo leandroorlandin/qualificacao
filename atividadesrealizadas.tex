@@ -1,4 +1,7 @@
-Este capítulo apresenta um estudo exploratório realizado com o objetivo de verificar a viabilidade e aperfeiçoar a proposta com base nas descobertas e desafios enfrentados durante o processo. Destaca-se que este estudo teve o foco apenas na análise das avaliações de acessibilidade e não explorou as sugestões de modificações e as alterações realizadas no código das aplicações. Todas as decisões de projeto e metodologia adotada estão em conformidade com o que foi descrito no Capítulo~\ref{chap:proposta}.
+Este capítulo apresenta um estudo exploratório realizado com o objetivo de verificar a viabilidade e aperfeiçoar a proposta com base nas descobertas e desafios enfrentados durante o processo. Destaca-se que este estudo teve o foco apenas na análise das avaliações de acessibilidade e não explorou as sugestões de modificações e as alterações realizadas no código das aplicações. 
+
+
+Todas as decisões de projeto e metodologia adotada estão em conformidade com o que foi descrito no Capítulo~\ref{chap:proposta}.
 Além disso, também são descritas as atividades já realizadas do cronograma proposto.
 
 \section{Questões de pesquisa}
@@ -41,10 +44,12 @@ Desvio Padrão        & 10.5       & 0.79  & 151.6K  & 5.7M   & 840.8  \\
 \end{table}
 
 A maioria dos aplicativos possui uma boa nota e a maioria foi avaliada por até 836 usuários. O número de avaliações apresentado na tabela é diferente do número de comentários, pois quando um usuário faz uma avaliação ele é obrigado a atribuir uma nota, mas não é obrigado a inserir um comentário. Existem aplicativos que possuem um número muito alto de avaliações, como o Telegram, que possui 3,6 milhões de avaliações. O Telegram também é o aplicativo mais instalado (100 milhoes de istalações).
-Por outro lado, o número de comentários não é muito alto, pois a maioria dos aplicativos recebeu até no máxmio 145 comentários em suas avaliações. O número máximo de revisões desta amostra é de 4480 em razão das limitações da API utilizada. Esta limitação não teve muito impacto neste estudo exploratório porque apenas 15 aplicativos (2\%) possuem mais de 4480 revisões registradas na Google Play Store.
+Por outro lado, o número de comentários não é muito alto, pois a maioria dos aplicativos recebeu até no máxmio 145 comentários em suas avaliações. O número máximo de revisões desta amostra é de 4480 em razão das limitações da API utilizada. Esta limitação não teve muito impacto neste estudo exploratório porque apenas 15 aplicativos (2\%) possuem mais de 4480 avaliações registradas na Google Play Store. 
+Para as novas coletas de avaliações serão avaliadas outras alternativas para que não haja limite no número de avaliações retornadas pela API. 
 
 
 \section{Extração e seleção das avaliações}
+\label{sec:extracaoselecao}
 
 Uma aplicação escrita na linguagem Python foi escrita para consumir os dados da Google Play Store utilizando a API \emph{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Como mencionado anteriormente, na versão utilizada, esta API só permite o retorno de no máximo 4480 avaliações de cada aplicativo. Além disso, só foram recuperadas avaliações escritas em inglês, que é o idioma padrão definido pela API.
 
@@ -271,48 +276,51 @@ A diversidade de palavras-chave não é uma indicação de que diversos aspectos
 A Tabela~\ref{fig:distributiontopicsapps} mostra a distribuição de tópicos de acessibilidade relacionados a cada avaliação de acessibilidade (lado direito). 
 Note que as avaliações de acessibilidade para a maioria dos aplicativos estão concentradas em dois a quatro tópicos, enquanto alguns aplicativos possuem avaliações associadas a quase todos os tópicos abordados. 
 O aplicativo \textit{Calculator}, por exemplo, tem avaliações de acessibilidade que abordam 12 tópicos de acessbilidade distintos. 
-Embora a correlação de Spearman entre a diversidade de tópicos e o número de avaliações seja de 0.87, o que representa uma correlação forte, este aplicativo possui apenas 60 avaliações.
+Embora a correlação de Spearman entre a diversidade de tópicos e o número de avaliações seja de 0.87, o que representa uma correlação forte, este aplicativo possui apenas 60 avaliações. \newline
 
 
 \textbf{RQ3 - Quais são as notas associadas às avaliações que abordam aspectos de acessibilidade?}
 
 
-Not all reviews have features requests or bug reports. Many users give positive feedback on the apps they like. 
-During our analysis, a review was marked as a compliment when a positive feedback was given on some accessibility aspect of the app. 
-For instance, the review \textit{``I am totally blind - and Cool Mic is fully compatible with Android's built in TalkBack screenreader. Great work guys!''} is a positive feedback.
-In our sample, around 76\% (2018) of the accessibility reviews are requests or complaints, and 24\% (645) are compliments. 
-The 645 positive feedback on accessibility are distributed over 110 apps, while the requests/complaints reviews are distributed over 262 apps. There are 166 mobile apps that received only requests/complaints and 14 mobile apps that received only compliments.
-
-One of the purposes of this research question is to find out whether users give a bad score when make a request related to accessibility and a good score when praise the app for its accessibility. 
-\autoref{fig:reqcompscores} shows a violin plot to compare the scores obtained for these two samples. Surprisingly, it seems there is no significant difference between these two groups. 
+Durante a validação manual (ver Seção~\ref{sec:extracaoselecao}), as avaliações foram classificadas entre requisições (76\%) ou elogios (24\%).
+As 645 avaliações que elogiam a acessibilidade estão distribuídas por 110 aplicativos, enquanto as requisitções estão distribuídas por 262 aplicativos. 
+Um dos propósitos desta questão de pesquisa é entender se os usuários dão uma nota boa para o aplicativo quanto fazem um elogio e uma nota ruim quanto fazem alguma requisição. 
+A Figura~\ref{fig:reqcompscores} mostra a comparação das notas recebidas pelas avaliações classificadas nessas duas categorias. Aparentemente, não há nenhuma diferença significativa entre as notas atribuídas aos dois grupos.
 
  \begin{figure}[!htb]
  \centering
 \includegraphics[scale=0.8]{imagens/scores-compliment-request.pdf}
-\caption{Comparison between the scores associated with request and compliment reviews}
+\caption{Comparação entre as notas associadas a avaliações que contem requisições com as avaliações que contem elogios à acessibilidade dos aplicativos}
 \label{fig:reqcompscores}
 \end{figure}
 
-In addition, we want to know whether reviews associated with different topics or keywords present lower or greater scores. 
-\autoref{fig:scoresthemes} shows a violin plot to compare the scores of reviews related to specific accessibility topics (cf. \autoref{tab:group-keywords}). In this case, we only plotted data from reviews that contain accessibility requests or complaints. For some accessibility topics, even though users requested features that can make the mobile app more accessible, scores are concentrated in 4 or 5. This is the case of topics such as, for example, ``customization'', ``font'', ``media'', ``size'' and ``theme''. For other topics, it is clear that the reviews scores are concentrated between 2 and 4. The concentration of scores below 3 related to the keywords ``contrast'', ``flickering'' and ``zoom'' indicates that users are more affect by those issues than others.
+Adicionalmente, deseja-se descobrir se avaliações associadas a diferentes palavras-chave ou tópicos de acessibilidade possuem notas maiores ou menores. 
+A Figura~\ref{fig:scoresthemes} mostra as notas associadas a cada tópico de acessibilidade (ver~ \ref{tab:group-keywords}). 
+Neste caso, nós só consideramos avaliações que contem requisições. 
+Para alguns tópicos específicos, mesmo que haja requisição dos usuários para tornar as aplicações mais acessíveis, as notas são, em sua maioria, 4 ou 5 (exemplo: \textit{customization}, \textit{font}, \textit{media}, \textit{size} e \textit{theme}).
+Para outros tópicos, entretanto, as notas estão concentradas em valores mais baixos, de 2 a 4 (exemplo: \textit{contrast}, \textit{flickering} e \textit{zoom}). 
 
- \begin{figure*}[!htb]
+
+ \begin{figure}[!htb]
  \centering
 \includegraphics[scale=0.57]{imagens/score-themes-adapt.pdf}
 \caption{Scores associated with the reviews that address an accessibility topic (cf. \autoref{tab:group-keywords})}
 \label{fig:scoresthemes}
-\end{figure*}
+\end{figure}
 
- \begin{figure*}[!htb]
+A Figura~\ref{fig:scoreskeys} mostra as notas associadas a avaliações que contem algumas das  palavras-chave utilizadas neste estudo. 
+Para algumas palavras-chave, as notas estão concentradas nos valores máximos (\textit{accessibility}, \textit{blind}, \textit{change font}, \textit{dark mode}, \textit{customization}, \textit{haptic}, etc).
+Para outras palavras-chave, as notas são significativamente mais baixas (\textit{cannot see}, \textit{epilepsy}, \textit{flicker}, \textit{migraine}, \textit{readable}, \textit{text reflow} e \textit{too bright}). 
+
+ \begin{figure}[!htb]
  \centering
 \includegraphics[scale=0.42]{imagens/keywords-scores.pdf}
 \caption{Scores associated with the reviews that present a particular keyword}
 \label{fig:scoreskeys}
-\end{figure*}
+\end{figure}
 
-\autoref{fig:scoreskeys} shows violin plots of the scores given by users to accessibility reviews that contain specific keywords. We do not show scores for all keywords due to space limitations. 
-For some keywords, the scores are concentrated on the upper score level. This is the case of ``accessibility'', ``blind'', ``change font'', ``dark mode'', ``customization'', ``haptic'', and so forth. 
-For others, there is a significant number of reviews with lower scores, such as in ``cannot see'', ``epilepsy'', ``flicker'', ``migraine'', ``readable'', ``text reflow'', and ``too bright''. This makes sense once the issues reported on reviews associated with such keywords are real barriers faced by users. Here are some examples of reviews that contain some of these keywords:
+Aparentemente, os usuários só atribuem notas baixas aos aplicativos quando encontram problemas de acessibilidade que são barreiras para a utilização do aplicativo. 
+Alguns exemplos de comentários de usuários encontrados nas avaliações que contem palavras-chave associadas a menores notas estão apresentados a seguir:
 \begin{itemize}
  \item \textit{``Very little contrast. Bad for old eyes.''}
  \item \textit{``Wish it also handled older open doc formats - and that it would reflow text on zoom''}
@@ -322,6 +330,44 @@ For others, there is a significant number of reviews with lower scores, such as 
  \item \textit{``Too bright now on this update now. Can you option to inverted color? (black instead of white). Going to have to uninstall. Sorry.''}  
 \end{itemize}
 
-%Analyse reviews with the lowest scores (score == 1)
+
+
+\section{Discussão}
+
+A maioria das avaliações de acessibilidade encontradas foram feitas por usuários que não necessariamente estavam tratando diretamente da acessibilidade da aplicação. Ainda que essas avaliações mencionem aspectos da aplicação que influenciam a sua acessibilidade, nem todas elas são requisições relacionadas a barreiras encontradas pelos usuários, mas solicitações para melhorar sua experiência de uso. 
+Embora poucos usuários se identifiquem como pessoas com deficiência em suas avaliações, percebe-se que as requisições realizadas por eles são associadas a barreiras reais encontradas durante o uso da aplicação, acompanhadas de notas mais baixas dadas ao aplicativo. 
+
+Em geral, pessoas com deficiência tendem a ser enfáticas sobre as barreiras que as impedem de usar plenamente a apliação. A seguir são apresentados alguns exemplos de comentários feitos por pessoas com deficiência:
+\begin{itemize}
+ \item \textit{``I am legally blind and use Voice Assistant. This app does not interface well with Voice Assistant. It jumps to reading the logo - when trying to get to next group or text to be read. Extremely frustrating! Please fix right away!''}
+  \item \textit{``The layout of the app is miserable for those with visual impairments. Please rethink your layout for those who can't read the tiny clues (even on a tablet!)''}
+  \item \textit{``Some buttons are unlabelled (I've figured out which ones are repeat and shuffle - I still don't think I know what some are). Also the sleep timer is half-way accessible - when I was using the slider to select the minutes it wouldn't read the amount of time I selected (might be the fault of the screen reader though - I'm using the Mobile Accessibility screen reader from Code Factory).''}
+  \item \textit{``Hello. If this app become accessible to Talkback (android screen reader) I wish the best for you developers. Actually we blinds can use telegram only on ios because it is accessible with Voiceover (IOS screen reader). One of my friends needs it because he does not have money to buy an apple product but he has a cheap android device and he needs telegram on it because of their university channel on telegram. If this app becomes accessible I will rate it 5 or more!''}
+  \item \textit{``What are you trying to do? Give someone who has epilepsy a seizure? I almost did. Thanks a lot, idiots''}  
+\end{itemize}
+
+A escassez e a homoneidade das avaliações de acessibilidade associadas às boas notas recebidas em geral pelos aplicativos parece indicar que ou os usuários com deficiência não utilizam essas aplicações ou eles tendem a realizar avaliações. 
+Nos estudos ampliados que serão realizados com base neste estudo exploratório, pretende-se fazer análise separadas de avaliações que claramente foram escritas por pessoas com alguma deficiência ou que enfrentaram uma barreira real para a utilização da aplicação pela falta de acessibilidade. 
+
+Por fim, considerando que as avaliações dos usuários são uma poderosa ferramenta para guiar a evolução de aplicações móveis~\cite{Iacob2014online,Panichella2015how,Palomba2018crowdsourcing}, 
+esses resultados preliminares sugerem que isso não tem sido utilizado apropriadamente para pressionar desenvolvedores e organizações na melhoria da acessibilidade das aplicações.
+
+\section{Publicações}
+
+Os resultados deste estudo exploratório foram divulgados em artigo completo publicado na trilha principal do XVIII Simpósio Brasileiro sobre Fatores Humanos em Sistemas Computacionais (IHC 2019)~\cite{ihc2019}. Destaca-se que este artigo recebeu o prêmio de melhor artigo do IHC 2019. 
+
+\section{Nova seleção de aplicativos}
+
+\textbf{Se der tempo: } É preciso realizar novamente uma seleção de aplicativos (FDroid X GPS X GitHub). O número tente a ser maior porque já passou um ano. Fazer um resumo sobre as informações dos aplicativos.
+
+\section{Novas extrações de avaliações de usuários}
+
+\textbf{Se der tempo: } É preciso extrair as avaliações dos aplicativos selecionados anteriormente. Vamos ver se não existe mais aquela restrição dos 4480 reviews. Fazer um resumo dos números até aqui. 
+
+\section{Extração de sugestões de mudanças e de alterações realizadas nos aplicativos}
+
+\textbf{Se der tempo: } É preciso extrair as issues e commits dos repositórios dos aplicativos selecionados. Fazer um resumo dos números até aqui. 
+
+Depois pensamos nas palavras-chave para selecionar tudo. Vamos primeiro extrair tudo o que der e depois pensar na seleção e rodar todo o estudo de novo com um conjunto ampliado. 
 
 
