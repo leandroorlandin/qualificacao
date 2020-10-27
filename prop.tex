@@ -25,17 +25,17 @@ Este capítulo apresenta as decisões metodológicas deste trabalho, tais como a
 
 Algumas questões de pesquisa gerais e específicas foram identificadas para guiar a execução deste trabalho:
 \begin{itemize}
- \item RQ1 - Os usuários de aplicações móveis mencionam aspectos relacionados a acessibilidade em suas avaliações publicadas nas lojas de aplicativos?
+ \item RQ1 - Os usuários de aplicações móveis mencionam aspectos relacionados à acessibilidade em suas avaliações publicadas nas lojas de aplicativos?
     \begin{itemize}
-       \item RQ1.1 - Quantas avaliações de usuários são relacionadas a acessibilidade e qual é a sua distribuição entre os aplicativos avaliados?
+       \item RQ1.1 - Quantas avaliações de usuários são relacionadas à acessibilidade e qual é a sua distribuição entre as aplicações avaliadas?
        \item RQ1.2 - O quão diverso são os tópicos de acessibilidades mencionados nas avaliações dos usuários?
-        \item RQ1.3 - Qual é a relação entre as questões de acessibilidade abordadas pelos usuários e as notas do aplicativo recebida em cada avaliação?
+        \item RQ1.3 - Qual é a relação entre as questões de acessibilidade abordadas pelos usuários e as notas da aplicação recebida em cada avaliação?
  \end{itemize}
-  \item RQ2 - Os problemas de acessibilidade relatados nas avaliações dos usuários tem impacto na evolução das aplicações móveis?
+  \item RQ2 - Os problemas de acessibilidade relatados nas avaliações dos usuários têm impacto na evolução das aplicações móveis?
         \begin{itemize}
-        \item RQ2.1 - Quantas sugestões de modificações (melhorias, correção de defeitos, novas funções) registradas nos repositórios de código das aplicações estão relacionadas a acessibilidade?
-        \item RQ2.2 - Quantas alterações realizadas nos códigos das aplicações estão relacionadas a acessibilidade?
-        \item RQ2.3 - Qual é a correlação entre as avaliações relacionadas à acessibilidade das aplicações e as sugestões de modificações e alterações efetuadas nos códigos das aplicações.
+        \item RQ2.1 - Quantas sugestões de modificações (melhorias, correção de defeitos, novas funções) registradas nos repositórios de código das aplicações estão relacionadas à acessibilidade?
+        \item RQ2.2 - Quantas alterações realizadas nos códigos das aplicações estão relacionadas à acessibilidade?
+        \item RQ2.3 - Qual é a correlação entre as avaliações relacionadas à acessibilidade das aplicações e às sugestões de modificações e alterações efetuadas nos códigos das aplicações.
         \end{itemize}
 \end{itemize}
 
@@ -44,7 +44,7 @@ Algumas questões de pesquisa gerais e específicas foram identificadas para gui
 \section{Atividades Planejadas e Decisões de Projeto}
 \label{sec:atividadesgerais}
 
-A seguir estão listadas as atividades propostas para atingir os objetivos deste projeto de pesquisa e responder às questões de pesquisa levantadas neste trabalho.
+A seguir estão listadas as atividades propostas para atingir os objetivos deste projeto de pesquisa e responder às questões levantadas neste trabalho.
 
 \subsection{Revisão Bibliográfica}
 
@@ -53,15 +53,15 @@ Inicialmente, será realizada uma etapa de estudos envolvendo os principais conc
 \subsection{Seleção de aplicativos móveis}
 \label{sec:selecaoapps}
 
-È necessário selecionar um conjunto de aplicativos para a realização da investigação proposta. Alguns critérios foram definidos para a realização desta seleção: os aplicativos selecionados devem estar publicados em uma loja de aplicativos; as avaliações dos aplicativos realizadas pelos usuários devem ser públicas e possíveis de serem acessadas; e os aplicativos devem ter código-aberto e devem estar publicados em repositórios de acesso público.
+É necessário selecionar um conjunto de aplicações para a realização da investigação proposta. Alguns critérios foram definidos para esta seleção: as aplicações selecionadas devem estar publicadas em uma loja de aplicativos; as avaliações das aplicações realizadas pelos usuários devem ser públicas e possíveis de serem acessadas; e as aplicações devem ter código-aberto e devem estar publicadas em repositórios de acesso público.
 
-Considerando os critérios de seleção, decidiu-se selecionar aplicativos da plataforma por três razões principais: 
-esta plataforme possui o maior mercado de aplicativos do mundo\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide}; 
-a maioria dos estudos sobre evolução de aplicativos móveis são relacionados a esta plataforma; 
-e o acesso aos dados da loja de aplicativos oficial (Google Play Store) é gratuito e existem ferramentas diponíveis para extrair as informações necessárias para a realização deste projeto. 
+Considerando os critérios de seleção, decidiu-se selecionar aplicações da plataforma por três razões principais: 
+esta plataforma possui o maior mercado de aplicações móveis do mundo\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide}; 
+a maioria dos estudos sobre evolução de aplicações móveis são relacionados a esta plataforma; 
+e o acesso aos dados da loja de aplicativos oficial (Google Play Store) é gratuito e existem ferramentas disponíveis para extrair as informações necessárias para a realização deste projeto. 
 
-Além disso, optou-se por analisar os aplicativos indexados no FDroid\footnote{https://www.f-droid.org/}, um repositório que mantem um catálogo de aplicativos gratuitos e de código aberto. Este repositório possui mais de 3168 aplicativos indexados\footnote{Dados extraídos em 23/10/2020} das mais diversas categorias, tamanhos, complexidades e popularidade, cujas informações podem ser acessadas por meio de um arquivo XML fornecido pela plataforma\footnote{https://f-droid.org/repo/index.xml}. 
-Infelizmente, nem todos os aplicativos indexados nesta plataforma estão publicados na Google Play Store. Portanto, a seleção dos aplicativos deve incluir apenas aqueles que estão publicados na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicativos cujos códigos-fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (Application Programming Interface) para a consulta de informações sobre sugestões de modificações e modificações realizadas no código das aplicações.
+Além disso, optou-se por analisar as aplicações indexadas no FDroid\footnote{https://www.f-droid.org/}, um repositório que mantem um catálogo de aplicações gratuitas e de código aberto. Este repositório possui mais de 3168 aplicações indexadas\footnote{Dados extraídos em 23/10/2020} das mais diversas categorias, tamanhos, complexidades e popularidade, cujas informações podem ser acessadas por meio de um arquivo XML fornecido pela própria plataforma\footnote{https://f-droid.org/repo/index.xml}. 
+Infelizmente, nem todos as aplicações indexadas nesta plataforma estão publicadas na Google Play Store. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicações cujos códigos-fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (Application Programming Interface) para a consulta de informações sobre sugestões de alterações e modificações realizadas no código das aplicações.
 
 
 \subsection{Extração das avaliações dos usuários}
