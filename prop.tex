@@ -33,7 +33,7 @@ Algumas questões de pesquisa gerais e específicas foram identificadas para gui
  \end{itemize}
   \item RQ2 - Os problemas de acessibilidade relatados nas avaliações dos usuários têm impacto na evolução das aplicações móveis?
         \begin{itemize}
-        \item RQ2.1 - Quantas sugestões de modificações (melhorias, correção de defeitos, novas funções) registradas nos repositórios de código das aplicações estão relacionadas à acessibilidade?
+        \item RQ2.1 - Quantas solicitações de modificações (melhorias, correção de defeitos, novas funções) registradas nos repositórios de código das aplicações estão relacionadas à acessibilidade?
         \item RQ2.2 - Quantas alterações realizadas nos códigos das aplicações estão relacionadas à acessibilidade?
         \item RQ2.3 - Qual é a correlação entre as avaliações relacionadas à acessibilidade das aplicações e às sugestões de modificações e alterações efetuadas nos códigos das aplicações.
         \end{itemize}
@@ -61,7 +61,7 @@ a maioria dos estudos sobre evolução de aplicações móveis são relacionados
 e o acesso aos dados da loja de aplicativos oficial (Google Play Store) é gratuito e existem ferramentas disponíveis para extrair as informações necessárias para a realização deste projeto. 
 
 Além disso, optou-se por analisar as aplicações indexadas no FDroid\footnote{https://www.f-droid.org/}, um repositório que mantem um catálogo de aplicações gratuitas e de código aberto. Este repositório possui mais de 3168 aplicações indexadas\footnote{Dados extraídos em 23/10/2020} das mais diversas categorias, tamanhos, complexidades e popularidade, cujas informações podem ser acessadas por meio de um arquivo XML fornecido pela própria plataforma\footnote{https://f-droid.org/repo/index.xml}. 
-Infelizmente, nem todos as aplicações indexadas nesta plataforma estão publicadas na Google Play Store. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicações cujos códigos-fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (Application Programming Interface) para a consulta de informações sobre sugestões de alterações e modificações realizadas no código das aplicações.
+Infelizmente, nem todos as aplicações indexadas nesta plataforma estão publicadas na Google Play Store. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicações cujos códigos-fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (Application Programming Interface) para a consulta de informações sobre solicitações de alterações e modificações realizadas no código das aplicações.
 
 
 \subsection{Extração das avaliações dos usuários}
@@ -73,30 +73,30 @@ A Google Play Store não oferece uma API pela qual se pode extrair os detalhes d
 
 Para extrair as avaliações da loja de aplicativos é preciso construir um software que utilize a API  \textit{google-pLay-api} a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
 
-\subsection{Extração das sugestões de modificações e alterações de código}
+\subsection{Extração das solicitações de modificações e alterações de código}
 \label{sec:extracaomodificacoes}
 
-Esta atividade consiste em obter as sugestões de modificações e as alterações realizadas no código das aplicações selecionadas para este estudo. 
-No GitHub, as sugestões de modificações (\textit{issues}) podem ser criadas pelos próprios desenvolvedores ou qualquer outro usuário da plataforma.
+Esta atividade consiste em obter as solicitações de modificações e as alterações realizadas no código das aplicações selecionadas para este estudo. 
+No GitHub, as solicitações de modificações (\textit{issues}) podem ser criadas pelos próprios desenvolvedores ou qualquer outro usuário da plataforma.
 As alterações (\textit{commits}) são realizadas pelos desenvolvedores/colaboradores do projeto e podem conter diversas informações, tais como rótulos, descrição das alterações efetuadas e as modificações efetuadas no código (inserção, deleção, etc). 
 
-O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os desenvolvedores utilizarem para extrair informações dos repositórios hospedados na plataforma. Portanto, para obter as informações necessários para este estudo é preciso construir um software capaz de utilizar a API fornecida pelo GitHub  para coletar e organizar as informações das sugestões de modificações e alterações realizadas no código das aplicações. 
+O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os desenvolvedores utilizarem para extrair informações dos repositórios hospedados na plataforma. Portanto, para obter as informações necessários para este estudo é preciso construir um software capaz de utilizar a API fornecida pelo GitHub  para coletar e organizar as informações das solicitações de modificações e alterações realizadas no código das aplicações. 
 
-\subsection{Seleção de avaliações, sugestões de modificações e alterações}
+\subsection{Seleção de avaliações, solicitações de modificações e alterações}
 \label{sec:selecao}
 
-Uma das atividades mais importantes deste projeto de pesquisa é a identificação das avaliações, das sugestões de modificações e das alterações realizadas e que estão relacionadas à acessibilidade das aplicações selecionadas.
+Uma das atividades mais importantes deste projeto de pesquisa é a identificação das avaliações, das solicitações de modificações e das alterações realizadas e que estão relacionadas à acessibilidade das aplicações selecionadas.
 Para a realização desta atividade, decidiu-se fazer a seleção bom base em duas etapas: 
 fazer um filtro dos itens analisados por meio de palavras-chave; e realizar análise manual para eliminar os falso-positivos. 
 O conjunto de palavras-chave será criado com base na análise das diretrizes de acessibilidade de padrões nacionais e internacionais de acessibilidade.
 A análise manual será feita pelo autor desta proposta, pelo orientador, e por outros colaboradores do mesmo grupo de pesquisa. 
 
 
-\subsection{Análise das avaliações, sugestões de modificações e alterações}
+\subsection{Análise das avaliações, solicitações de modificações e alterações}
 \label{sec:analise}
 
 Após a seleção por meio de palavras-chave e análise manual, 
-as avaliações dos usuários, as sugestões de modificações e as alterações realizadas nos aplicativos serão analisadas para responder as questões de pesquisa definidas na Seção~\ref{sec:questoespesquisa}.
+as avaliações dos usuários, as solicitações de modificações e as alterações realizadas nos aplicativos serão analisadas para responder as questões de pesquisa definidas na Seção~\ref{sec:questoespesquisa}.
 
 
 %\begin{enumerate}

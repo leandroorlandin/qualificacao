@@ -1,4 +1,4 @@
-Este capítulo apresenta um estudo exploratório realizado com o objetivo de verificar a viabilidade e aperfeiçoar a proposta com base nas descobertas e desafios enfrentados durante o processo. Destaca-se que este estudo teve o foco apenas na análise das avaliações de acessibilidade e não explorou as sugestões de modificações e as alterações realizadas no código das aplicações. 
+Este capítulo apresenta um estudo exploratório realizado com o objetivo de verificar a viabilidade e aperfeiçoar a proposta com base nas descobertas e desafios enfrentados durante o processo. Destaca-se que este estudo teve o foco apenas na análise das avaliações de acessibilidade e não explorou as solicitações de modificações e as alterações realizadas no código das aplicações. 
 
 
 Todas as decisões de projeto e metodologia adotada estão em conformidade com o que foi descrito no Capítulo~\ref{chap:proposta}.
@@ -356,18 +356,30 @@ esses resultados preliminares sugerem que isso não tem sido utilizado apropriad
 
 Os resultados deste estudo exploratório foram divulgados em artigo completo publicado na trilha principal do XVIII Simpósio Brasileiro sobre Fatores Humanos em Sistemas Computacionais (IHC 2019)~\cite{ihc2019}. Destaca-se que este artigo recebeu o prêmio de melhor artigo do IHC 2019. 
 
-\section{Nova seleção de aplicativos}
+\section{Novas configurações de estudo e atividades realizadas}
 
-\textbf{Se der tempo: } É preciso realizar novamente uma seleção de aplicativos (FDroid X GPS X GitHub). O número tente a ser maior porque já passou um ano. Fazer um resumo sobre as informações dos aplicativos.
+O planejamento e os resultados do estudo apresentado anteriormente foram importantes para validar a existência de avaliações que tratam da acessibilidade dos aplicativos, ainda que de forma escassa, e o processo adotado para seleção e análise dos comentários escritos pelos usuários. 
+Para a continuação deste trabalho de mestrado, pretende-se fazer um estudo estendido e aperfeiçoado para obter resultados mais robustos. A seguir estão listadas as diferenças do estudo anterior e dos estudos que serão executados em seguida:
+\begin{itemize}
+ \item Os aplicativos foram selecionados com base no estado dos repositórios em junho de 2019. Uma nova análise será realizada para atualizar alista de aplicativos.
+ \item Coleta de avaliações da Google Play Store: serão coletadas as avaliações atualizadas de todos os aplicativos selecionados.
+ \item Quantidade de avaliações coletada: no estudo exploratório apresentado havia o limite de extração de 4480 avaliações por aplicativo, mas as atualizações realizadas na API utiliza permitem agora extrair todas as avaliaões.
+ \item Identificação de avaliações de acessibilidade: serão utilizadas palavras-chave e avaliação manual. Entretanto, diferentemente do estudo exploratório, as palavras-chave serão definidas com base na análise do WCAG 2.1 e não mais com base nas diretrizes da BBC. Essa decisão foi tomada porque o WCAG é um padrão utilizado internacionalmente e é utilizado como referência em muitas leis que promovem o desenvolvimento de software e conteúdo digital acessível. 
+ \item Coleta de solicitações de mudanças e alterações realizadas nos repositórios de código e cruzamento de informações com as avaliações coletadas e avaliadas.
+ 
+\end{itemize}
 
-\section{Novas extrações de avaliações de usuários}
 
-\textbf{Se der tempo: } É preciso extrair as avaliações dos aplicativos selecionados anteriormente. Vamos ver se não existe mais aquela restrição dos 4480 reviews. Fazer um resumo dos números até aqui. 
+Algumas dessas atividades já foram realizadas e apresenta-se os resultados como segue:
+\begin{itemize}
+ \item \textbf{Amostra de aplicativos: } foi realizada uma seleção de aplicativos com base nos critérios definidos na Seção~\ref{sec:selecaoapps}: os aplicativos precisam estar indexados no repositório FDroid, estar disponíveis na Google Play Store e ter código-fonte armazenado em repositório público no GitHub. Além disso, os aplicativos selecionados devem ter pelo menos uma avaliação completa (nota e comentário) registrada na Google Play Store. Ao todo, 921 aplicativos foram selecionados para este estudo\footnote{Com base em dados coletados em 23 de outubro de 2020}.
+ 
+ \item \textbf{Extração de avaliações: } foram extraídas as avaliações completas (nota e comentário) dos 921 aplicativos da amostra. Ao todo, foram extraídas 1,5 milhão de avaliações. Apesar do grande número de avaliações, mais de 80\% das aplicações possui menos do que 1000 avaliações, e poucas aplicações possuem mais do que 100 mil.
+ 
+ \item \textbf{Extração de solicitações de mudanças (\textit{issues}) e alterações (\textit{commits}): } os repositórios de código dos aplicativos da amostra foram analisado e foram extraídas as solicitações de mudanças e alterações realizadas no código. Ao todo, foram extraídas aproximadamente 41 mil solicitações de mudanças e 1,1 milhão de alterações.
 
-\section{Extração de sugestões de mudanças e de alterações realizadas nos aplicativos}
+  
+\end{itemize}
 
-\textbf{Se der tempo: } É preciso extrair as issues e commits dos repositórios dos aplicativos selecionados. Fazer um resumo dos números até aqui. 
-
-Depois pensamos nas palavras-chave para selecionar tudo. Vamos primeiro extrair tudo o que der e depois pensar na seleção e rodar todo o estudo de novo com um conjunto ampliado. 
 
 
