@@ -1,23 +1,23 @@
 
 
-O objetivo geral deste trabalho de mestrado é descobrir se questões relacionadas à acessibilidade são tratadas pelos usuários de aplicativos móveis em avaliações submetidas às lojas de aplicativos,
-e se tais avaliações são levadas em consideração pelos desenvolvedores e organizações responsáveis pela manutenção e evolução das aplicações. 
+O objetivo geral deste trabalho de mestrado é descobrir se questões relacionadas à acessibilidade são tratadas pelos usuários de aplicações móveis em avaliações submetidas às lojas de aplicativos,
+e se tais avaliações são levadas em consideração pelos desenvolvedores e organizações responsáveis pela manutenção e evolução destas aplicações.
 
 
+%IMPORTANTE!!!!!!
 \textbf{Escrever um parágrafo dizendo que tipo de pesquisa foi adotado neste projeto (exploratória, experimental, estudo de caso, bibliográfica, quantitativa, qualitativa, etc????).}
+%Poderia ser inserido o texto abaixo, finalizando que se trata de uma pesquisa exploratória qualitativa:
+%\section{Estudo Bibliográfico}
+%O início da pesquisa se dá através de um estudo bibliográfico envolvendo os guias de padrões para acessibilidade internacionais da BBC \cite{bbc} e W3C \cite{wcag}, e suas influências no padrão brasileiro eMAG \cite{emag}. Esta etapa provê o embasamento crítico para avaliar os comentários dos usuários, bem como os \textit{commits} e \textit{issues} dos desenvolvedores.
+
+%Além disso, foram analisados artigos envolvendo comentários. Estes estudos apresentam diferentes formas de abordar o tema, considerado como um rico conjunto de informações aos desenvolvedores. Com o advento das lojas de aplicativos, a facilidade em disponibilizar novas versões do software tornou o planejamento das entregas um importante pilar no processo de engenharia de software, apoiado no modelo Ágil de Entregas \cite{manifestoagil}. São encontrados na literatura tanto estudos envolvendo a utilização de comentários de usuários como fonte de requisitos para versões futuras de \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews}, quanto avaliações de diferentes formas para classificá-los\cite{Panichella2015how,Pelloni2018becloma,Sorbo2017surf}, porém nenhum estudo relacionou estes três itens (comentários, \textit{commits} e \textit{issues}).
+
 
 Este capítulo apresenta as decisões metodológicas deste trabalho, tais como as questões de pesquisa, as atividades previstas e as configurações dos estudos definidos para atingir os objetivos propostos neste trabalho. 
 
 %Os comentários dos usuários nas lojas de aplicativos são uma importante fonte de informações para os desenvolvedores, apresentando um vasto conjunto de possíveis requisitos a serem abordados nas versões posteriores dos \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews,Palompa2018crowdsourcing,Pelloni2018becloma}. Além disso, mesmo aplicações de grandes corporações possuem falhas de acessibilidade \cite{Eler2018mate}. Considerando o cenário apresentado, esta proposta de pesquisa visa investigar o relacionamento dos comentários dos usuários, \textit{commits} e \textit{issues} dos desenvolvedores envolvendo o tema acessibilidade, bem como o quão relevante é este ponto de vista frente ao volume total. O objetivo principal desta pesquisa é a apresentação de um panorama geral sobre esta perspectiva.
 
 %A pesquisa visa estender o estudo piloto \cite{ihc2019} que identificou baixo índice de comentários envolvendo este tema, em torno de 1,2\%, em conjunto específico de 701 \textit{apps}. Nessa ocasião foram analisados de forma manual aproximadamente 5000 comentários, considerando apenas as aplicações que possuem código fonte aberto no Github \footnote{https://github.com/} e com versões anteriores de instalação disponíveis no repositório F-Droid\footnote{https://f-droid.org/}.
-
-
-%\section{Estudo Bibliográfico}
-%O início da pesquisa se dá através de um estudo bibliográfico envolvendo os guias de padrões para acessibilidade internacionais da BBC \cite{bbc} e W3C \cite{wcag}, e suas influências no padrão brasileiro eMAG \cite{emag}. Esta etapa provê o embasamento crítico para avaliar os comentários dos usuários, bem como os \textit{commits} e \textit{issues} dos desenvolvedores.
-
-%Além disso, foram analisados artigos envolvendo comentários. Estes estudos apresentam diferentes formas de abordar o tema, considerado como um rico conjunto de informações aos desenvolvedores. Com o advento das lojas de aplicativos, a facilidade em disponibilizar novas versões do software tornou o planejamento das entregas um importante pilar no processo de engenharia de software, apoiado no modelo Ágil de Entregas \cite{manifestoagil}. São encontrados na literatura tanto estudos envolvendo a utilização de comentários de usuários como fonte de requisitos para versões futuras de \textit{apps} \cite{Ciurumelea2017analyzing,Li2018MobileAE,Ortega2015thesis,Palomba2015userreviews}, quanto avaliações de diferentes formas para classificá-los\cite{Panichella2015how,Pelloni2018becloma,Sorbo2017surf}, porém nenhum estudo relacionou estes três itens (comentários, \textit{commits} e \textit{issues}).
-
 
 
 \section{Questões de Pesquisa}
@@ -29,13 +29,13 @@ Algumas questões de pesquisa gerais e específicas foram identificadas para gui
     \begin{itemize}
        \item RQ1.1 - Quantas avaliações de usuários são relacionadas à acessibilidade e qual é a sua distribuição entre as aplicações avaliadas?
        \item RQ1.2 - O quão diverso são os tópicos de acessibilidades mencionados nas avaliações dos usuários?
-        \item RQ1.3 - Qual é a relação entre as questões de acessibilidade abordadas pelos usuários e as notas da aplicação recebida em cada avaliação?
+       \item RQ1.3 - Qual é a relação entre as questões de acessibilidade abordadas pelos usuários e as notas da aplicação recebidas em cada avaliação?
  \end{itemize}
   \item RQ2 - Os problemas de acessibilidade relatados nas avaliações dos usuários têm impacto na evolução das aplicações móveis?
         \begin{itemize}
-        \item RQ2.1 - Quantas solicitações de modificações (melhorias, correção de defeitos, novas funções) registradas nos repositórios de código das aplicações estão relacionadas à acessibilidade?
+        \item RQ2.1 - Quantas solicitações de modificações (melhorias, correções de defeitos ou novas funções) registradas nos repositórios de código das aplicações estão relacionadas à acessibilidade?
         \item RQ2.2 - Quantas alterações realizadas nos códigos das aplicações estão relacionadas à acessibilidade?
-        \item RQ2.3 - Qual é a correlação entre as avaliações relacionadas à acessibilidade das aplicações e às sugestões de modificações e alterações efetuadas nos códigos das aplicações.
+        \item RQ2.3 - Qual é a correlação entre as avaliações relacionadas à acessibilidade das aplicações e as sugestões de modificações e alterações efetuadas nos códigos das aplicações.
         \end{itemize}
 \end{itemize}
 
@@ -44,7 +44,7 @@ Algumas questões de pesquisa gerais e específicas foram identificadas para gui
 \section{Atividades Planejadas e Decisões de Projeto}
 \label{sec:atividadesgerais}
 
-A seguir estão listadas as atividades propostas para atingir os objetivos deste projeto de pesquisa e responder às questões levantadas neste trabalho.
+A seguir estão listadas as atividades propostas para atingir os objetivos deste projeto de pesquisa e responder as questões levantadas neste trabalho.
 
 \subsection{Revisão Bibliográfica}
 
@@ -53,15 +53,15 @@ Inicialmente, será realizada uma etapa de estudos envolvendo os principais conc
 \subsection{Seleção de aplicativos móveis}
 \label{sec:selecaoapps}
 
-É necessário selecionar um conjunto de aplicações para a realização da investigação proposta. Alguns critérios foram definidos para esta seleção: as aplicações selecionadas devem estar publicadas em uma loja de aplicativos; as avaliações das aplicações realizadas pelos usuários devem ser públicas e possíveis de serem acessadas; e as aplicações devem ter código-aberto e devem estar publicadas em repositórios de acesso público.
+É necessário selecionar um conjunto de aplicações para a realização da investigação proposta. Alguns critérios foram definidos para esta seleção: as aplicações selecionadas devem estar publicadas em uma loja de aplicativos; as avaliações das aplicações realizadas pelos usuários devem ser públicas e possíveis de serem acessadas; e as aplicações devem ter código-aberto e devem estar disponíveis em repositórios de acesso público.
 
-Considerando os critérios de seleção, decidiu-se selecionar aplicações da plataforma por três razões principais: 
+Considerando os critérios de seleção, decidiu-se eleger aplicações da plataforma Android por três razões principais: 
 esta plataforma possui o maior mercado de aplicações móveis do mundo\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide}; 
 a maioria dos estudos sobre evolução de aplicações móveis são relacionados a esta plataforma; 
-e o acesso aos dados da loja de aplicativos oficial (Google Play Store) é gratuito e existem ferramentas disponíveis para extrair as informações necessárias para a realização deste projeto. 
+e o acesso aos dados da loja de aplicativos oficial (\textit{Google Play Store}) é gratuito e existem ferramentas disponíveis para extrair as informações necessárias para a realização deste projeto.
 
-Além disso, optou-se por analisar as aplicações indexadas no FDroid\footnote{https://www.f-droid.org/}, um repositório que mantem um catálogo de aplicações gratuitas e de código aberto. Este repositório possui mais de 3168 aplicações indexadas\footnote{Dados extraídos em 23/10/2020} das mais diversas categorias, tamanhos, complexidades e popularidade, cujas informações podem ser acessadas por meio de um arquivo XML fornecido pela própria plataforma\footnote{https://f-droid.org/repo/index.xml}. 
-Infelizmente, nem todos as aplicações indexadas nesta plataforma estão publicadas na Google Play Store. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicações cujos códigos-fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (Application Programming Interface) para a consulta de informações sobre solicitações de alterações e modificações realizadas no código das aplicações.
+Além disso, optou-se por analisar as aplicações indexadas no FDroid\footnote{https://www.f-droid.org/}, um repositório que mantém um catálogo de aplicações gratuitas e de código fonte aberto. Este repositório possui mais de 3168 aplicações indexadas\footnote{Dados extraídos em 23/10/2020} das mais diversas categorias, tamanhos, complexidades e popularidade, cujas informações podem ser acessadas por meio de um arquivo XML fornecido pela própria plataforma\footnote{https://f-droid.org/repo/index.xml}.
+Infelizmente, nem todas as aplicações indexadas nesta plataforma estão publicadas na \textit{Google Play Store}. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicações cujos códigos fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (\textit{Application Programming Interface}) para a consulta de informações sobre solicitações de alterações e modificações realizadas no código das aplicações.
 
 
 \subsection{Extração das avaliações dos usuários}
@@ -69,9 +69,9 @@ Infelizmente, nem todos as aplicações indexadas nesta plataforma estão public
 
 Esta atividade consiste em obter as avaliações publicadas pelos usuários referentes às aplicações selecionadas. As avaliações consistem em uma nota atribuída para o aplicativo, um título para a avaliação (opcional) e um comentário escrito pelo usuário (opcional). As avaliações também podem conter comentários ou respostas para os usuários escritas pelos desenvolvedores ou pelas organizações responsáveis pela publicação do aplicativo nas lojas oficiais. 
 
-A Google Play Store não oferece uma API pela qual se pode extrair os detalhes das avaliações dos usuários, portanto decidiu-se utilizar uma API não oficial chamada \textit{google-pLay-api}\footnote{https://github.com/facundoolano/google-play-api}. Esta API foi construída com base em uma biblioteca que percorre automaticamente as páginas (\textit{crawler}) da loja de aplicativos e transforma as informações coletadas em dados que podem ser consumidos por meio de uma API.
+A \textit{Google Play Store} não oferece uma API pela qual se pode extrair os detalhes das avaliações dos usuários, portanto decidiu-se utilizar uma API não oficial chamada \textit{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Esta API foi construída com base em uma biblioteca que percorre automaticamente as páginas (\textit{crawler}) da loja de aplicativos e transforma as informações coletadas em dados que podem ser consumidos por meio de uma API.
 
-Para extrair as avaliações da loja de aplicativos é preciso construir um software que utilize a API  \textit{google-pLay-api} a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
+Para extrair as avaliações da loja de aplicativos é preciso construir um software que utilize a API \textit{google-pLay-api}, a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
 
 \subsection{Extração das solicitações de modificações e alterações de código}
 \label{sec:extracaomodificacoes}
@@ -85,8 +85,8 @@ O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os dese
 \subsection{Seleção de avaliações, solicitações de modificações e alterações}
 \label{sec:selecao}
 
-Uma das atividades mais importantes deste projeto de pesquisa é a identificação das avaliações, das solicitações de modificações e das alterações realizadas e que estão relacionadas à acessibilidade das aplicações selecionadas.
-Para a realização desta atividade, decidiu-se fazer a seleção bom base em duas etapas: 
+Uma das atividades mais importantes deste projeto de pesquisa é a identificação das avaliações, das solicitações de modificações e das alterações realizadas, que estão relacionadas à acessibilidade das aplicações selecionadas.
+Para a realização desta atividade, decidiu-se fazer a seleção com base em duas etapas: 
 fazer um filtro dos itens analisados por meio de palavras-chave; e realizar análise manual para eliminar os falso-positivos. 
 O conjunto de palavras-chave será criado com base na análise das diretrizes de acessibilidade de padrões nacionais e internacionais de acessibilidade.
 A análise manual será feita pelo autor desta proposta, pelo orientador, e por outros colaboradores do mesmo grupo de pesquisa. 
@@ -115,7 +115,7 @@ as avaliações dos usuários, as solicitações de modificações e as alteraç
 
 \section{Cronograma}
 
-A Tabela~\ref{tab:cronograma} apresenta as atividades e o cronograma previsto para a realização deste projeto de pesquisa. Algumas atividades apresentadas referem-se ao projeto de pesquisa em si e são relacionadas às tarefas descritas na Seção~\ref{sec:atividadesgerais}, e algumas atividades referem-se a etapas do curso de mestrado. A atividade denominada \emph{Estudo Piloto} refere-se a um estudo exploratório realizado para investigar a viabilidade do projeto proposto. Os detalhes desse estudo estão apresentados no próximo capítulo desta proposta.
+A Tabela~\ref{tab:cronograma} apresenta as atividades e o cronograma previstos para a realização deste projeto de pesquisa. Algumas atividades apresentadas referem-se ao projeto de pesquisa em si e são relacionadas às tarefas descritas na Seção~\ref{sec:atividadesgerais}, e algumas atividades referem-se a etapas do curso de mestrado. A atividade denominada \emph{Estudo Piloto} refere-se a um estudo exploratório realizado para investigar a viabilidade do projeto proposto. Os detalhes desse estudo estão apresentados no próximo capítulo desta proposta.
 
 
 \newcommand{\y}{\rule{18,5pt}{5pt}}
@@ -209,14 +209,14 @@ A Tabela~\ref{tab:cronograma} apresenta as atividades e o cronograma previsto pa
 
 \section{Contribuições Esperadas}
 As principais contribuições esperadas desta pesquisa são as evidências de que não só as aplicações móveis são pouco acessíveis, mas que também os requisitos relacionados à acessibilidade digital raramente são abordados durante a evolução de uma aplicação móvel.
-Os resultados desta pesquisa podem contribuir com os estudos relacionados à acessibilidade digital em aplicações móveis e fomentar pesquisas e ações voltadas à conscientização e treinamento de desenvolvedores, e igualmente a criação de novos recursos para
+Os resultados desta pesquisa podem contribuir com os estudos relacionados à acessibilidade digital em aplicações móveis, fomentando pesquisas e ações voltadas à conscientização e treinamento de desenvolvedores, e igualmente a criação de novos recursos para
 a implementação e avaliação de acessibilidade digital.
 Como contribuições adicionais entregues, podemos citar:
 
 \begin{itemize}
-	\item Conjunto de dados de comentários, \textit{commits} e \textit{issues} para posteriores estudos relacionados;
+	\item Conjunto de dados referentes às avaliações, solicitações de modificações e alterações, para posteriores estudos relacionados;
 	\item Evolução dos conjuntos de palavras-chave relacionadas à acessibilidade, expandindo o mesmo para os padrões W3C e eMAG;
-	\item Código fonte em Python que permita realizar a obtenção de comentários do \textit{Google Play Store}, dos \textit{commits} e \textit{issues} cadastrados no Github.
+	\item Código fonte em Python que permita realizar a obtenção de avaliações do \textit{Google Play Store}, solicitações de modificações e alterações cadastradas no Github.
 \end{itemize}
 
 
