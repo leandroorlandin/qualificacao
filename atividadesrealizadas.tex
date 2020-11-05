@@ -15,7 +15,7 @@ As seguintes questões de pesquisa foram definidas para este estudo exploratóri
 
 \section{Seleção de aplicações móveis}
 
-Os critérios de seleção das aplicações para este estudo seguem os mesmos definidos na Seção~\ref{sec:selecao}. Portanto, foram selecionadas aplicações da plataforma Android que satisfaziam as seguintes condições: estavam disponíveis na \textit{Google Play Store} e o código-fonte se encontrava armazenado em um repositório público da plataforma GitHub. Ao todo, apenas 701 aplicações dentre as mais de 2000 indexadas no FDroid\footnote{Dados de julho/2019} satisfizeram esses critérios.
+Os critérios de seleção das aplicações para este estudo seguem os mesmos definidos na Seção~\ref{sec:selecao}. Portanto, foram selecionadas aplicações da plataforma Android que satisfaziam as seguintes condições: estavam disponíveis na \textit{Google Play Store} e o código-fonte se encontrava armazenado em um repositório público da plataforma GitHub. Ao todo, apenas 701 aplicações dentre as mais de 2.000 indexadas no FDroid\footnote{Dados de julho/2019} satisfizeram esses critérios.
 
 A Tabela~\ref{tab:summarygps} mostra a distribuição de alguns atributos das aplicações selecionados por meio de estatística descritiva utilizando o resumo dos cinco números (mínimo amostral, quartil inferior, 
 mediana, quartil superior, máximo amostral), a média e o desvio padrão. 
@@ -36,31 +36,31 @@ Mínimo          & 1          & 0     & 0            & 0         & 0       \\
 Quartil Inferior           & 2          & 4           & 50    & 1K      & 4       \\
 Mediana       & 5          & 4,3   & 130         & 10K     & 22      \\
 Quartil Superior          & 9          & 4,6   & 836        & 50K     & 145     \\
-Máximo          & 92         & 5     & 3.6M    & 100M & 4480    \\
+Máximo          & 92         & 5     & 3.6M    & 100M & 4.480    \\
 Média         & 8,16       & 4,16  & 12.4K     & 550K+    & 305,4   \\
 Desvio Padrão        & 10,5       & 0,79  & 151,6K  & 5,7M   & 840,8  \\
 \hline
 \end{tabular}
 \end{table}
 
-A maioria das aplicações possui uma boa nota e foi avaliada por até 836 usuários. O número de avaliações apresentado na tabela é diferente do número de comentários, pois quando um usuário faz uma avaliação ele necessariamente atribui uma nota, mas não é obrigado a inserir um comentário. Existem aplicações que possuem um número muito alto de avaliações, como o Telegram, que possui 3,6 milhões de avaliações. O Telegram também é a aplicação mais instalado (100 milhões de instalações).
-Por outro lado, o número de avaliações não é muito alto, visto que a maioria das aplicações recebeu no máximo 145 comentários em suas avaliações. O número máximo de avaliações desta amostra é de 4480 em razão das limitações da API utilizada. Esta limitação não teve muito impacto neste estudo exploratório porque apenas 15 aplicações (2\%) possuem mais de 4480 avaliações registradas na \textit{Google Play Store}. 
+A maioria das aplicações possui uma boa nota e foi avaliada por até 836 usuários. O número de avaliações apresentado na tabela é diferente do número de comentários, pois quando um usuário faz uma avaliação ele necessariamente atribui uma nota, mas não é obrigado a inserir um comentário. Existem aplicações que possuem um número muito alto de avaliações, como o Telegram, que possui 3,6 milhões de avaliações. O Telegram também é a aplicação mais instalada (100 milhões de instalações).
+Por outro lado, o número de avaliações não é muito alto, visto que a maioria das aplicações recebeu no máximo 145 comentários em suas avaliações. O número máximo de avaliações desta amostra é de 4.480 em razão das limitações da API utilizada. Esta limitação não teve muito impacto neste estudo exploratório porque apenas 15 aplicações (2\%) possuem mais de 4.480 avaliações registradas na \textit{Google Play Store}. 
 No momento do estudo piloto, ficou definido que para as novas coletas de avaliações seriam consideradas outras alternativas para que não houvesse limite no número de avaliações retornadas pela API. 
 
 
 \section{Extração e seleção das avaliações}
 \label{sec:extracaoselecao}
 
-Uma aplicação escrita na linguagem Python foi desenvolvida para consumir os dados da \textit{Google Play Store} utilizando a API \emph{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Como mencionado anteriormente, na versão utilizada esta API só permitia o retorno de no máximo 4480 avaliações de cada aplicação. Além disso, só foram recuperadas avaliações escritas em inglês, que é o idioma padrão definido pela API.
+Uma aplicação escrita na linguagem Python foi desenvolvida para consumir os dados da \textit{Google Play Store} utilizando a API \emph{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Como mencionado anteriormente, na versão utilizada esta API só permitia o retorno de no máximo 4.480 avaliações de cada aplicação. Além disso, só foram recuperadas avaliações escritas em inglês, que é o idioma padrão definido pela API.
 
 
 A seleção das avaliações que possivelmente estão relacionadas a algum aspecto de acessibilidade da aplicação foi feita por meio da utilização de palavras-chave aplicadas aos comentários dos usuários.
 Para isso, um conjunto de palavras-chave foi definido com base nas diretrizes de acessibilidade da BBC~\cite{bbc}, o qual possui 54 recomendações que são classificadas em onze diferentes categorias: áudio e vídeo (5); design (12); editorial (3); foco (6); formulários (6); imagens (2); links (3); notificações (4); scripts e conteúdo dinâmico (4); estrutura (4); e texto equivalente (5). 
-Este padrão foi selecionado porque ele tem o foco em aplicações móveis e possui exemplos de implementação e de teste para cada recomendação, o que permite compreender melhor os tipos de problemas de acessibilidade tratados no guia. 
+Este padrão foi selecionado porque tem o foco em aplicações móveis e possui exemplos de implementação e de teste para cada recomendação, o que permite compreender melhor os tipos de problemas de acessibilidade tratados no guia. 
 
 Foram definidas 213 palavras-chave com base na análise de cada recomendação do guia. 
-A Tabela~{tab:keywords} mostra exemplos das palavras-chave utilizadas.
-Note que foram consideradas variantes das palavras (exemplo: \textit{cannot see} e \textit{can't see}, ou \textit{color} e \textit{colour}, ou \textit{impaired} e \textit{impairement}) para garantir que nenhuma avaliação relevante fosse excluída. Infelizmente, não é possível capturar casos em que as palavras foram escritas com a grafia errada. A lista completa das palavras-chave podem ser vistas em um repositório criado para armazenamento dos dados deste estudo\footnote{https://github.com/marceloeler/data-ihc2019}.
+A Tabela~\ref{tab:keywords} mostra exemplos das palavras-chave utilizadas.
+Note que foram consideradas variantes das palavras (exemplo: \textit{cannot see} e \textit{can't see}, ou \textit{color} e \textit{colour}, ou \textit{impaired} e \textit{impairement}) para garantir que nenhuma avaliação relevante fosse excluída. Infelizmente, não é possível capturar casos em que as palavras foram escritas com a grafia errada. A lista completa das palavras-chave pode ser vista em um repositório criado para armazenamento dos dados deste estudo\footnote{https://github.com/marceloeler/data-ihc2019}.
 
 
 \begin{table}[!htb]
@@ -132,7 +132,7 @@ As avaliações selecionadas com base nas palavras-chave e na validação manual
 
 No total, foram extraídas 214.053 avaliações completas (com nota e comentário) das 701 aplicações da amostra. 
 Dessas avaliações, apenas 5.076 foram pré-selecionadas por meio das palavras-chave. 
-Após a análise manual, o número de avaliações relacionadas à acessibilidade das aplicações foi reduzido para 2.663, o que representa apenas 1.24\% de todas as avaliações completas extraídas.
+Após a análise manual, o número de avaliações relacionadas à acessibilidade das aplicações foi reduzido para 2.663, o que representa apenas 1,24\% de todas as avaliações completas extraídas.
 
 As avaliações de acessibilidade não estão igualmente distribuídas entre as aplicações da amostra.
 Só 40\% dos casos (276) possuem pelo menos uma avaliação relacionada à acessibilidade.
@@ -154,13 +154,13 @@ A Figura~\ref{fig:distributionreviewsapp} mostra a distribuição de avaliaçõe
 
 
 A Figura~\ref{fig:distribution-proportion} mostra a distribuição da proporção entre as avaliações de acessibilidade e o número total de avaliações completas de cada aplicação.
-No geral, as avaliações de acessibilidade representam menos de 4\% de todas as avaliações feitas para cada aplicação, e para metade dos softwares, elas representam menos de 1.5\%.
+No geral, as avaliações de acessibilidade representam menos de 4\% de todas as avaliações feitas para cada aplicação, e para metade das aplicações elas representam menos de 1,5\%.
 Para uma pequena proporção de aplicações, as avaliações de acessibilidade representam entre 4\% e 9\% do total de avaliações recebidas. Existem algumas aplicações para as quais essa proporção varia entre 10\% e 16\%.
-Há alguns casos em que o número de avaliações completas é tão pequeno que uma simples avaliação de acessibilidade representa uma grande proporção, como é o caso da aplicação MuPDF mini, Booky McBookface, e GameDealz, cujas proporções são de 50\% (1/2), 40\% (2/5) e 33\% (1/3), respectivamente. 
+Há alguns casos em que o número de avaliações completas é tão pequeno que uma simples avaliação de acessibilidade representa uma grande proporção, como é o caso das aplicações MuPDF mini, Booky McBookface, e GameDealz, cujas proporções são de 50\% (1/2), 40\% (2/5) e 33\% (1/3), respectivamente. 
 \newline 
 
- \begin{figure}[!htb]
- \centering
+\begin{figure}[!htb]
+\centering
 \includegraphics[scale=0.8]{imagens/distribution-proportion-accreviews}
 \caption{Distribuição da proporção entre avaliações de acessibilidade e o total de avaliações de cada aplicação}
 \label{fig:distribution-proportion}
@@ -169,7 +169,7 @@ Há alguns casos em que o número de avaliações completas é tão pequeno que 
 
 \textbf{RQ2 - Qual é a diversidade de tópicos de acessibilidade abordados nas avaliações dos usuários?}
 
-O objetivo desta questão de pesquisa é entender se os usuários abordam diferentes problemas de acessibilidade em suas avaliações ou se a maioria das avaliações tratam-se de um conjunto restrito de problemas. 
+O objetivo desta questão de pesquisa é entender se os usuários abordam diferentes problemas de acessibilidade em suas avaliações ou se a maioria das avaliações trata-se de um conjunto restrito de problemas. 
 A Tabela~\ref{tab:keywords-reviews} mostra o número de avaliações de acessibilidade e aplicações associadas a cada palavra-chave utilizada para selecionar as avaliações. 
 Nesta tabela só estão apresentadas as palavras-chave para as quais pelo menos uma avaliação estava associada. 
 
@@ -217,7 +217,7 @@ Claramente, as avaliações de acessibilidade estão concentradas em um pequeno 
 Como várias palavras-chave podem estar relacionadas a uma mesma diretriz ou princípio de acessibilidade (exemplo: \textit{dark mode}, \textit{night mode} e \textit{black mode}), 
 as palavras-chave e as respectivas quantidades de avaliações foram agrupadas por tópicos (diretrizes, princípios ou temas) específicos de acessibilidade para facilitar a análise da diversidade de características abordadas.
 
-A Tabela~\ref{tab:group-keywords} mostra, para cada tópico de acessibilidade (Coluna 1), o número de avaliações distintas (Coluna 2), a proporção das avaliações em relação às avaliações de acessibilidade (Coluna 3), o número de aplicações distintas que tiveram uma avaliação relacionada (Coluna 4), e a proporção de aplicações em relação aos aplicações que possuem pelo menos uma avaliação (Coluna 5).
+A Tabela~\ref{tab:group-keywords} mostra, para cada tópico de acessibilidade (Coluna 1), o número de avaliações distintas (Coluna 2), a proporção das avaliações em relação às avaliações de acessibilidade (Coluna 3), o número de aplicações distintas que tiveram uma avaliação relacionada (Coluna 4), e a proporção de aplicações que possuem pelo menos uma avaliação (Coluna 5).
 As diretrizes gerais da BBC não foram utilizadas para a organização dos tópicos apresentados na tabela porque eles são muito gerais e podem englobar muitas palavras-chave ao mesmo tempo.
 
 \begin{table}[]
@@ -247,7 +247,7 @@ Language      & 15      & 0,6\%      & 11   & 4,0\%  \\
 
 O tópico \textit{Theme/Mode} é o mais popular entre as avaliações uma vez que 27\% das avaliações de acessibilidade estão relacionadas a este tópico, e quase metade das aplicações tem este tipo de avaliação. 
 Este tópico agrega todas as avaliações que mencionam modos de cores e temas das interfaces das aplicações. 
-O segundo tópico mais popular é o relacionado a funcionalidades de \textit{zoom} (19\% das revisões de acessibilidade e 30\% das aplicações).
+O segundo tópico mais popular é o relacionado a funcionalidades de \textit{zoom} (19\% das avaliações de acessibilidade e 30\% das aplicações).
 O terceiro tópico mais popular está relacionado à personalização da aplicação, representando 13\% das avaliações e relacionados a 23\% das aplicações. 
 Diversos outros tópicos estão presentes em um número menor de avaliações de acessibilidade, mas muitos deles estão relacionados com um grande número de aplicações. 
 
@@ -272,7 +272,7 @@ Uma das aplicações que foge ao padrão é o \textit{Cool Reader}, pois em suas
 
 
 A diversidade de palavras-chave não é uma indicação de que diversos aspectos de acessibilidade são tratados uma vez que muitas delas estão relacionadas a um mesmo problema, e por isso uma análise por tópico deve ser realizada. 
-A Tabela~\ref{fig:distributiontopicsapps} mostra a distribuição de tópicos de acessibilidade relacionados a cada avaliação de acessibilidade (lado direito). 
+A Figura~\ref{fig:distributiontopicsapps} mostra a distribuição de tópicos de acessibilidade relacionados a cada avaliação de acessibilidade (lado direito). 
 Note que as avaliações de acessibilidade para a maioria das aplicações estão concentradas entre dois e quatro tópicos, enquanto algumas aplicações possuem avaliações associadas a quase todos os tópicos abordados. 
 A aplicação \textit{Calculator}, por exemplo, tem avaliações de acessibilidade que abordam 12 tópicos de acessibilidade distintos. 
 Embora a correlação de Spearman entre a diversidade de tópicos e o número de avaliações seja de 0,87, o que representa uma correlação forte, esta aplicação possui apenas 60 avaliações. \newline
@@ -361,7 +361,7 @@ Para a continuação deste trabalho de mestrado, pretende-se fazer um estudo est
 \begin{itemize}
  \item As aplicações foram selecionadas com base no estado dos repositórios em junho de 2019. Uma nova análise será realizada para atualizar a lista de aplicações.
  \item Coleta de avaliações da \textit{Google Play Store}: serão coletadas as avaliações atualizadas de todas as aplicações selecionadas.
- \item Quantidade de avaliações coletadas: no estudo exploratório apresentado havia o limite de extração de 4480 avaliações por aplicação, mas as atualizações realizadas na API utilizada permitem agora extrair todas as avaliações.
+ \item Quantidade de avaliações coletadas: no estudo exploratório apresentado havia o limite de extração de 4.480 avaliações por aplicação, mas as atualizações realizadas na API utilizada permitem agora extrair todas as avaliações.
  \item Identificação de avaliações de acessibilidade: serão utilizadas palavras-chave e avaliação manual. Entretanto, diferentemente do estudo exploratório, as palavras-chave serão definidas com base na análise do WCAG 2.1 e não mais com base nas diretrizes da BBC. Essa decisão foi tomada porque o WCAG é um padrão utilizado internacionalmente e é utilizado como referência em muitas leis que promovem o desenvolvimento de software e conteúdo digital acessível. 
  \item Coleta de solicitações de mudanças e alterações realizadas nos repositórios de código e cruzamento de informações com as avaliações coletadas e avaliadas.
  

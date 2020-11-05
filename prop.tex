@@ -56,7 +56,7 @@ Inicialmente, será realizada uma etapa de estudos envolvendo os principais conc
 É necessário selecionar um conjunto de aplicações para a realização da investigação proposta. Alguns critérios foram definidos para esta seleção: as aplicações selecionadas devem estar publicadas em uma loja de aplicativos; as avaliações das aplicações realizadas pelos usuários devem ser públicas e possíveis de serem acessadas; e as aplicações devem ter código-aberto e devem estar disponíveis em repositórios de acesso público.
 
 Considerando os critérios de seleção, decidiu-se eleger aplicações da plataforma Android por três razões principais: 
-esta plataforma possui o maior mercado de aplicações móveis do mundo\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide}; 
+esta plataforma possui o maior mercado de aplicações móveis do mundo\footnote{http://gs.statcounter.com/os-market-share/mobile/worldwide em 04/11/2020}, com 72,92\%;
 a maioria dos estudos sobre evolução de aplicações móveis são relacionados a esta plataforma; 
 e o acesso aos dados da loja de aplicativos oficial (\textit{Google Play Store}) é gratuito e existem ferramentas disponíveis para extrair as informações necessárias para a realização deste projeto.
 
@@ -67,11 +67,11 @@ Infelizmente, nem todas as aplicações indexadas nesta plataforma estão public
 \subsection{Extração das avaliações dos usuários}
 \label{sec:extracaoavaliacoes}
 
-Esta atividade consiste em obter as avaliações publicadas pelos usuários referentes às aplicações selecionadas. As avaliações consistem em uma nota atribuída para o aplicativo, um título para a avaliação (opcional) e um comentário escrito pelo usuário (opcional). As avaliações também podem conter comentários ou respostas para os usuários escritas pelos desenvolvedores ou pelas organizações responsáveis pela publicação do aplicativo nas lojas oficiais. 
+Esta atividade consiste em obter as avaliações publicadas pelos usuários referentes às aplicações selecionadas. As avaliações consistem em uma nota atribuída para o aplicativo, um título para a avaliação (opcional) e um comentário escrito pelo usuário (opcional). As avaliações também podem conter comentários ou respostas para os usuários escritas pelos desenvolvedores ou pelas organizações responsáveis pela publicação do aplicativo na loja oficial. 
 
 A \textit{Google Play Store} não oferece uma API pela qual se pode extrair os detalhes das avaliações dos usuários, portanto decidiu-se utilizar uma API não oficial chamada \textit{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Esta API foi construída com base em uma biblioteca que percorre automaticamente as páginas (\textit{crawler}) da loja de aplicativos e transforma as informações coletadas em dados que podem ser consumidos por meio de uma API.
 
-Para extrair as avaliações da loja de aplicativos é preciso construir um software que utilize a API \textit{google-pLay-api}, a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
+Para extrair as avaliações da loja de aplicativos é preciso construir um software que utilize a API \textit{google-play-api}, a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
 
 \subsection{Extração das solicitações de modificações e alterações de código}
 \label{sec:extracaomodificacoes}
@@ -80,7 +80,7 @@ Esta atividade consiste em obter as solicitações de modificações e as altera
 No GitHub, as solicitações de modificações (\textit{issues}) podem ser criadas pelos próprios desenvolvedores ou qualquer outro usuário da plataforma.
 As alterações (\textit{commits}) são realizadas pelos desenvolvedores/colaboradores do projeto e podem conter diversas informações, tais como rótulos, descrição das alterações efetuadas e as modificações efetuadas no código (inserção, deleção, etc). 
 
-O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os desenvolvedores utilizarem para extrair informações dos repositórios hospedados na plataforma. Portanto, para obter as informações necessários para este estudo é preciso construir um software capaz de utilizar a API fornecida pelo GitHub  para coletar e organizar as informações das solicitações de modificações e alterações realizadas no código das aplicações. 
+O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os desenvolvedores utilizarem para extrair informações dos repositórios hospedados na plataforma. Portanto, para obter as informações necessárias para este estudo é preciso construir um software capaz de utilizar a API fornecida pelo GitHub  para coletar e organizar as informações das solicitações de modificações e alterações realizadas no código das aplicações. 
 
 \subsection{Seleção de avaliações, solicitações de modificações e alterações}
 \label{sec:selecao}
@@ -162,7 +162,7 @@ A Tabela~\ref{tab:cronograma} apresenta as atividades e o cronograma previstos p
   & \y & \y & \y & \x & \x  & \x & \x & \x \\
   \hline
   
-  Extração de issues/commits
+  Extração de \textit{issues}/\textit{commits}
   & \x & \x & \x & \x & \x  & \y & \x & \x \\
   \hline
   
