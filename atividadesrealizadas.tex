@@ -294,7 +294,7 @@ A Figura~\ref{fig:reqcompscores} mostra a comparação das notas recebidas pelas
 \end{figure}
 
 Adicionalmente, deseja-se descobrir se avaliações associadas a diferentes palavras-chave ou tópicos de acessibilidade possuem notas maiores ou menores. 
-A Figura~\ref{fig:scoresthemes} mostra as notas associadas a cada tópico de acessibilidade (ver~ \ref{tab:group-keywords}). 
+A Figura~\ref{fig:scoresthemes} mostra as notas associadas a cada tópico de acessibilidade (ver Tabela~\ref{tab:group-keywords}). 
 Neste caso, somente foram consideradas avaliações que contém requisições. 
 Para alguns tópicos específicos, mesmo que haja requisição dos usuários para tornar as aplicações mais acessíveis, as notas são, em sua maioria, 4 ou 5 (exemplo: \textit{customization}, \textit{font}, \textit{media}, \textit{size} e \textit{theme}).
 Para outros tópicos, entretanto, as notas estão concentradas em valores mais baixos, de 2 a 4 (exemplo: \textit{contrast}, \textit{flickering} e \textit{zoom}). 
@@ -333,7 +333,7 @@ Alguns exemplos de comentários de usuários encontrados nas avaliações que co
 \section{Discussão}
 
 A maioria das avaliações de acessibilidade encontradas foram feitas por usuários que não necessariamente estavam tratando diretamente da acessibilidade da aplicação. Ainda que essas avaliações mencionem aspectos da aplicação que influenciam a sua acessibilidade, nem todas elas são requisições relacionadas a barreiras encontradas pelos usuários, mas solicitações para melhorar sua experiência de uso. 
-Embora poucos usuários se identifiquem como pessoas com deficiência em suas avaliações, percebe-se que as requisições realizadas por eles são associadas a barreiras reais encontradas durante o uso da aplicação, acompanhadas de notas mais baixas dadas à aplicação. 
+Embora poucos usuários se identifiquem como pessoas com deficiência em suas avaliações, percebe-se que as requisições realizadas por eles são associadas a barreiras reais encontradas durante o uso da aplicação, acompanhadas de notas mais baixas. 
 
 Em geral, pessoas com deficiência tendem a ser enfáticas sobre as barreiras que as impedem de usar plenamente a aplicação. A seguir são apresentados alguns exemplos de comentários feitos por pessoas com deficiência:
 \begin{itemize}
@@ -363,7 +363,7 @@ Para a continuação deste trabalho de mestrado, pretende-se fazer um estudo est
  \item Coleta de avaliações da \textit{Google Play Store}: serão coletadas as avaliações atualizadas de todas as aplicações selecionadas.
  \item Quantidade de avaliações coletadas: no estudo exploratório apresentado havia o limite de extração de 4.480 avaliações por aplicação, mas as atualizações realizadas na API utilizada permitem agora extrair todas as avaliações.
  \item Identificação de avaliações de acessibilidade: serão utilizadas palavras-chave e avaliação manual. Entretanto, diferentemente do estudo exploratório, as palavras-chave serão definidas com base na análise do WCAG 2.1 e não mais com base nas diretrizes da BBC. Essa decisão foi tomada porque o WCAG é um padrão utilizado internacionalmente e é utilizado como referência em muitas leis que promovem o desenvolvimento de software e conteúdo digital acessível. 
- \item Coleta de solicitações de mudanças e alterações realizadas nos repositórios de código e cruzamento de informações com as avaliações coletadas e avaliadas.
+ \item Coleta de solicitações de modificações e alterações realizadas nos repositórios de código e cruzamento de informações com as avaliações coletadas e avaliadas.
  
 \end{itemize}
 
@@ -372,9 +372,9 @@ Algumas dessas atividades já foram realizadas e apresenta-se os resultados como
 \begin{itemize}
  \item \textbf{Amostra de aplicações: } foi realizada uma seleção de aplicações com base nos critérios definidos na Seção~\ref{sec:selecaoapps}: as aplicações precisam estar indexadas no repositório FDroid, estarem disponíveis na \textit{Google Play Store} e ter código-fonte armazenado em repositório público no GitHub. Além disso, as aplicações selecionadas devem ter pelo menos uma avaliação completa (nota e comentário) registrada na \textit{Google Play Store}. Ao todo, 921 aplicações foram selecionadas para este estudo\footnote{Com base em dados coletados em 23 de outubro de 2020}.
  
- \item \textbf{Extração de avaliações: } foram extraídas as avaliações completas (nota e comentário) das 921 aplicações da amostra. Ao todo, foram extraídas 1,5 milhão de avaliações. Apesar do grande número de avaliações, mais de 80\% das aplicações possui menos do que 1000 avaliações, e poucas aplicações possuem mais do que 100 mil.
+ \item \textbf{Extração de avaliações: } foram extraídas as avaliações completas (nota e comentário) das 921 aplicações da amostra. Ao todo, foram extraídas 1,5 milhão de avaliações. Apesar do grande número de avaliações, mais de 80\% das aplicações possui menos do que 1.000 avaliações, e poucas aplicações possuem mais do que 100 mil.
  
- \item \textbf{Extração de solicitações de modificações (\textit{issues}) e alterações (\textit{commits}): } os repositórios de código das aplicações da amostra foram analisados e destes extraídas as solicitações de modificações e alterações realizadas no código. Ao todo, foram extraídas aproximadamente 41 mil solicitações de mudanças e 1,1 milhão de alterações.
+ \item \textbf{Extração de solicitações de modificações (\textit{issues}) e alterações (\textit{commits}): } os repositórios de código das aplicações da amostra foram analisados e destes extraídas as solicitações de modificações e alterações realizadas no código. Ao todo, foram extraídas aproximadamente 41 mil solicitações de modificações e 1,1 milhão de alterações.
 
   
 \end{itemize}
