@@ -28,26 +28,28 @@ A acessibilidade digital teve o foco inicial nas páginas e aplicações \textit
 Infelizmente, 
 apesar da existência de recursos para o desenvolvimento de aplicações acessíveis, 
 diversos estudos evidenciaram uma falta geral de acessibilidade em aplicações móveis de diversas categorias, tamanhos, complexidade e popularidade~\cite{serra2015accessibility,eler2018mate,Yan2019currentstatus,Vendome2019,Alshayban2020,AcostaVargas2020}.
-O mesmo fenômeno tem sido observado em aplicações \textit{web}, e por isso diversos estudos foram conduzidos para entender as razões que explicam a falta de acessibilidade observada, mas com o foco na consciência, no conhecimento e nas questões organizacionais de quem está envolvido com o desenvolvimento de software~\cite{  
-lazar2004improving,Freire2008survey,oliveira2017strategies,Inal2019,barzilai2008factors,Putnam:2012}. 
-Grande parte desses estudos reportou que a maioria dos desenvolvedores tem pouco conhecimento sobre acessibilidade, as demandas são muito altas, os prazos são curtos, não há treinamento adequado e o tema acessibilidade não é uma prioridade da organização.
+O mesmo fenômeno tem sido observado em aplicações \textit{web}, e por isso diversos estudos foram conduzidos para entender as razões que explicam a falta de acessibilidade observada. A maioria desses estudos investigou a consciência, o conhecimento e as questões organizacionais que impactam o desenvolvimento de software acessível e constatou que a maioria dos desenvolvedores tem pouco conhecimento sobre acessibilidade, as demandas por manutenção e novos produtos de software são muito altas, os prazos são curtos, não há treinamento adequado e o tema acessibilidade não é uma prioridade das organizações~\cite{  
+lazar2004improving,Freire2008survey,oliveira2017strategies,Inal2019,barzilai2008factors,Putnam:2012}. Um estudo recente realizado com mais de 870 desenvolvedores de aplicações móveis no Brasil mostrou um comportamento semelhante nesta plataforma específica.
 
-Apesar dos estudos terem relatado que o contexto das organizações não é propício para a promoção da acessibilidade, existe um outro fator importante no cenário do desenvolvimento de software: as requisições dos usuários. 
-Na implementação de aplicações móveis, 
-é comum que as organizações utilizem avaliações (notas e comentários) realizadas pelos usuários nas lojas de aplicativos para planejar a correção de defeitos e o lançamento de novas funcionalidades porque isso resulta em melhores avaliações, o que pode dar destaque e potencializar a instalação por outros usuários~\cite{nayebi,Palomba2015userreviews,Palomba2018crowdsourcing,Li2018MobileAE,Ciurumelea2017analyzing,Ortega2015thesis}.
 
-Diversos estudos sobre avaliações dos usuários em lojas de aplicativos as classificam de diferentes formas\cite{Iacob2013retrieving,Pagano2013userfeedback,Iacob2014online,Mcilroy2016analyzing,Sorbo2017surf,Ciurumelea2017analyzing,Ortega2015thesis,Li2018MobileAE,Pelloni2018becloma,Panichella2015how}: 
-relato de falha, reclamações em geral, requisição de nova funcionalidade, solução de propostas, problemas com o custo, incompatibilidades, dificuldades com a rede, preocupações com segurança e privacidade, consumo de memória e bateria, elogios, e questões relacionadas à interface com o usuário.
-Apesar de alguns estudos classificarem avaliações relacionadas à interface com o usuário, nenhuma delas fez um estudo detalhado sobre as questões abordadas pelos avaliadores e nem mencionaram comentários específicos sobre acessibilidade digital.
+Se por um lado o conhecimento dos desenvolvedores e o contexto organizacional não favorecem o desenvolvimento de aplicações acessíveis, um outro fator pode fazer a diferença neste cenário: as requisições dos usuários. 
+No contexto do desenvolvimento e evolução de aplicações móveis, 
+é comum que as organizações utilizem avaliações (notas e comentários) realizadas pelos usuários nas lojas de aplicativos para planejar a correção de defeitos e o lançamento de novas funcionalidades, pois isso geralmente resulta em melhores avaliações, o que pode dar destaque e potencializar a instalação por outros usuários~\cite{nayebi,Palomba2015userreviews,Palomba2018crowdsourcing,Li2018MobileAE,Ciurumelea2017analyzing,Ortega2015thesis}.
+
 Considerando que os comentários e as notas recebidas nas avaliações dos usuários são utilizados para corrigir falhas e evoluir aplicações móveis, duas questões de pesquisa são destacadas neste trabalho:
 \begin{itemize}
  \item Os usuários de aplicações móveis mencionam aspectos relacionados à acessibilidade em suas avaliações publicadas nas lojas de aplicativos?
  \item Os problemas de acessibilidade relatados nas avaliações dos usuários têm impacto na evolução das aplicações móveis?
 \end{itemize}
 
+Diversos estudos sobre avaliações dos usuários em lojas de aplicativos foram realizados para entender as demandas dos usuários e as respostas dos desenvolvedores e das organizações~\cite{Iacob2013retrieving,Pagano2013userfeedback,Iacob2014online,Mcilroy2016analyzing,Sorbo2017surf,Ciurumelea2017analyzing,Ortega2015thesis,Li2018MobileAE,Pelloni2018becloma,Panichella2015how}. Os trabalhos encontrados na literatura classificam as avaliações dos usuários de diferentes formas: 
+relato de falha, reclamações em geral, requisição de nova funcionalidade, solução de propostas, problemas com o custo, incompatibilidades, dificuldades com a rede, preocupações com segurança e privacidade, consumo de memória e bateria, elogios, e questões relacionadas à interface com o usuário.
+Apesar de alguns estudos classificarem avaliações relacionadas à interface com o usuário, nenhuma delas fez uma diferenciação ou um detalhamento sobre os aspectos de acessibilidade abordados pelos usuários, tampouco enfatizaram a evolução da acessibilidade das aplicações. 
+
+
 \section{Objetivo} 
 
-O objetivo deste projeto de pesquisa é investigar se as avaliações feitas por usuários abordam aspectos relacionados à acessibilidade do produto, e se essas avaliações têm algum efeito na melhoria da acessibilidade da aplicação. Mais especificamente, deseja-se saber:
+O objetivo geral deste projeto de pesquisa é investigar se as avaliações feitas por usuários abordam aspectos relacionados à acessibilidade do produto, e se essas avaliações têm algum efeito na melhoria da acessibilidade da aplicação. Mais especificamente, deseja-se saber:
 \begin{itemize}
  \item A quantidade e a distribuição de avaliações relacionadas à acessibilidade da aplicação
  \item A diversidade de tipos de violações de acessibilidade mencionadas nas avaliações
