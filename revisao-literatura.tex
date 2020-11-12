@@ -1,41 +1,41 @@
 
 Segundo o site \textit{Dicio - Dicionário Online de Português}, a definição de acessibilidade pode ser dada como sendo \textit{a propriedade de material confeccionado para que qualquer pessoa tenha acesso, consiga ver, usar, compreender, principalmente de material que se destina à inclusão social de pessoas com alguma deficiência} \footnote{https://www.dicio.com.br/acessibilidade/}. Trata-se da possibilidade e condição de qualquer indivíduo alcançar os elementos funcionais do ambiente construído, para assim permitir sua utilização \cite{camilamaster}.
 
-Para o caso de acessibilidade digital, e conforme visto anteriormente, essa representa a capacidade de um software ser utilizado, independentemente da condição física, mental ou intelectual do usuário \cite{w3cwai}. Trata-se da flexibilidade do software em se adaptar às necessidades de cada usuário, suas preferências e limitações \cite{camilamaster}. Este fator torna-se mais importante no contexto mundial atual em decorrência dos índices de pessoas com algum tipo de deficiência e da alta demanda por \textit{apps} em dispositivos móveis \cite{storeanalysis}.
+Para o caso de acessibilidade digital, a mesma representa a capacidade de um software ser utilizado, independentemente da condição física, mental ou intelectual do usuário \cite{w3cwai}. Refere-se à flexibilidade do software em se adaptar às necessidades de cada usuário, suas preferências e limitações \cite{camilamaster}. Este fator se torna ainda mais importante no contexto mundial atual em decorrência dos índices de pessoas com algum tipo de deficiência e da alta demanda por \textit{apps} dispositivos móveis \cite{storeanalysis}.
 
 Normalmente a acessibilidade digital é associada exclusivamente às dificuldades motoras, físicas ou sensoriais dos indivíduos com necessidades especiais, sendo desconsiderada importante parcela da população, como por exemplo idosos ou crianças. Uma aplicação que não seja acessível a um indivíduo não pode ser considerada eficaz, eficiente ou agradável ao mesmo \cite{santarosa}.
 
 \section{Padrões de Acessibilidade}
-Para atender a estas necessidades, diversos padrões foram definidos, com destaque para o WCAG, BBC Guidelines e eMAG, utilizados nesta proposta de pesquisa. Esta carência foi fortemente identificada no decorrer da década de 1990, quando se ampliou a utilização da internet pela sociedade. Destacam-se como principais promotores dois consórcios internacionais: o W3C (Consórcio para a Web) e a WAI (Iniciativa para a Acessibilidade na Rede), responsáveis pelo estabelecimento de padrões e protocolos que sistemas computacionais deveriam seguir para serem considerados acessíveis \cite{passerino}.
+Para atender a estas necessidades, diversos padrões foram definidos, com destaque para o WCAG~\cite{wcag}, o padrão da BBC~\cite{bbc} e o e-MAG~\cite{emag}, utilizados nesta proposta de pesquisa. Esta carência foi fortemente identificada no decorrer da década de 1990 quando se ampliou a utilização da internet pela sociedade. Destacam-se como principais promotores dois consórcios internacionais: o W3C (\textit{The World Wide Web Consortium}) e a WAI (\textit{Web Accessibility Initiative}), responsáveis pelo estabelecimento de padrões e protocolos que sistemas computacionais deveriam seguir para serem considerados acessíveis \cite{passerino}.
 
 \subsection{WCAG}
-O \textit{Web Content Accessibility Guidelines}, ou WCAG2.0 \footnote{https://www.w3.org/WAI/intro/wcag}, trata-se de um documento elaborado pela W3C, com conteúdo em formato de declarações testáveis que não se referem a uma tecnologia específica. Possui a intenção de tornar o conteúdo web mais acessível, com a consciência de que não é capaz de abordar as necessidades de pessoas com todos os tipos, graus e combinações de deficiência.
+O \textit{Web Content Accessibility Guidelines}, ou WCAG2.0 \footnote{https://www.w3.org/WAI/intro/wcag}, é um documento elaborado pela W3C, com conteúdo em formato de declarações testáveis que não se referem a uma tecnologia específica. Possui a intenção de tornar o conteúdo \textit{web} mais acessível, com a consciência de que não é capaz de abordar as necessidades de pessoas com todos os tipos, graus e combinações de deficiência.
 
-Com a finalidade de abranger as necessidades de diferentes grupos e situações de deficiência, os padrões de acessibilidade do WCAG estão divididos em 4 princípios básicos. De forma a satisfazer os mesmos, foram criados critérios de sucesso que estão classificados em três níveis de conformidade: A (o mais baixo), AA e AAA (o mais elevado).
+Com a finalidade de abranger as necessidades de diferentes grupos e situações de deficiência, os padrões de acessibilidade do WCAG estão divididos em 4 princípios básicos. Foram criados critérios de sucesso que estão classificados em três níveis de conformidade: A (o mais baixo), AA e AAA (o mais elevado).
 
 Os princípios básicos do WCAG são:
 
 \begin{itemize}
 	\item \textbf{Perceptível}: a informação deve ser apresentada na interface, de forma a garantir que qualquer usuário possa percebê-la;
 	\item \textbf{Operável}: todos os componentes de navegação da aplicação devem ser operáveis por qualquer usuário;
-	\item \textbf{Entendível}: qualquer usuário deve conseguir entender a informação passada pela interface;
+	\item \textbf{Entendível}: todo usuário deve conseguir entender a informação passada pela interface;
 	\item \textbf{Robusto}: a interface deve ser robusta o suficiente para que possa ser interpretada por qualquer usuário, utilizando ou não tecnologias assistivas.
 \end{itemize}
 
-Com a intenção de evoluir os critérios do WCAG para atender também as aplicações móveis (\textit{apps}), foi criado o WCAG2.1 \footnote{https://www.w3.org/TR/WCAG21/}, mantendo os mesmos 4 princípios porém com a inclusão de 17 novas diretrizes (critérios de sucesso) mais específicas para este tipo de ambiente relativo às aplicações móveis \cite{shanley}.
+Com a intenção de evoluir os critérios do WCAG para atender também as aplicações móveis (\textit{apps}), foi criado o WCAG2.1 \footnote{https://www.w3.org/TR/WCAG21/}, mantendo os mesmos 4 princípios porém com a inclusão de 17 novas diretrizes (critérios de sucesso) mais específicas para este tipo de ambiente \cite{shanley}.
 
 
 \subsection{\textit{BBC Accessibility Guidelines}}
-A BBC - (\textit{British Broadcasting Corporation}) \cite{bbc} - é a empresa pública líder mundial em serviços de transmissão (incluindo canais de televisão e rádio, bem como transmissões via internet). Devido à sua característica pública possui um perfil altamente imparcial e independente, com foco no entretenimento e principalmente na edução, tanto do Reino Unido quanto no restante do mundo \cite{bbchomepage}.
+A BBC - (\textit{British Broadcasting Corporation}) \cite{bbc} - é uma empresa pública líder mundial em serviços de transmissão (incluindo canais de televisão e rádio, bem como transmissões via internet). Devido à sua característica pública, possui um perfil altamente imparcial e independente, com foco no entretenimento e principalmente na edução, tanto do Reino Unido quanto no restante do mundo \cite{bbchomepage}.
 
-Com a intenção de manter seus conteúdos disponíveis para o maior número de pessoas, foram definidas diretrizes que devem ser seguidos para os conteúdos disponibilizados pela BBC, e que se tornaram uma das referências globais. Como um conjunto de práticas recomendadas, são agnósticas, podendo ser aplicadas em conteúdos Web móvel, aplicativos híbridos e nativos.
+Com a intenção de manter seus conteúdos disponíveis para o maior número de pessoas, foram definidas diretrizes que devem ser seguidas para os conteúdos disponibilizados pela empresa, e que se tornaram uma das referências globais. Como um conjunto de práticas recomendadas, são agnósticas, podendo ser aplicadas em conteúdos Web móvel, aplicações híbridas e nativas.
 
-Abaixo segue tabela das diretrizes da BBC estão subdivididas em 11 categorias, conforme segue abaixo:
+Abaixo segue tabela das diretrizes da BBC, subdivididas em 11 categorias:
 
 \begin{itemize}
 	\item Áudio e Vídeo:
 		\subitem - Alternativas para conteúdos de vídeo e áudio: quando possível, devem ser disponibilizados conteúdos alternativos, como por exemplo em legendas, linguagem de sinais e transcrições, incorporados à midia.
-		\subitem - Autoplay: elementos de audio não devem iniciar automaticamente, exceto se o usuário tiver conhecimento prévio ou que sejam fornecidos botões de controle (pausa, parada e mudo).
+		\subitem - Autoplay: elementos de áudio não devem iniciar automaticamente, exceto se o usuário tiver conhecimento prévio ou que sejam fornecidos botões de controle (pausa, parada e mudo).
 		\subitem - Metadados: Os metadados relevantes devem ser disponibilizados para todas as mídias.
 		\subitem - Controle de Volume: em havendo música de fundo, sons de ambiente ou efeitos sonoros narrativos e de edição, deverão ser disponibilizados controles de volume separadamente.
 		\subitem - Conflito de áudio: não devem ocorrer conflitos dos áudios da tecnologia de assistência nativa com os sons narrativos em jogos ou mídias interativas.
@@ -49,16 +49,16 @@ Abaixo segue tabela das diretrizes da BBC estão subdivididas em 11 categorias, 
 		\subitem - Elementos acionáveis: deve ser possível a distinção clara de \textit{links} e outros elementos acionáveis.
 		\subitem - Foco: todos os elementos devem continuar visíveis, independentemente do foco utilizado pelo usuário.
 		\subitem - Consistência: a experiência do usuário deve ser consistente, manter a mesma lógica e linguagem, o que facilitará ao usuário prever a próxima etapa.
-		\subitem - Escolha: as interfaces do usuário deve prover múltiplas formas de interação com o seu conteúdo.
+		\subitem - Escolha: as interfaces do usuário devem prover múltiplas formas de interação com o seu conteúdo.
 		\subitem - Ajustabilidade: mídias interativas, incluindo jogos, devem ser ajustáveis pelo usuário de acordo com sua capacidade (habilidade) e preferência.
-		\subitem - Cintilação: não deve haver conteúdo que pisque mais do que 3 vezes em um período de 1 segundo. Este tipo de cintilação podem causar fadiga ocular, tonturas, dores de cabeça, enxaqueca, náusea, podendo chegar a vertigem e até mesmo convulsões em casos específicos.
+		\subitem - Cintilação: não deve haver conteúdo que pisque mais do que 3 vezes em um período de 1 segundo. Este tipo de cintilação pode causar fadiga ocular, tonturas, dores de cabeça, enxaqueca, náusea, podendo chegar a vertigem e até mesmo convulsões em casos específicos.
 	\item Editorial:
-		\subitem - Títulos consistentes: devem ser utilizados em \textit{web sites} e aplicações nativas, de forma a facilitar o entendimento do conteúdo completo, tornando-o familiar, principalmente para usuários que utilizam leitores de tela.
-		\subitem - Indicação do idioma: deve estar especificado o idioma de uma página ou aplicação, sendo que alterações no conteúdo devem ser indicados ao usuário.
+		\subitem - Títulos consistentes: devem ser utilizados em \textit{web sites} e aplicações nativas, de forma a facilitar o entendimento do conteúdo completo, tornando-o familiar, principalmente para usuários que se utilizam de leitores de tela.
+		\subitem - Indicação do idioma: deve estar especificado o idioma de uma página ou aplicação, sendo que alterações no conteúdo devem ser indicadas ao usuário.
 		\subitem - Instruções: quando necessário, instruções adicionais devem ser fornecidas de forma a auxiliar o conteúdo disponibilizado em formato de áudio e vídeo.
 	\item Foco:
 		\subitem - Elementos focáveis: todos os elementos interativos devem ser focáveis. Elementos inativos não devem ser focáveis.
-		\subitem - Armadilhas de teclado: não devem existir armadilhas de teclado, de forma que o usuário possa controlar a interface através de um teclado ou mesmo uma entrada que não possua um "ponteiro".
+		\subitem - Armadilhas de teclado: não deve existir armadilhas de teclado, de forma que o usuário possa controlar a interface através de um teclado ou mesmo uma entrada que não possua um "ponteiro".
 		\subitem - Ordem do conteúdo: a ordem do conteúdo deve ser lógica, facilitando o entendimento do mesmo principalmente por usuários que se utilizam de tecnologia assistiva.
 		\subitem - Ordem do foco: o conteúdo clicável deve ser navegável em uma sequência entendível. Por exemplo: navegar em um formulário sem ordem lógica do foco tornará o mesmo desorientador para um usuário com leitor de tela.
 		\subitem - Interações do usuário: Ações devem desencadear outra interação apropriada, de acordo com o método de entrada de dados pelo usuário, como por exemplo mouse, teclado ou mesmo outros controladores.
@@ -66,16 +66,16 @@ Abaixo segue tabela das diretrizes da BBC estão subdivididas em 11 categorias, 
 	\item Formulários:
 		\subitem - Rótulos dos controles dos formulários: todos os controles dos formulários devem possuir rótulos exclusivos e disponíveis para tecnologias assistidas, facilitando o entendimento.
 		\subitem - Entrada de dados: deve ser claramente indicado e suportado um formato de entrada de dados padrão, facilitando o usuário de entender e acertar a entrada na primeira vez.
-		\subitem - \textit{Layout} dos formulários: os rótulos devem ser colocados próximos dos controles do formulário, reduzindo o risco do usuário se desorientar.
+		\subitem - \textit{Layout} dos formulários: os rótulos devem ser colocados próximos dos controles do formulário, reduzindo o risco do usuário de se desorientar.
 		\subitem - Agrupamento de elementos: os controles, rótulos e outros elementos do formulário devem estar adequadamente agrupados, o que reduzirá o número de passos e complexidade de preenchimento principalmente por usuários que se utilizam de tecnologia assistiva.
 		\subitem - Foco manuseável: O foco ou o contexto não devem mudar automaticamente durante a entrada de dados, mas sim apenas com uma ação do próprio usuário.
 	\item Imagens:
-		\subitem - Imagens de texto: devem ser evitadas, já que trata-se de uma forma inflexível de passagem de informação, estando indisponível para tecnologias assistidas.
+		\subitem - Imagens de texto: devem ser evitadas, já que se trata de uma forma inflexível de passagem de informação, estando indisponível para tecnologias assistidas.
 		\subitem - Imagens de fundo: as imagens de fundo que contenham informações devem ser evitadas ou conter uma alternativa acessível adicional, já que não estão disponíveis em tecnologias assistidas.
 	\item \textit{Links}:
 		\subitem - \textit{Links} descritivos: O texto do \textit{link} ou do item de navegação deve descrever exclusivamente seu destino ou função.
 		\subitem - \textit{Links} para formatos alternativos: \textit{Links} para formatos alternativos devem indicar
-		que uma página alternativa será aberta, caso contrário desorientar usuários com dificuldades cognitivas ou que se utilizam de tecnologia assistida.
+		que uma página alternativa será aberta, caso contrário desorientará usuários com dificuldades cognitivas ou que se utilizam de tecnologia assistida.
 		\subitem - Combinação de \textit{links} repetidos: \textit{Links} repetidos para o mesmo recurso devem ser combinados em um único \textit{link}, o que auxiliará os usuários a navegar rapidamente pelo conteúdo, especialmente aqueles que dependem de tecnologia assistida.
 	\item Notificações:
 		\subitem - Notificações inclusivas: devem ser visíveis e audíveis.
@@ -83,11 +83,11 @@ Abaixo segue tabela das diretrizes da BBC estão subdivididas em 11 categorias, 
 		\subitem - Mensagens de erro e correção: devem ser claras.
 		\subitem - \textit{Feedback} e assistência: \textit{Feedback} ou assistência não críticos devem ser fornecidos quando apropriado.
 	\item \textit{Scripts} e Conteúdos Dinâmicos:
-		\subitem - Funcionamento progressivo: Aplicativos e sites devem ser criados de forma a funcionar de maneira progressiva, garantindo uma experiência funcional para todos os usuários.
+		\subitem - Funcionamento progressivo: Aplicações e sites devem ser criados de forma a funcionar de maneira progressiva, garantindo uma experiência funcional para todos os usuários.
 		\subitem - Controle de mídia: em apresentações de mídias devem existir botões para controles de pausa, parada ou mesmo ocultação dos controles.
 		\subitem - Atualização de página: As atualizações automáticas de página não devem ser usadas sem prévio aviso, podendo impactar tecnologias assistidas, como por exemplo leitores de tela.
 		\subitem - Tempos de espera: os tempos de resposta devem ser ajustáveis, algumas pessoas podem não ser capazes de responder dentro do tempo esperado.
-		\subitem - Controle de entrada: Interações de entrada devem ser adaptáveis, de forma a permitir que usuários com deficiências motoras possam se adaptar.
+		\subitem - Controle de entrada: Interações de entrada devem ser adaptáveis, de forma a permitir que usuários com deficiências motoras possam ajustar.
 	\item Estrutura:
 		\subitem - Título único	para páginas ou telas: Todas as páginas ou telas devem conter um único e identificável título.
 		\subitem - Cabeçalho: O conteúdo deve fornecer uma estrutura lógica e hierárquica de cabeçalho, de acordo com o que é suportado pela plataforma.
@@ -104,8 +104,8 @@ Abaixo segue tabela das diretrizes da BBC estão subdivididas em 11 categorias, 
 \subsection{Comparativo WCAG2.1 e BBC}
 Conforme abordado em \cite{camilamaster}, apesar das diretrizes de acessibilidade propostas pela BBC serem compreensíveis e de fácil interpretação, pode-se dizer que a W3C possui diretrizes não cobertas pela BBC, conforme apresentado abaixo:
 \begin{itemize}
-	\item Montante de informações: em telas de aplicativos móveis, é fundamental a redução da quantidade de informações apresentadas na tela se comparadas com as versões de \textit{desktop}.
-	\item Posição dos títulos: os formulários devem possuir seus títulos dispostos acima, ao invés de ao lado.
+	\item Montante de informações: em telas de aplicações móveis, é fundamental a redução da quantidade de informações apresentadas na tela se comparadas com as versões de \textit{desktop}.
+	\item Posição dos títulos: os formulários devem possuir seus títulos dispostos acima, ao invés de estarem ao lado da página.
 	\item Teclado: todas as funcionalidades devem ser operáveis sem a necessidade da utilização de um teclado.
 	\item Gestos: o seu emprego deve ser fácil, sem a necessidade de percorrer caminhos específicos.
 	\item Posição dos elementos interativos: devem estar posicionados de forma que o usuário possa identificá-los facilmente.
@@ -113,33 +113,33 @@ Conforme abordado em \cite{camilamaster}, apesar das diretrizes de acessibilidad
 	\item Posicionamento dos elementos: as informações importantes devem estar visíveis, sem que haja a necessidade de rolagem da tela para identificá-las.
 	\item Instruções: é fundamental a inserção de títulos ou instruções que auxiliem o usuário a inserir as informações requeridas.
 	\item Ajuda: devem estar disponíveis e de fácil identificação, mesmo com tecnologias assistidas.
-	\item Facilidade na entrada de dados: substitua volumes de texto de entrada por menus de seleção, botões \textit{radio}, caixas de seleção ou mesmo por entrada automática de dados, desde que estas estejam claramente informadas ao usuário e contempladas por tecnologias assistidas.
+	\item Facilidade na entrada de dados: pode haver a substituição de volumes de texto de entrada por menus de seleção, botões \textit{radio}, caixas de seleção ou mesmo por entrada automática de dados, desde que estes estejam claramente informados ao usuário e contemplados por tecnologias assistidas.
 \end{itemize}
 
-Apesar do alto número de padrões e diretrizes definidos tanto pela BBC quanto pela W3C, é de conhecimento que estas definições não são completas, e que outros grupos ou companhias \ consórcios podem definir novos padrões de acordo com as necessidades de seus usuários. Segundo \cite{meloihc2004}, a avaliação da usabilidade de um software é definida pela verificação de sua acessibilidade relacionada ao seu contexto de uso, às atividades que o mesmo apoia, necessidades e preferências dos usuários envolvidos.  
+Apesar do alto número de padrões e diretrizes definidos tanto pela BBC quanto pela W3C, é de conhecimento que estas definições não são completas, e que outros grupos ou companhias ou consórcios podem definir novos padrões de acordo com as necessidades de seus usuários. Segundo \cite{meloihc2004}, a avaliação da usabilidade de um software é definida pela verificação de sua acessibilidade relacionada ao seu contexto de uso, às atividades que o mesmo apoia, necessidades e preferências dos usuários envolvidos.  
 
 
 
 \subsection{eMAG - Modelo de Acessibilidade em Governo Eletrônico \cite{emag}}
-No âmbito brasileiro, podemos citar o eMAG como um norteador para os padrões de acessibilidade. Como forma de promover a inclusão social na população brasileira, uma das iniciativas adotadas pelo Governo Federal Brasileiro foi da criação deste modelo, que visa garantir o acesso a todos para os conteúdos digitais do governo federal, através de recomendações de fácil implementação \cite{victormaster}.
+No âmbito brasileiro, podemos citar o eMAG como um norteador para os padrões de acessibilidade. Como forma de promover a inclusão social na população brasileira, uma das iniciativas adotadas pelo Governo Federal Brasileiro foi a criação deste modelo, que visa garantir o acesso a todos para os conteúdos digitais do governo federal através de recomendações de fácil implementação \cite{victormaster}.
 De forma a seguir os padrões internacionais, foi utilizado como base para estas diretrizes o documento internacional WCAG \cite{wcag}, e que não exclui qualquer boa prática de acessibilidade deste documento.
 
-Como já abordado em \cite{victormaster}, diante de uma considerável parcela da população demandante de material acessível, no ano de 2004 o governo brasileiro iniciou os trabalhos relativos às definições dos padrões de acessibilidade, que ao longo dos anos vem sendo aperfeiçoado. Os estudos para estas definições têm considerados modelos de vários países como Estados Unidos, Canadá e Inglaterra, da mesma forma que organizações internacionais como o W3C \cite{wai}.
+Como já abordado em \cite{victormaster}, diante de uma considerável parcela da população demandante de material acessível, no ano de 2004 o governo brasileiro iniciou os trabalhos relativos às definições dos padrões de acessibilidade, que ao longo dos anos vem sendo aperfeiçoado. Os estudos para estas definições têm considerado modelos de vários países como Estados Unidos, Canadá e Inglaterra, da mesma forma que organizações internacionais como o W3C \cite{wai}.
 
 Na data de 07 de maio de 2007, a Portaria nº 3 institucionalizou o padrão eMAG, tornando-o obrigatório para os \textit{sites} do governo brasileiro. Posteriormente, em 2015, foi sancionada a lei Brasileira de nº 13.146, que estabelece as normas gerais de acessibilidade, incluindo as áreas de sistemas de informação e conteúdos digitais.
 
-A versão 3.1 do eMAG, de Abril de 2014, separou as 45 recomendações de acordo com suas 6 seções. Diferentemente da WCAG, que classifica seus padrões po prioridade, o eMAG divide as recomendações de acordo com a área de atuação. Desta forma, se um determinado \textit{site} é a área de contato, as recomendações de Formulários deverão ser seguidas, se disponibilizar alguma mídia, deverão ser seguidas as recomendações de Multimídia.
+A versão 3.1 do eMAG, de Abril de 2014, separou as 45 recomendações de acordo com suas 6 seções. Diferentemente da WCAG, que classifica seus padrões por prioridade, o eMAG divide as recomendações de acordo com a área de atuação. Exemplificando, se um determinado \textit{site} trata-se da área de contato da empresa / órgão, as recomendações de Formulários deverão ser seguidas, se disponibilizar alguma mídia, deverão ser seguidas as recomendações de Multimídia.
 
 \begin{itemize}
-	\item[1] Marcação: as 9 recomendações desta seção visam orientar os desenvolvedores a organizar as camadas do código, respeitando os padrões Web de forma lógica e semântica. Além disso direciona a disponibilização de \textit{links} diretos que facilitarão principalmente a navegação pelo usuário que se utiliza de tecnologias assistidas bem como a não abertura de instâncias (abas ou janelas) sem a prévia solicitação do usuário.
+	\item[1] Marcação: as 9 recomendações desta seção visam orientar os desenvolvedores a organizar as camadas do código, respeitando os padrões \textit{web} de forma lógica e semântica. Além disso direciona a disponibilização de \textit{links} diretos que facilitarão principalmente a navegação pelo usuário que se utiliza de tecnologias assistidas, bem como a não abertura de instâncias (abas ou janelas) sem a prévia solicitação do usuário.
 	
 	\item[2] Comportamento (DOM): as 7 recomendações descritas na seção visam orientar a utilização e controle da navegação. Independentemente do tipo de entrada utilizado (teclado, \textit{mouse} ou mesmo \textit{touchscreen}), os objetos programáveis devem ser acessíveis e as páginas não devem ser atualizadas ou redirecionadas automaticamente sem a autonomia do usuário. Nesta seção também se aborda o tema cintilação, que podem causar sérios danos a usuários sensíveis.
 	
-	\item[3] Conteúdo/Informação: as 12 recomendações desta seção visam garantir que o usuário possuirá as informações relevantes de cada elemento da ela, como por exemplo idioma da página ou conteúdo, textos descritivos e claros de objetos, imagens e links. Palavras incomuns, abreviaturas e siglas também devem conter suas descrições claramente. Por fim, direciona que estas informações estejam disponíveis em tecnologias assistidas.
+	\item[3] Conteúdo/Informação: as 12 recomendações desta seção visam garantir que o usuário possuirá as informações relevantes de cada elemento da tela, como por exemplo idioma da página ou conteúdo, textos descritivos e claros de objetos, imagens e links. Palavras incomuns, abreviaturas e siglas também devem conter suas descrições claramente. Por fim, direciona que estas informações estejam disponíveis em tecnologias assistidas.
 
 	\item[4] Apresentação/Design: nesta seção estão as 4 recomendações relacionadas à disponibilização visual dos objetos da aplicação. São citados taxa de contraste mínimo, não utilização apenas da cor como elemento para transmissão de informações, redimensionar a tela sem perdas de funcionalidades e por fim possibilitar que o elemento com foco esteja destacado dos demais.
 	
-	\item[5] Multimídia: contemplando 5 recomendações, esta seção tem a função de direcionar que hajam alternativas e controle para o usuário na apresentação de informações de conteúdos multimídia. Legendas, audiodescrição, áudios alternativos, botões de controle são citados como fundamentais para o atendimento a esta categoria.	
+	\item[5] Multimídia: contemplando 5 recomendações, esta seção tem a função de direcionar que hajam alternativas e controles para o usuário na apresentação de informações de conteúdos multimídia. Legendas, audiodescrição, áudios alternativos, botões de controle são citados como fundamentais para o atendimento a esta categoria.	
 	
 	\item[6] Formulário: as 8 recomendações visam disponibilizar formulários acessíveis, com textos descritivos, etiquetas e/ou orientações sobre cada item, manutenção da leitura lógica através de tecnologia assistida, evitando alterações automáticas no contexto. Caso hajam erros nas inserções de dados, deverá haver textos explicativos e que sinalizem os locais a serem corrigidos. Por fim, estratégias de segurança também são abordadas nesta seção.
 	
@@ -150,29 +150,29 @@ No detalhamento das recomendações mais complexas, são apresentados exemplos q
 
  
 \section{Novos Desafios}
-Com o avanço da tecnologia móvel, um novo panorama foi criado para a interface humano computador. As páginas Web acessadas em \textit{desktops} (computadores pessoais e fixos nas residências ou locais de trabalho) passaram a ser acessadas através de celulares, com telas menores e com localização móvel. As tarefas envolvendo o computador há 10 anos que eram realizadas em locais muitas vezes silenciosos, passou a fazer parte do cotidiano, sendo acessado em metrôs, ônibus e até mesmo nas ruas. A utilização do software pelos usuários, anteriormente disponibilizado para instalação através de midias físicas vendidas em lojas, passou a ser disponibilizado praticamente de forma instantânea nas Lojas On-Line de Aplicativos (ex: \textit{Google Play}), alterando a forma e periodicidade em que os usuários instalam ou atualizam seus \textit{apps} \cite{nayebi}, impulsionando o desenvolvimento em formato Ágil.
+Com o avanço da tecnologia móvel, um novo panorama foi criado para a interface humano computador. As páginas Web acessadas em \textit{desktops} (computadores pessoais e fixos nas residências ou locais de trabalho) passaram a ser acessadas através de celulares, com telas menores e com localização móvel. As tarefas envolvendo o computador há 10 anos que eram realizadas em locais muitas vezes silenciosos, passou a fazer parte do cotidiano, sendo acessado em metrôs, ônibus e até mesmo nas ruas. A utilização do software pelos usuários, anteriormente disponibilizado para instalação através de midias físicas vendidas em lojas, passou a ser disponibilizado praticamente de forma instantânea nas lojas de aplicativos (ex: \textit{Google Play}), alterando a forma e periodicidade em que os usuários instalam ou atualizam seus \textit{apps} \cite{nayebi}, impulsionando o desenvolvimento em formato Ágil.
 
 Esta mudança de características trouxe novos desafios ao cotidiano dos desenvolvedores, funcionalidades envolvendo geolocalização, as resoluções das telas e respectivos objetos precisam ser reconsiderados, a luminosidade no ambiente do usuário passou a ser uma importante variável.
 
 \section{Estudos Relacionados}
 %evolução de apps (evoluem rapidamente), geralmente é ágil, novas versões surgem a cada semana, citar referência, citar estudos do panichella, mario linhares, e assim por diante
-No contexto relacionado aos estudos já realizados sobre comentários em lojas de aplicativos, podemos elencar vários artigos, porém os únicos centradosem discussões de envolvendo acessibilidade trata-se do artigo referente ao estudo piloto desta pesquisa \cite{ihc2019} e estudo evolutivo deste artigo abordando uma análise automatizada \cite{rochestertamjeed}. Não identificamos estudos correlacionando comentários, solicitações de modificações e alterações envolvendo acessibilidade.
+No contexto relacionado aos estudos já realizados sobre avaliações em lojas de aplicativos, podemos elencar vários artigos, porém os únicos centrados em discussões envolvendo acessibilidade tratam-se do artigo referente ao estudo piloto desta pesquisa \cite{ihc2019} e do estudo evolutivo deste artigo abordando uma análise automatizada \cite{rochestertamjeed}. Não identificamos estudos correlacionando avaliações, solicitações de modificações e alterações envolvendo acessibilidade.
 
-Com o advento das lojas de aplicativos (e.g. \textit{Google Play} e \textit{Apple Store}) a relação entre desenvolvedor e usuário começou a ser alterado. Comentários de usuários passaram a ser postados publicamente causando impactos tanto nas notas do aplicativo (\textit{ratings}) bem como no número de vezes que o software é baixado (\textit{downloads}), e desta forma tornando-se para o desenvolvedor uma importante fonte de compreensão do seu público \cite{Pagano2013userfeedback}. De acordo com \cite{Fu2013whypeoplehate}, baseado em mais de 13 milhões de comentários, foi possível uma análise da exigência dos usuários independentemente da categoria do aplicativo, observando-se que os mesmos tendem a ser mais tolerantes para a categoria jogos do que para demais aplicações.
+Com o advento das lojas de aplicativos (e.g. \textit{Google Play} e \textit{Apple Store}) a relação entre desenvolvedor e usuário começou a ser alterada. Avaliações de usuários passaram a ser postadas publicamente causando impactos tanto nas notas da aplicação (\textit{ratings}) quanto no número de vezes que o software é baixado (\textit{downloads}), e desta forma tornando-se para o desenvolvedor uma importante fonte de compreensão do seu público \cite{Pagano2013userfeedback}. De acordo com \cite{Fu2013whypeoplehate}, baseado em mais de 13 milhões de avaliações, foi possível uma análise da exigência dos usuários de acordo com a categoria da aplicação, observando-se que os mesmos tendem a ser mais tolerantes para a categoria jogos do que para demais aplicações.
 
-A oportunidade do cliente de expôr sua opinião com textos livres (muitas vezes com mais de uma ideia\cite{Mcilroy2016analyzing}) por outro lado traz aos desenvolvedores a dificuldade de identificar as necessidades a serem tratadas nas próximas entregas, especialmente para softwares populares com alta quantidade de opiniões postadas. Este cenário tem promovido pesquisas sobre formas de sumarização \cite{Iacob2013retrieving,Iacob2014online,Fu2013whypeoplehate} e interpretação destes textos, incluindo o emprego conjunto de diferentes técnicas para aprendizado de máquina \cite{Panichella2015how}.
+A oportunidade do cliente expôr sua opinião com textos livres (muitas vezes com mais de uma ideia\cite{Mcilroy2016analyzing}) por outro lado traz aos desenvolvedores a dificuldade de identificar as necessidades a serem tratadas nas próximas entregas, especialmente para softwares populares com alta quantidade de opiniões postadas. Este cenário tem promovido pesquisas sobre formas de sumarização \cite{Iacob2013retrieving,Iacob2014online,Fu2013whypeoplehate} e interpretação destes textos, incluindo o emprego conjunto de diferentes técnicas para aprendizado de máquina \cite{Panichella2015how}.
 
-Em \cite{Palomba2015userreviews}, \cite{Palompa2018crowdsourcing} e \cite{Li2018MobileAE} foram realizadas pesquisas que associaram os comentários às disponibilizações de versões do software (\textit{releases}). As conclusões foram de que as notas aumentam quando há implementações quem visam atender às opiniões dos usuários. Mesmo o pequeno volume de textos informativos trata-se de uma valiosa fonte de informações, que permite tanto a correção de erros de difícil identificação nos testes quanto a implantação de novas funcionalidades e recursos não funcionais.
+Em \cite{Palomba2015userreviews}, \cite{Palompa2018crowdsourcing} e \cite{Li2018MobileAE} foram realizadas pesquisas que associaram as avaliações às disponibilizações de versões do software (\textit{releases}). As conclusões foram de que as notas aumentam quando há implementações quem visam atender às opiniões dos usuários. Mesmo o pequeno volume de textos informativos trata-se de uma valiosa fonte de informações, que permite tanto a correção de erros de difícil identificação nos testes quanto a implantação de novas funcionalidades e recursos não funcionais.
 
-No que diz respeito às notas em lojas de aplicação, em \cite{Yan2019currentstatus} não foi identificado um relacionamento direto entre a nota e as falhas de acessibilidade observadas na pesquisa.
+No que diz respeito às notas em lojas de aplicativos, em \cite{Yan2019currentstatus} não foi identificado um relacionamento direto entre a nota e as falhas de acessibilidade observadas na pesquisa.
 
 
 \section{Considerações Finais}
 %faço um resumo, crio o meu entendimento crítico e dou um gancho para o meu trabalho de pesquisa
 %vimos que falta acessibilidade, ela é importante, muita gente não implementa, tem um monte de problema...
 %Os comentários impulsionam os desenvolvedores, mas não temos estudos envolvendo
-Em decorrência de relevante parcela da população mundial possuir algum grau de deficiência, bem como do avanço tecnológico que permitiu um aumento considerável da utilização de softwares para dispositivos móveis, entende-se como fundamental a evolução das aplicações no que diz respeito à sua acessibilidade.
+Em decorrência de relevante parcela da população mundial possuir algum grau de deficiência, bem como do avanço tecnológico que permitiu um aumento considerável da utilização de software para dispositivos móveis, entende-se como fundamental a evolução das aplicações no que diz respeito à sua acessibilidade.
 
-Apesar desta importância e mesmo em aplicações móveis populares, identifica-se problemas de acessibilidade conforme com os padrões internacionalmente reconhecidos, o que leva ao indício de que não há a devida significância para este tema junto aos desenvolvedores, ou mesmo não há uma pressão de mercado que induza a esta priorização durante a elaboração de novas versões do software.
+Apesar desta importância e mesmo em aplicações móveis populares, identifica-se problemas de acessibilidade conforme os padrões internacionalmente reconhecidos, o que leva ao indício de que não há a devida significância para este tema junto aos desenvolvedores, ou mesmo não há uma pressão de mercado que induza a esta priorização durante a elaboração de novas versões.
 
-Considerando que os comentários são uma importante fonte de retroalimentação para os desenvolvedores e dada a importância da acessibilidade no cenário mundial, entende-se que existe a necessidade de um estudo do relacionamento entre os comentários em lojas de aplicativos, e as informações cadastradas pelos desenvolvedores para as solicitações de modificações e alterações, tendo em conta o tema acessibilidade.
+Considerando que as avaliações são uma importante fonte de retroalimentação para os desenvolvedores e dada a importância da acessibilidade no cenário mundial, entende-se que existe a necessidade de um estudo do relacionamento entre as avaliações em lojas de aplicativos, e as informações cadastradas pelos desenvolvedores para as solicitações de modificações e alterações, tendo em conta o tema acessibilidade.
