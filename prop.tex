@@ -4,7 +4,7 @@ O objetivo geral deste trabalho de mestrado é descobrir se questões relacionad
 e se tais avaliações são levadas em consideração pelos desenvolvedores e organizações responsáveis pela manutenção e evolução destas aplicações.
 
 
-Para atender a este objetivo, foi adotada uma pesquisa exploratória envolvendo artigos relacionados a avaliações de usuários em lojas de aplicativos bem como levantamentos destas avaliações em conjunto com dados de solicitações de modificações e alterações em repositórios de códigos fonte abertos (GitHub), visto não ter sido identificado estudo relacionando estas três bases de informações no que diz respeito ao tema acessibilidade.
+Para atender a este objetivo, foi adotada uma pesquisa exploratória envolvendo artigos relacionados a avaliações de usuários em lojas de aplicativos bem como levantamentos destas avaliações em conjunto com dados de solicitações de modificações e alterações em repositórios de códigos-fonte abertos (GitHub), visto não ter sido identificado estudo relacionando estas três bases de informações no que diz respeito ao tema acessibilidade.
 
 %IMPORTANTE!!!!!!
 %\textbf{Escrever um parágrafo dizendo que tipo de pesquisa foi adotado neste projeto (exploratória, experimental, estudo de caso, bibliográfica, quantitativa, qualitativa, etc????).}
@@ -66,7 +66,9 @@ a maioria dos estudos sobre evolução de aplicações móveis são relacionados
 e o acesso aos dados da loja de aplicativos oficial (\textit{Google Play Store}) é gratuito e existem ferramentas disponíveis para extrair as informações necessárias para a realização deste projeto.
 
 Além disso, optou-se por analisar as aplicações indexadas no FDroid\footnote{https://www.f-droid.org/}, um repositório que mantém um catálogo de aplicações gratuitas e de código fonte aberto. Este repositório possui mais de 3168 aplicações indexadas\footnote{Dados extraídos em 23/10/2020} das mais diversas categorias, tamanhos, complexidades e popularidade, cujas informações podem ser acessadas por meio de um arquivo XML fornecido pela própria plataforma\footnote{https://f-droid.org/repo/index.xml}.
-Infelizmente, nem todas as aplicações indexadas nesta plataforma estão publicadas na \textit{Google Play Store}. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficinal do Android. Ainda, decidiu-se selecionar apenas aplicações cujos códigos fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (\textit{Application Programming Interface}) para a consulta de informações sobre solicitações de modificações e alterações realizadas no código das aplicações.
+
+Infelizmente, nem todas as aplicações indexadas nesta plataforma estão publicadas na \textit{Google Play Store}. Portanto, a seleção das aplicações deve incluir apenas aquelas que estão publicadas na loja oficial do Android para que seja possível obter as avaliações dos usuários. 
+Ainda, para analisar as solicitações de aletrações e alterações realizadas nas aplicações é preciso que o código-fonte esteja disponível publicamente. Portanto, decidiu-se selecionar apenas aplicações cujos códigos-fonte estejam armazenados no repositório GitHub, pois este repositório oferece uma API (\textit{Application Programming Interface}) para a consulta de informações sobre solicitações de modificações e alterações realizadas nas aplicações. No GitHub, as solicitações de alterações são denominadas de \textit{issues} e as alterações realizadas no código são chamadas de \textit{commit}.
 
 
 \subsection{Extração das avaliações dos usuários}
@@ -76,7 +78,10 @@ Esta atividade consiste em obter as avaliações publicadas pelos usuários refe
 
 A \textit{Google Play Store} não oferece uma API pela qual se pode extrair os detalhes das avaliações dos usuários, portanto decidiu-se utilizar uma API não oficial chamada \textit{google-play-api}\footnote{https://github.com/facundoolano/google-play-api}. Esta API foi construída com base em uma biblioteca que percorre automaticamente as páginas (\textit{crawler}) da loja de aplicativos e transforma as informações coletadas em dados que podem ser consumidos por meio de uma API.
 
-Para extrair as avaliações da loja de aplicativos é preciso construir um software que utilize a API \textit{google-play-api}, a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
+Para extrair as avaliações da loja de aplicativos, é preciso construir um software que utilize a API \textit{google-play-api}, a fim de coletar as informações necessárias das aplicações móveis selecionadas para este estudo. 
+Para cada avaliação, as seguintes informações são fornecidas: 
+um identificador, o nome do usuário que fez a avaliação, a data da avaliação, a nota que o usuário atribuiu ao aplicativo, o título do comentário, o corpo do texto do comentário, a data de resposta dada ao usuário (se houver), e o texto da resposta dada o usuário (se houver).
+
 
 \subsection{Extração das solicitações de modificações e alterações de código}
 \label{sec:extracaomodificacoes}
@@ -85,7 +90,14 @@ Esta atividade consiste em obter as solicitações de modificações e as altera
 No GitHub, as solicitações de modificações (\textit{issues}) podem ser criadas pelos próprios desenvolvedores ou qualquer outro usuário da plataforma.
 As alterações (\textit{commits}) são realizadas pelos desenvolvedores/colaboradores do projeto e podem conter diversas informações, tais como rótulos, descrição das alterações efetuadas e as modificações efetuadas no código (inserção, deleção, etc). 
 
-O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os desenvolvedores utilizarem para extrair informações dos repositórios hospedados na plataforma. Portanto, para obter as informações necessárias para este estudo é preciso construir um software capaz de utilizar a API fornecida pelo GitHub  para coletar e organizar as informações das solicitações de modificações e alterações realizadas no código das aplicações. 
+O GitHub fornece uma API\footnote{https://developer.github.com/v3/} para os desenvolvedores utilizarem para extrair informações dos repositórios hospedados na plataforma.
+As informações das solicitações de modificações (\textit{issues}) obtidas por meio desta API são as seguintes: 
+um identificador, a data de criação e a situação da solicitação (aberta, atendida), o título da solicitação, o corpo do texto da solicitação, um rótulo para a solicitação (defeito, nova funcionalidade, melhoria, etc), dados sobre o usuário que fez a solicitação, comentários feitos por outros usuários sobre a solicitação, entre outras.
+As informações das alterações (\textit{commits}) obtidas por meio desta API são as seguintes:
+um identificador, o autor da alteração, um texto explicando a alteração realizada, e ponteiros para informações detalhadas sobre as modificações realizadas no código. 
+
+
+Para obter as informações necessárias para este estudo, é preciso construir um software capaz de utilizar a API fornecida pelo GitHub  para coletar e organizar as informações das solicitações de modificações e alterações realizadas no código das aplicações. 
 
 \subsection{Seleção de avaliações, solicitações de modificações e alterações}
 \label{sec:selecao}
@@ -116,6 +128,20 @@ as avaliações dos usuários, as solicitações de modificações e as alteraç
 	%\item Análise dos dados: finalmente serão analisadas as amostras filtradas. Os percentuais obtidos no estudo piloto serão estendidos para os \textit{commits} e \textit{issues} considerando o novo conjunto de palavras-chave. Será verificado se o mesmo comportamento dos comentários (baixo índice e notas inferiores para casos específicos de reclamações) é refletido para os outros dois itens, correlacionando desta forma os três conjuntos de dados.
 	%Durante a etapa de análise, poderão ser realizadas revisões manuais que validem percentuais fora do padrão esperado, de acordo com o estudo piloto \cite{ihc2019}. De acordo com \cite{Panichella2015how}, os usuários aplicam o mesmo padrão de resposta quando a sua intenção é de reportar um problema.	
 %\end{enumerate}
+
+\section{Contribuições Esperadas}
+
+As principais contribuições esperadas desta pesquisa são as evidências de que não só as aplicações móveis são pouco acessíveis, mas que também os requisitos relacionados à acessibilidade digital raramente são abordados por usuários em suas avaliações publicadas nas lojas de aplicativos, e consequentemente esses requisitos não são abordados durante a evolução das aplicações móveis.
+O entendimento de que existe uma lacuna nas demandas feitas pelos usuários para que as aplicações se tornem mais acessíveis pode ser útil para a criação de ações cujo objetivo seja fornecer aos usuários com alguma deficiência informações e recursos suficientes para utilizar esta ferramenta tão útil para direcionar a evolução e a melhoria da qualidade das aplicações. 
+
+Além da contribuição geral desta proposta de pesquisa, pode-se citar as seguintes contribuições pontuais:
+\begin{itemize}
+	\item Disponibilização de um conjunto de dados referentes às avaliações, solicitações de modificações e alterações, para posteriores estudos relacionados;
+	\item Criação de um conjuntos de palavras-chave relacionadas à acessibilidade para a identificação de textos que tratem de aspectos mencionados em padrões como o WCAG e a BBC
+	\item Código fonte em Python que permita a extração dos dados utilizados neste trabalho: avaliações do \textit{Google Play Store}, solicitações de modificações e alterações cadastradas no Github.
+\end{itemize}
+
+
 
 
 \section{Cronograma}
@@ -209,21 +235,6 @@ A Tabela~\ref{tab:cronograma} apresenta as atividades e o cronograma previstos p
 \end{tabular}
  \normalsize
 \end{table}
-
-
-
-
-\section{Contribuições Esperadas}
-
-As principais contribuições esperadas desta pesquisa são as evidências de que não só as aplicações móveis são pouco acessíveis, mas que também os requisitos relacionados à acessibilidade digital raramente são abordados por usuários em suas avaliações publicadas nas lojas de aplicativos, e consequentemente esses requisitos não são abordados durante a evolução das aplicações móveis.
-O entendimento de que existe uma lacuna nas demandas feitas pelos usuários para que as aplicações se tornem mais acessíveis pode ser útil para a criação de ações cujo objetivo seja fornecer aos usuários com alguma deficiência informações e recursos suficientes para utilizar esta ferramenta tão útil para direcionar a evolução e a melhoria da qualidade das aplicações. 
-
-Além da contribuição geral desta proposta de pesquisa, pode-se citar as seguintes contribuições pontuais:
-\begin{itemize}
-	\item Disponibilização de um conjunto de dados referentes às avaliações, solicitações de modificações e alterações, para posteriores estudos relacionados;
-	\item Criação de um conjuntos de palavras-chave relacionadas à acessibilidade para a identificação de textos que tratem de aspectos mencionados em padrões como o WCAG e a BBC
-	\item Código fonte em Python que permita a extração dos dados utilizados neste trabalho: avaliações do \textit{Google Play Store}, solicitações de modificações e alterações cadastradas no Github.
-\end{itemize}
 
 
 
