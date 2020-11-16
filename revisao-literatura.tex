@@ -374,24 +374,25 @@ Embora diversos trabalhos tenham sido realizados para entender os tipos de deman
 A seguir são apresentados detalhes dos estudos relacionados a esta pesquisa.
 
 \subsection{\textit{User Feedback in the AppStore: An Empirical Study}}
-O estudo \cite{Pagano2013userfeedback} de 2013 já apresentava a importância das avaliações dos usuários na engenharia de requisitos. O estudo exploratório considerou mais de um milhão de avaliações, identificando que a maior parte era enviada logo após o lançamento da aplicação, com redução rápida ao longo do tempo. Os conteúdos dos textos causam impacto direto no número de \textit{downloads}, sendo que as avaliações negativas referentes às deficiências da aplicação são tipicamente destrutivas e perdem detalhes de contexto e experiência do usuário.
+O estudo de \citeonline{Pagano2013userfeedback} já apresentava a importância das avaliações dos usuários na engenharia de requisitos. O estudo exploratório considerou mais de um milhão de avaliações, identificando que a maior parte era enviada logo após o lançamento da aplicação, com redução rápida ao longo do tempo. Os conteúdos dos textos causam impacto direto no número de \textit{downloads}, sendo que as avaliações negativas referentes às deficiências da aplicação são tipicamente destrutivas e perdem detalhes de contexto e experiência do usuário.
 
 Trata-se de um artigo de 2013, quando ainda estava sendo desvendado o relacionamento entre desenvolvedores, lojas de aplicativos e usuários que podem expôr suas avaliações abertamente, ou seja, formadores de opinião.
 
 O artigo cita a observação de que o tamanho dos textos é maior para aplicações mais caras. Além disso, claramente os usuários tornam-se raivosos (enviando textos com insultos), principalmente quando houve compra da aplicação.
 
-Em 2013, quando da elaboração do estudo, conclui-se que as avaliações são uma ótima fonte para os desenvolvedores entenderem seu público, porém foi salientada a falta de ferramenta que permita a análise e agrupamento das avaliações que facilitem a mineração das informações pelos desenvolvedores.
+Em 2013, quando da elaboração do estudo, concluiu-se que as avaliações são uma ótima fonte para os desenvolvedores entenderem seu público, porém foi salientada a falta de ferramenta que permita a análise e agrupamento das avaliações que facilitem a mineração das informações pelos desenvolvedores.
 
 
 \subsection{\textit{How can i improve my app? Classifying user reviews for software maintenance and evolution}}
-Em \cite{Panichella2015how} é apresentado um estudo sobre as avaliações de aplicações móveis utilizando a combinação de três técnicas: Processamento de Linguagem Natural (PLN), Análise de Texto (AT) e Análise de Sentimento (AS). Os resultados sugerem ser possível a utilização destas informações para a evolução das aplicações pelos desenvolvedores.
+
+No trabalho de \citeonline{Panichella2015how} é apresentado um estudo sobre as avaliações de aplicações móveis utilizando a combinação de três técnicas: Processamento de Linguagem Natural (PLN), Análise de Texto (AT) e Análise de Sentimento (AS). Os resultados sugerem ser possível a utilização destas informações para a evolução das aplicações pelos desenvolvedores.
 
 As principais conclusões referentes às técnicas são que a combinação das mesmas produz melhor resultado na classificação e entendimento dos textos, e que a Análise de Sentimento sozinha não apresenta valores significativos, porém agregando valor quando combinada com as demais.
 
 A metodologia do estudo consistiu em: (i) definir uma taxonomia para identificar os textos relacionados à manutenção e evolução do software; (ii) extração dos desejos dos usuários, considerando tanto novas funcionalidades quanto correções; (iii) aprendizado das técnicas e execução das mesmas combinadas; (iv) avaliação dos resultados.
 A taxonomia foi gerada manualmente por 2 autores do trabalho, e revisadas por um aluno de PhD, a partir de 300 e-mails produzidos em lista de discussão sobre 2 projetos de código fonte aberto, bem como se utilizando de técnica qualitativa publicada em 1967. Para a avaliação foi utilizada base de dados de trabalho anterior contendo as principais aplicações disponíveis nas lojas de aplicativos. Para a avaliação da metodologia foi feita a classificação manual por dois autores utilizando uma amostragem de 18\% (1.421) das avaliações para um determinado software, que possuía 7.696 avaliações no total. Apenas 31 casos (2,81\%) foram categorizados como "outros".
 
-Os resultados sugerem que os usuários utilizam padrões para respostas quando a intenção é reportar um problema, porém quando a intenção é sugerir uma nova funcionalidade são identificados diferentes padrões, o que dificulta a identificação. Além disso AS sozinha não apresenta valores significantes, no entanto agrega valor quando em combinação com outras técnicas.
+Os resultados sugerem que os usuários utilizam padrões para respostas quando a intenção é reportar um problema, porém quando a intenção é sugerir uma nova funcionalidade são percebidos diferentes padrões, o que dificulta a identificação. Além disso AS sozinha não apresenta valores significantes, no entanto agrega valor quando em combinação com outras técnicas.
 
 Como ameaça de validade da base de estudo, pode-se citar a má interpretação do julgamento manual das classificações, porém mitigado com processo realizado em 2 etapas, por pessoas distintas, resultando em questionamentos para apenas 2,81\% dos casos.
 
@@ -400,37 +401,36 @@ Como ameaças à validade interna citou-se inicialmente que os textos podem ser 
 Como ameaças externas citou-se que o processo foi executado para um grupo específico de aplicações. Para reduzir esta ameaça foram selecionados casos de diferentes categorias, de duas lojas distintas.
 
 \subsection{\textit{Analyzing reviews and code of mobile apps for better release planning}}
-No artigo \cite{Ciurumelea2017analyzing} é apresentado o método \textit{User Request Referencer} (URR) que permite ao desenvolvedor a obtenção mais rápida do código de seu software relacionado à avaliação do usuário. O estudo validou a possibilidade de categorizar a avaliação tanto em alto quanto baixo nível, salientando que o processo ainda necessitava de mais treinamentos.
-
+No artigo de \citeonline{Ciurumelea2017analyzing} é apresentado o método \textit{User Request Referencer} (URR) que permite ao desenvolvedor a obtenção mais rápida do código de seu software relacionado à avaliação do usuário. O estudo validou a possibilidade de categorizar a avaliação tanto em alto quanto baixo nível, salientando que o processo ainda necessitava de mais treinamentos.
 Foi estimada uma economia de tempo de até 75\% para estas identificações do código, facilitando o processo para os casos em que as avaliações estão melhor explicadas.
 
 O método URR se utiliza dos seguintes passos: (i) Definição da Taxonomia; (ii) Classificação das avaliações dos usuários; (iii) Localização do código fonte.
-
 A definição da taxonomia foi feita a partir de amostragens de 39 aplicações. Aqueles que possuíam muitas avaliações a quantidade foi limitada a 200. O volume total de avaliações analisadas manualmente foi de 1.566.
 
 Para a classificação de alto nível, tanto as avaliações positivas quanto as de classificações negativas são importantes para o desenvolvedor, o qual necessitará atuar mais fortemente ou poderá decidir atuar em outra funcionalidade.
 Para a classificação de baixo nível, a mesma é importante para o desenvolvedor identificar com precisão o ponto merecedor de atenção pelo desenvolvedor.
-
 A extração das funcionalidades foi feita utilizando Aprendizado de Máquina, de acordo com a taxonomia definida anteriormente. Foi decidido não considerar a avaliação em estrelas dada pelo usuário. Considerou-se a razão de 20\% das avaliações como sendo base para aprendizagem.
 
 Para a localização do código fonte, foi utilizado \textit{Apache Lucene API}, de acordo com as etapas seguintes: (i) obtenção do código fonte de cada software; (ii) pré processamento de cada código fonte e avaliações considerando \textit{stop word} em inglês e reduzindo distúrbios; (iii) indexação dos conteúdos do código fonte e avaliações; (iv) pré localização, feita através da criação de uma base de dados utilizando classificações das avaliações e localização das mesmas dentro do padrão de código fonte; (v) realização de pesquisa por relevência, onde neste teste foram obtidos resultados de 30\%, com previsão de melhoras em trabalhos futuros.
 
 As perguntas do artigo foram:
+\begin{itemize}
+\item RQ1: Até que ponto o Referenciador de Solicitações do Usuário organiza as avaliações de acordo com tarefas significativas de manutenção e evolução para desenvolvedores?
 
-RQ1: Até que ponto o Referenciador de Solicitações do Usuário organiza as avaliações de acordo com tarefas significativas de manutenção e evolução para desenvolvedores?
+\item RQ2: O URR recomenda corretamente os artefatos de software que precisam ser modificados para lidar com solicitações de usuários e reclamações?
+\end{itemize}
 
-RQ2: O URR recomenda corretamente os artefatos de software que precisam ser modificados para lidar com solicitações de usuários e reclamações?
-Base utilizada de 7.754 avaliações envolvendo 39 aplicações de código fonte abertos, que resultaram em 7.242 classes e 940.051 linhas de código Java.
+Para este estudo foi utilizada uma base de 7.754 avaliações envolvendo 39 aplicações de código fonte abertos, que resultaram em 7.242 classes e 940.051 linhas de código Java.
+Dois experimentos foram realizados:
+O experimento I foi feito para responder à RQ1, em que se executou o URR com 20\% dos textos e foi então solicitada a classificação manual dos mesmos, informando se o URR acertou ou não. Desta forma, não foi utilizado o mesmo conjunto de 1.566 avaliações utilizadas na elaboração da taxonomia.
+O experimento II foi feito para responder à RQ2, em que foi feito um oráculo com 91 avaliações.
 
-Foram realizados 2 experimentos:
-Experimento I foi feito para responder à RQ1. Executou-se o URR com 20\% com textos e foi então solicitada a classificação manual dos mesmos, informando se o URR acertou ou não. Desta forma não foi utilizado o mesmo conjunto de 1.566 avaliações utilizadas na elaboração da taxonomia.
-Experimento II foi feito para responder à RQ2. Foi então feito um oráculo com 91 avaliações.
-
-As conclusões para a RQ1 é que é possível categorizar tanto em alto quanto baixo nível, no entanto há a necessidade de melhorar o treinamento para alguns casos. Foi estimado uma possível economia de tempo de até 75\%, sendo as categorias mais importantes Uso, Recursos e Compatibilidade.
-Para RQ2 conclui-se que URR alcança resultados promissores, sendo que as melhores avaliações são mais fáceis de vincular.
+As conclusões para a RQ1 é que é possível categorizar as avaliações tanto em alto quanto baixo nível, no entanto há a necessidade de melhorar o treinamento para alguns casos. Foi estimada uma possível economia de tempo de até 75\%, sendo as categorias mais importantes Uso, Recursos e Compatibilidade.
+Para RQ2, concluiu-se que a URR alcança resultados promissores, sendo que as melhores avaliações são mais fáceis de vincular.
 
 \subsection{\textit{SURF: Summarizer of User Reviews Feedback}}
-Neste estudo \cite{Sorbo2017surf} foi apresentada uma ferramenta denominada SURF (\textit{Summarizer of User Reviews Feedback}) que se propõe analisar, classificar e sumarizar os textos das avaliações dos usuários com a intenção de facilitar a visualização pelos desenvolvedores. No estudo empírico participaram 12 desenvolvedores da Suíça, Itália e Holanda, que avaliaram a usabilidade da ferramenta. Um total de 12 aplicações e 2.622 textos de avaliações foram utilizados, de diferentes lojas e categorias de aplicativos.
+
+Neste estudo de \citeonline{Sorbo2017surf} foi apresentada uma ferramenta denominada SURF (\textit{Summarizer of User Reviews Feedback}) que se propõe analisar, classificar e sumarizar os textos das avaliações dos usuários com a intenção de facilitar a visualização pelos desenvolvedores. No estudo empírico participaram 12 desenvolvedores da Suíça, Itália e Holanda, que avaliaram a usabilidade da ferramenta. Um total de 12 aplicações e 2.622 textos de avaliações foram utilizados, de diferentes lojas e categorias de aplicativos.
 
 A primeira etapa do processo foi a classificação da intenção dos usuários, utilizando Processamento em Linguagem Natural (PLN) e Análise de Sentimento.
 A segunda etapa classifica em diferentes agrupamentos, também se utilizando de através de PLN.
@@ -445,11 +445,10 @@ Os resultados foram disponibilizados para pesquisadores, profissionais da indús
 As conclusões finais foram que futuramente a ferramenta poderia ser expandida para identificar a parte do código e evolução da extração dos dados.
 
 \subsection{\textit{BECLoMA: Augmenting stack traces with user review information}}
-A ferramenta BECLoMA (\textit{Bug Extractor , Classifier and Linker of Mobile Apps}) é apresentada em \cite{Pelloni2018becloma}. Seu propósito é de vincular as avaliações de usuários aos processos de testes de aplicações, fornecendo aos desenvolvedores uma visão ampliada dos casos de testes e por consequência agilidade nas tomadas de ação. A ferramenta possui um \textit{crawler} capaz de minerar avaliações do \textit{Google Play Store} e já treinado para 6.600 avaliações. A parte central do software vincula os textos das avaliações aos códigos, retirando os métodos nativos e permitindo assim uma melhor visualização do problema.
 
-A avaliação da ferramenta consistiu em responder à pergunta:
+A ferramenta BECLoMA (\textit{Bug Extractor , Classifier and Linker of Mobile Apps}) é apresentada no trabalho de \citeonline{Pelloni2018becloma}. Seu propósito é de vincular as avaliações de usuários aos processos de testes de aplicações, fornecendo aos desenvolvedores uma visão ampliada dos casos de testes e por consequência agilidade nas tomadas de ação. A ferramenta possui um \textit{crawler} capaz de minerar avaliações do \textit{Google Play Store} e já treinado para 6.600 avaliações. A parte central do software vincula os textos das avaliações aos códigos, retirando os métodos nativos e permitindo assim uma melhor visualização do problema.
 
-RQ1: Qual é a acurácia do BECLoMA em vincular as avaliações dos usuários aos relatórios de erro?
+A avaliação da ferramenta consistiu em responder à pergunta: Qual é a acurácia do BECLoMA em vincular as avaliações dos usuários aos relatórios de erro?
 
 Foram realizados testes empíricos com 8 aplicações, número reduzido decorrente do esforço para geração de oráculos, construído por um desenvolvedor com 2 anos de experiência. A ferramenta apresentou precisão de 82\%, \textit{recall} de 75\% e \textit{F1-Score} de 78\%, confirmando que o processo \textit{Dice} para vinculação foi uma boa escolha, no entanto foi importante salientar que aproximadamente 18\% dos casos que deveriam ser vinculados a ferramenta não conseguiu associar.
 
@@ -469,67 +468,73 @@ A segunda parte do artigo tem a intenção de sinalizar os casos discrepantes pa
 Como o estudo envolveu mais de 13MM de avaliações, foi possível realizar uma análise independente da aplicação. O estudo conclui também que os usuários tendem a ser mais tolerantes para jogos do que outros tipos de aplicações, considerando softwares pagos.
 
 \subsection{\textit{Analyzing and automatically labelling the types of user issues that are raised in mobile app reviews}}
-A possibilidade e importância da rotulação das avaliações é apresentada em \cite{Mcilroy2016analyzing}. O estudo rotulou (em 11 classificações distintas) mais de 600 mil textos de 12 mil aplicações. O artigo cita que com as avaliações os desenvolvedores podem entender melhor as preocupações dos usuários, os proprietários de lojas de aplicativos podem identificar softwares anômalos e os usuários podem comparar aplicações semelhantes e decidir quais utilizar. Foi abordado que a natureza não estruturada e informal das avaliações, se utilizando muitas vezes de gírias e abreviações, complica a rotulagem automática de tais avaliações.
+
+A possibilidade e importância da rotulação das avaliações é apresentada no trabalho de  \citeonline{Mcilroy2016analyzing}. O estudo rotulou (em 11 classificações distintas) mais de 600 mil textos de 12 mil aplicações. O artigo cita que com as avaliações os desenvolvedores podem entender melhor as preocupações dos usuários, os proprietários de lojas de aplicativos podem identificar softwares anômalos e os usuários podem comparar aplicações semelhantes e decidir quais utilizar. Foi abordado que a natureza não estruturada e informal das avaliações, se utilizando muitas vezes de gírias e abreviações, complica a rotulagem automática de tais avaliações.
 
 Além disso, o artigo cita que algumas empresas se especializaram em prover dados estatísticos e comparativos detalhados sobre avaliações para seus clientes, porém muitas vezes não é um trabalho orientado ao software.
 
 As perguntas respondidas pelo estudo foram:
-
-RQ1 - Quantos avaliações contém múltiplos tipos de problemas apontados?
-
+\begin{itemize}
+\item RQ1 - Quantas avaliações contém múltiplos tipos de problemas apontados?
 A resposta foi que 22\% (Apple) e 30\% (Android) das avaliações são \textit{multi-label}, tendo uma média de palavras um pouco maior (passando de 32 para 41).
 
-RQ2 - Quão bem é possível categorizar as avaliações em mais de um tipo de categoria?
+\item RQ2 - Quão bem é possível categorizar as avaliações em mais de um tipo de categoria?
+No estudo, a precisão das análises foram de até 66\%, com recall de até 65\%, sendo que a proposta de estudo futuro é de melhorar o processo de predição.
 
-No estudo a precisão das análises foram de até 66\%, com recall de até 65\%, sendo que a proposta de estudo futuro é de melhorar o processo de predição.
-
-RQ3 - A abordagem de multi categorias é funcional para os \textit{stakeholders}?
-
+\item RQ3 - A abordagem de multi categorias é funcional para os \textit{stakeholders}?
 O artigo informa que sim, e para isso considera provas de conceito.
+
+\end{itemize}
 
 
 \subsection{\textit{Retrieving and Analyzing Mobile Apps Feature}}
-No artigo \cite{Iacob2013retrieving} é proposto um processo denominado MARA (\textit{Mobile App Review Analyzer}) para auxiliar na identificação de avaliações que apresentem solicitações de funcionalidades. No processo, a ferramenta se utiliza de \textit{Latent Dirichlet Allocation} (modelo estatístico de Processamento de Linguagem Natural) para as informações.
+
+No artigo de \citeonline{Iacob2013retrieving} é proposto um processo denominado MARA (\textit{Mobile App Review Analyzer}) para auxiliar na identificação de avaliações que apresentem solicitações de funcionalidades. No processo, a ferramenta se utiliza de \textit{Latent Dirichlet Allocation} (modelo estatístico de Processamento de Linguagem Natural) para as informações.
 
 Na investigação foi considerado que textos com sarcasmos, não estruturados, reduzidos, com erros de pontuação são algumas barreiras a serem ultrapassadas no entendimento das avaliações.
 
 As conclusões do estudo mostram que 23\% das avaliações sugerem novas funcionalidades ou alteração em casos existentes, e que a maioria das solicitações dos usuários diz respeito ao suporte aprimorado das aplicações, atualizações mais frequentes, novos níveis para jogos e mais opções de personalização.
 
 \subsection{\textit{Online Reviews as First Class Artifacts in Mobile App Development}}
-No estudo \cite{Iacob2014online} é apresentado o impacto das avaliações dos usuários no processo de engenharia de software, com argumentos explicando que os modelos e técnicas clássicas podem não ser os mais adequados. Baseado em evidências, o protótipo MARA visa oferecer integração das avaliações com o processo de engenharia de software, extraindo as solicitações de recursos e relatórios de erros.
+
+No estudo \citeonline{Iacob2014online} é apresentado o impacto das avaliações dos usuários no processo de engenharia de software, com argumentos explicando que os modelos e técnicas clássicas podem não ser os mais adequados. Baseado em evidências, o protótipo MARA visa oferecer integração das avaliações com o processo de engenharia de software, extraindo as solicitações de recursos e relatórios de erros.
 
 Este novo estudo da ferramenta MARA estendeu a análise para classificação de erros, com aprendizagem baseada em exemplo de 3.279 avaliações randômicas, tratadas manualmente.
 
 \subsection{\textit{User Reviews Matter! Tracking Crowdsourced - Reviews to Support Evolution of Successful Apps}}
-Uma nova abordagem, denominada CRISTAL, é apresentada em \cite{Palomba2015userreviews} com o propósito de rastrear as avaliações comprovando que desenvolvedores que implementam as solicitações dos usuários são recompensados em termos de notas. O processo se utiliza de mecanismos \textit{crowdsourcing} sobre as avaliações das lojas de aplicativos, tendo como conjunto de estudo um total 100 aplicações Android.
+
+Uma nova abordagem, denominada CRISTAL, é apresentada por  \citeonline{Palomba2015userreviews} com o propósito de rastrear as avaliações comprovando que desenvolvedores que implementam as solicitações dos usuários são recompensados em termos de notas. O processo se utiliza de mecanismos \textit{crowdsourcing} sobre as avaliações das lojas de aplicativos, tendo como conjunto de estudo um total 100 aplicações Android.
 
 Neste estudo foi também avaliada a possibilidade de relacionamento dos \textit{commits} e \textit{issues} com as avaliações dos usuários, porém apenas em um conjunto restrito de 10 aplicações, obtendo indicador \textit{F-Measure} de 75\% (77\% de \textit{precision} e 73\%de \textit{recall}).
 
 As questões abordadas no estudo foram:
-
-RQa: Quão preciso é o CRISTAL na identificação de links entre avaliações informativas e \textit{issues} e \textit{commits}?
+\begin{itemize}
+\item RQa: Quão preciso é o CRISTAL na identificação de links entre avaliações informativas e \textit{issues} e \textit{commits}?
 
 O artigo explica a possibilidade de associação entre as avaliações dos usuários e os respectivos \textit{commits} das aplicações, sendo esta associação com uma precisão de 77\% e recall de 73\%.
 
-RQc: Até que ponto os desenvolvedores cumprem as avaliações ao trabalhar em um novo lançamento de aplicação?
+\item RQb: Até que ponto os desenvolvedores cumprem as avaliações ao trabalhar em um novo lançamento de aplicação?
 
 Os resultados alcançados mostraram que, na média, os desenvolvedores implementam 49\% das solicitações nas avaliações enquanto trabalham no lançamento de nova aplicação.
 
-RQe: Qual é o efeito de um mecanismo análise massiva de avaliações (para planejar e implementar mudanças futuras) no sucesso da aplicação?
+\item RQc: Qual é o efeito de um mecanismo análise massiva de avaliações (para planejar e implementar mudanças futuras) no sucesso da aplicação?
 
 Confirmado através de uma correlação de 0,59 entre a cobertura das avaliações e a alteração de nota entre a versão anterior e nova da aplicação. Este percentual foi validado informado que a análise qualitativa suporta parte dos resultados quantitativos encontrados.
+\end{itemize}
 
 Como ameaça do estudo citou-se que a nota da aplicação foi melhorada decorrente de outras formas, como por exemplo uma importante entrega (\textit{feature}) disponibilizada. No entanto, a intenção do artigo é de apresentar uma correlação quantitativa ao invés de uma relação direta de causa e efeito. Também foram encontradas evidências através de mineração dos dados e discussões entre os autores de casos em que o mesmo usuário melhorou a nota após a liberação de uma nova versão da aplicação.
 
 A conclusão do artigo é que as notas das aplicações aumentam quando os desenvolvedores implementam alterações que visam responder às avaliações dos usuários.
 
 \subsection{\textit{Crowdsourcing user reviews to support the evolution of mobile apps}}
-Na publicação \cite{Palomba2018crowdsourcing} a abordagem CRISTAL foi complementada com uma pesquisa junto a 73 desenvolvedores.
+
+No trabalho de \citeonline{Palomba2018crowdsourcing}, a abordagem CRISTAL foi complementada com uma pesquisa junto a 73 desenvolvedores.
 
 Os resultados qualitativos da pesquisa corroboram as informações quantitativas encontradas através da abordagem. Os desenvolvedores concordam que as avaliações representam uma valiosa informação, levando a correções difíceis de serem identificadas nos testes, implementação de recursos de sucesso e requisitos não funcionais. A grande maioria dos entrevistados (90\%) acredita que estas implementações têm um efeito de sucesso da aplicação.
 
 \subsection{\textit{Mobile App Evolution Analysis based on User Reviews}}
-O artigo \cite{Li2018MobileAE} associa avaliações com versões disponibilizadas da aplicação (\textit{releases}), porém tendo apenas como objeto de estudo a aplicação \textit{Whatspapp}.
+
+O artigo de \citeonline{Li2018MobileAE} associa avaliações com versões disponibilizadas da aplicação (\textit{releases}), porém tendo apenas como objeto de estudo a aplicação \textit{Whatspapp}.
 
 Ao longo do estudo determinou-se quais foram as principais versões da aplicação e então realizada uma análise de sentimento sobre as avaliações enviadas entre estas versões.
 
@@ -538,10 +543,13 @@ Após agrupamento das palavras chave, verificou-se o comportamento destes grupos
 O processo consistiu em determinar quais foram as principais versões da aplicação e em seguida realizar uma análise de sentimento sobre as avaliações enviadas entre as publicações destas versões.
 
 \subsection{\textit{Do Android App Users Care about Accessibility? An Analysis of User Reviews on the Google Play Store}}
-O estudo \cite{ihc2019} se encontra melhor detalhado na seção \ref{chap:atividades}, e dá subsídios como um estudo piloto para esta proposta de pesquisa.
+
+O estudo de \citeonline{ihc2019} analisa as avaliações feitas pelos usuários de um conjunto de 700 aplicações. Os detalhes deste artigo são apresentados na Seção~ \ref{chap:atividades} pois foi o estudo de viabilidade que subsidiou esta proposta de pesquisa.
+
 
 \subsection{\textit{Accessibility in User Reviews for Mobile Apps: An Automated Detection Approach}}
-O estudo \cite{rochestertamjeed} aborda a investigação das avaliações utilizadas no artigo \cite{ihc2019}, tomando parte da análise manual como oráculo para o mecanismo de aprendizado de máquina proposto nessa nova pesquisa.
+
+O estudo de \citeonline{rochestertamjeed} utilizou os dados da pesquisa de ~\citeonline{ihc2019} que estão disponíveis publicamente\footenote{https://github.com/marceloeler/data-ihc2019} para propor e avaliar um mecanismo de aprendizado de máquina para identificar automaticamente avaliações de acessibilidade. Entretanto, os autores não analisaram as avaliações de outros aplicativos ou avançaram nas discussões sobre o tema.
 
 %No que diz respeito às notas em lojas de aplicativos, em \cite{Yan2019currentstatus} não foi identificado um relacionamento direto entre a nota e as falhas de acessibilidade observadas na pesquisa.
 
@@ -553,4 +561,4 @@ Em decorrência de relevante parcela da população mundial possuir algum grau d
 
 Apesar desta importância e mesmo em aplicações móveis populares, identifica-se problemas de acessibilidade conforme os padrões internacionalmente reconhecidos, o que leva ao indício de que não há a devida significância para este tema junto aos desenvolvedores, ou mesmo não há uma pressão de mercado que induza a esta priorização durante a elaboração de novas versões.
 
-Considerando que as avaliações são uma importante fonte de retroalimentação para os desenvolvedores e dada a importância da acessibilidade no cenário mundial, entende-se que existe a necessidade de um estudo do relacionamento entre as avaliações em lojas de aplicativos, e as informações cadastradas pelos desenvolvedores para as solicitações de modificações e alterações, tendo em conta o tema acessibilidade.
+Considerando que as avaliações são uma importante fonte de retroalimentação para os desenvolvedores e dada a importância da acessibilidade no cenário mundial, entende-se que existe a necessidade de um estudo do relacionamento entre as avaliações em lojas de aplicativos, os aspectos de acessibilidade mencionados, e as informações cadastradas pelos desenvolvedores para as solicitações de modificações e alterações de fato realizadas. Nos estudos encontrados na literatura sobre análise de avaliações de usuários e evolução dos aplicativos, o tema acessibilidade não é explorado, apesar de alguns estudos classificar as avaliações dentro da categoria de interface com o usuário. 
